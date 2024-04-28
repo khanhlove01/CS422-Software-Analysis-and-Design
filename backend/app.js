@@ -3,13 +3,6 @@ const fs = require("fs")
 
 const app = express()
 app.use(express.json())
-// app.get('/',(req,res) => {
-//     res.status(200).json({message: 'Hello World!'})
-// })
-
-// app.post('/',(req,res) => {
-//     res.status(201).json({message: 'Data created!'})
-// })
 
 //GET request
 const nfts = JSON.parse(
@@ -48,6 +41,60 @@ app.post("/api/v1/nfts",(req,res) => {
         })
     })
     // res.send("POST NFT");
+})
+
+//Get single NFT
+app.get("/api/v1/nfts/:id", (req,res) => {
+    console.log(req.params);
+
+    if(id => nfts.length) {
+        return res.status(404).json({
+            status: 'fail',
+            message: 'Invalid ID'
+        })
+    }
+
+    const nft = nfts.find(el => el.id === parseInt(req.params.id));
+    res.status(200).json({
+        status: 'success',
+        data: {
+            nft,
+        }
+    })
+})
+
+//Patch method
+app.patch("/api/v1/nfts/:id", (req,res) => {
+
+    if(req.params.id * 1 > nfts.length) {
+        return res.status(404).json({
+            status: 'fail',
+            message: 'Invalid ID'
+        })
+    }
+
+    res.status(200).json({
+        status: 'success',
+        data: {
+            nft: '<Updated nft here...>'
+        }
+    
+    })
+})
+
+//Delete method
+app.delete("/api/v1/nfts/:id", (req,res) => {
+    if(req.params.id * 1 > nfts.length) {
+        return res.status(404).json({
+            status: 'fail',
+            message: 'Invalid ID'
+        })
+    }
+
+    res.status(204).json({
+        status: 'success',
+        data: null
+    })
 })
 
 const port = 3000
