@@ -1,8 +1,8 @@
-const { log } = require("console");
 const express = require("express")
 const fs = require("fs")
-const app = express()
 
+const app = express()
+app.use(express.json())
 // app.get('/',(req,res) => {
 //     res.status(200).json({message: 'Hello World!'})
 // })
@@ -16,10 +16,6 @@ const nfts = JSON.parse(
     fs.readFileSync(`${__dirname}/data/nft-simple.json`)
 );
 
-console.log('====================================');
-console.log(nfts);
-console.log('====================================');
-
 app.get('/api/v1/nfts', (req,res) => {
     res.status(200).json({
         status: 'success',
@@ -28,6 +24,30 @@ app.get('/api/v1/nfts', (req,res) => {
             nfts,
         }
     })
+})
+
+// POST request
+app.post("/api/v1/nfts",(req,res) => {
+    const newId = nfts[nfts.length - 1].id + 1;
+    const newNFTs = Object.assign({id: newId}, req.body);
+    nfts.push(newNFTs);
+    console.log('====================================');
+    console.log(newNFTs);
+    console.log('====================================');
+    fs.writeFile(`${__dirname}/data/nft-simple.json`, JSON.stringify(nfts), err => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ status: 'error', message: 'An error occurred while writing to the file.' });
+        }
+        console.log("Success");
+        res.status(201).json({
+            status: 'success',
+            data: {
+                nft: newNFTs,
+            }
+        })
+    })
+    // res.send("POST NFT");
 })
 
 const port = 3000
