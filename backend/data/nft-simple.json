@@ -212,5 +212,12 @@
         "duration": 5,
         "maxGroupSize": 25,
         "difficulty": "easy"
+    },
+    {
+        "id": 10,
+        "name": "Monkey Monster",
+        "duration": 5,
+        "maxGroupSize": 25,
+        "difficulty": "easy"
     }
 ]

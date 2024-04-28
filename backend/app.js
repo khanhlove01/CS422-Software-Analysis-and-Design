@@ -9,7 +9,7 @@ const nfts = JSON.parse(
     fs.readFileSync(`${__dirname}/data/nft-simple.json`)
 );
 
-app.get('/api/v1/nfts', (req,res) => {
+const getAllNfts = (req,res) => {
     res.status(200).json({
         status: 'success',
         results: nfts.length,
@@ -17,10 +17,11 @@ app.get('/api/v1/nfts', (req,res) => {
             nfts,
         }
     })
-})
+}
+
 
 // POST request
-app.post("/api/v1/nfts",(req,res) => {
+const createNFT = (req,res) => {
     const newId = nfts[nfts.length - 1].id + 1;
     const newNFTs = Object.assign({id: newId}, req.body);
     nfts.push(newNFTs);
@@ -40,18 +41,18 @@ app.post("/api/v1/nfts",(req,res) => {
             }
         })
     })
-    // res.send("POST NFT");
-})
+}
+
 
 //Get single NFT
-app.get("/api/v1/nfts/:id", (req,res) => {
+const getSingleNFT =  (req,res) => {
     console.log(req.params);
 
-    if(id => nfts.length) {
+    if (req.params.id * 1 >= nfts.length) {
         return res.status(404).json({
             status: 'fail',
             message: 'Invalid ID'
-        })
+        });
     }
 
     const nft = nfts.find(el => el.id === parseInt(req.params.id));
@@ -60,11 +61,11 @@ app.get("/api/v1/nfts/:id", (req,res) => {
         data: {
             nft,
         }
-    })
-})
+    });
+}
 
 //Patch method
-app.patch("/api/v1/nfts/:id", (req,res) => {
+const updateNFT =  (req,res) => {
 
     if(req.params.id * 1 > nfts.length) {
         return res.status(404).json({
@@ -80,10 +81,10 @@ app.patch("/api/v1/nfts/:id", (req,res) => {
         }
     
     })
-})
+}
 
 //Delete method
-app.delete("/api/v1/nfts/:id", (req,res) => {
+const deleteNFT =  (req,res) => {
     if(req.params.id * 1 > nfts.length) {
         return res.status(404).json({
             status: 'fail',
@@ -95,7 +96,17 @@ app.delete("/api/v1/nfts/:id", (req,res) => {
         status: 'success',
         data: null
     })
-})
+}
+
+// app.get('/api/v1/nfts', getAllNfts);
+// app.post("/api/v1/nfts", createNFT);
+// app.get("/api/v1/nfts/:id", getSingleNFT);
+// app.patch("/api/v1/nfts/:id",updateNFT)
+// app.delete("/api/v1/nfts/:id",deleteNFT)
+
+app.route('/api/v1/nfts').get(getAllNfts).post(createNFT);
+
+app.route('/api/v1/nfts/:id').get(getSingleNFT).patch(updateNFT).delete(deleteNFT);
 
 const port = 3000
 app.listen(port, () => {
