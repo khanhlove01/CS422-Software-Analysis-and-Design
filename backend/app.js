@@ -1,8 +1,20 @@
 const express = require("express")
 const fs = require("fs")
+const morgan = require("morgan")
 
 const app = express()
 app.use(express.json())
+app.use(morgan('dev'))
+//Custom middleware
+app.use((req,res,next) => {
+    console.log('Hello from the middleware');
+    next();
+})
+
+app.use((req,res,next) => {
+    req.requestTime = new Date().toISOString();
+    next();
+})
 
 //GET request
 const nfts = JSON.parse(
@@ -10,8 +22,10 @@ const nfts = JSON.parse(
 );
 
 const getAllNfts = (req,res) => {
+    console.log(req.requestTime);
     res.status(200).json({
         status: 'success',
+        requestedAt: req.requestTime,
         results: nfts.length,
         data: {
             nfts,
