@@ -2,11 +2,12 @@ const express = require('express');
 const nftsRouter = express.Router();
 const nftControllers = require('../controllers/nftControllers');
 
+nftsRouter.param('id', nftControllers.checkId);
 
 //Router NFTs
 nftsRouter.route('/')
     .get(nftControllers.getAllNfts)
-    .post(nftControllers.createNFT);
+    .post(nftControllers.checkBody,nftControllers.createNFT);
 
 nftsRouter.route('/:id')
     .get(nftControllers.getSingleNFT)

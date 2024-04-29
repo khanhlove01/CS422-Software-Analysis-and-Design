@@ -24,7 +24,7 @@ const createNFT = (req,res) => {
     console.log('====================================');
     console.log(newNFTs);
     console.log('====================================');
-    fs.writeFile(`${__dirname}/data/nft-simple.json`, JSON.stringify(nfts), err => {
+    fs.writeFile(`${__dirname}/../data/nft-simple.json`, JSON.stringify(nfts), err => {
         if (err) {
             console.error(err);
             return res.status(500).json({ status: 'error', message: 'An error occurred while writing to the file.' });
@@ -93,4 +93,32 @@ const deleteNFT =  (req,res) => {
     })
 }
 
-module.exports = {getAllNfts, createNFT, getSingleNFT, updateNFT, deleteNFT}
+const checkId = (req,res,next,val) => {
+    if(req.params.id * 1 > nfts.length) {
+        return res.status(404).json({
+            status: 'fail',
+            message: 'Invalid ID'
+        })
+    }
+    next();
+}
+
+const checkBody = (req,res,next) => {
+    if(!req.body.name || !req.body.price) {
+        return res.status(400).json({
+            status: 'fail',
+            message: 'Missing name or price'
+        })
+    }
+    next();
+}
+
+module.exports = {
+    getAllNfts, 
+    createNFT, 
+    getSingleNFT, 
+    updateNFT, 
+    deleteNFT,
+    checkId,
+    checkBody,
+}
