@@ -5,7 +5,8 @@ const usersRouter = require("./routes/usersRoute")
 
 const app = express()
 app.use(express.json())
-app.use(morgan('dev'))
+
+if(process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 
 //Serving template demo
 app.use(express.static(__dirname + "/img"));
