@@ -7,6 +7,10 @@ const app = express()
 app.use(express.json())
 app.use(morgan('dev'))
 
+//Serving template demo
+app.use(express.static(__dirname + "/img"));
+//console.log(__dirname);
+
 //Custom middleware
 app.use((req,res,next) => {
     console.log('Hello from the middleware');
