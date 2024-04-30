@@ -40,7 +40,7 @@ const Profile = () => {
           <div className={Style.profile_menu_one_item}>
             <FaUserEdit />
             <p>
-              <a href="./edt-profile">Edit Profile</a>
+              <a href="./edit-profile">Edit Profile</a>
             </p>
           </div>
         </div>
@@ -49,13 +49,13 @@ const Profile = () => {
           <div className={Style.profile_menu_one_item}>
             <MdHelpCenter />
             <p>
-            <a href="./help">Help</a>
+              <a href="./help">Help</a>
             </p>
           </div>
           <div className={Style.profile_menu_one_item}>
             <TbDownload />
             <p>
-            <a href="./Disconnect">Disconnect</a>
+              <a href="./Disconnect">Disconnect</a>
             </p>
           </div>
         </div>
