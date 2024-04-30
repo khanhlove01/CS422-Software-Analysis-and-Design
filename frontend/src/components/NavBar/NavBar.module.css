@@ -41,7 +41,6 @@
   grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr;
   gap: 1rem;
   align-items: center;
-  align-self: flex-end;
 }
 .navbar .navbar_container .navbar_container_right .navbar_container_right_discover {
   position: relative;

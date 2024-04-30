@@ -26,8 +26,7 @@ const HelpCenter = () => {
     <div>
       {helpCenter.map((item, index) => (
         <div key={index + 1} className={Style.helpCenter}>
-          {/* <link rel="stylesheet" href={`${item.link}`}>{item.name}</link> */}
-          <div>{item.name}</div>
+          <a href={`${item.link}`}>{item.name}</a>
         </div>
       ))}
     </div>

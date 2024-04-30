@@ -42,7 +42,7 @@
 }
 .sideBar .sideBar_menu .sideBar_menu_box {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }

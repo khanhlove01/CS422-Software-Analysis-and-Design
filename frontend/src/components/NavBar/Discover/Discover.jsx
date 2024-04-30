@@ -38,7 +38,8 @@ const Discover = () => {
     <div>
       {discover.map((item, index) => (
         <div key={index + 1} className={Style.discover}>
-          <div>{item.name}</div>
+          <a href={`${item.link}`}>{item.name}</a>
+          
         </div>
       ))}
     </div>
