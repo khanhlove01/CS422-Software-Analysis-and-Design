@@ -131,7 +131,7 @@ const SideBar = ({setOpenSideMenu}) => {
           {openDiscover && (
             <div className={Style.sideBar_discover}>
               {discover.map((item, index) => (
-                <p key={i + 1}>
+                <p key={index + 1}>
                   <a href={`${item.link}`}>{item.name}</a>
                 </p>
               ))}
@@ -148,7 +148,7 @@ const SideBar = ({setOpenSideMenu}) => {
           {openHelp && (
             <div className={Style.sideBar_discover}>
               {helpCenter.map((item, index) => (
-                <p key={i + 1}>
+                <p key={index + 1}>
                   <a href={`${item.link}`}>{item.name}</a>
                 </p>
               ))}
