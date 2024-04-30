@@ -28,7 +28,6 @@
   gap: 2rem;
   padding: 0rem 1.5rem;
   transition: all 0.3s ease-in;
-  color: var(--icons-color);
 }
 .profile .profile_menu .profile_menu_one .profile_menu_one_item:hover {
   background-color: var(--icons-color);
