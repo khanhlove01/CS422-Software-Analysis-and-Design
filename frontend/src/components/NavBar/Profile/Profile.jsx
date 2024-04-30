@@ -45,7 +45,7 @@ const Profile = () => {
           </div>
         </div>
 
-        <div className={Style.profile_menu_two}>
+        <div className={Style.profile_menu_one}>
           <div className={Style.profile_menu_one_item}>
             <MdHelpCenter />
             <p>
