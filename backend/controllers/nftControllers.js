@@ -7,7 +7,23 @@ const NFT = require('../models/nftModel');
 
 const getAllNfts = async (req,res) => {
     try {
-        const nfts = await NFT.find();
+        //BUILD QUERY
+        const queryObj = {...req.query};
+        const excludedFields = ['page', 'sort', 'limit', 'fields'];
+        excludedFields.forEach(el => delete queryObj[el])
+        // console.log(req.query, queryObj);
+
+        //EXECUTE QUERY
+        //ADVANCED FILTERING
+        let queryStr = JSON.stringify(queryObj);
+        queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
+        // console.log(JSON.parse(queryStr));
+        // { difficulty: 'medium', duration: { '$gte': '5' } }
+        const query = NFT.find(JSON.parse(queryStr));
+        
+        const nfts = await query;
+
+        //SEND RESPONSE
         res.status(200).json({
             status: 'success',
             results: nfts.length,
