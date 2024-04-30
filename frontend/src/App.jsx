@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import Home from './pages'
+import { NavBar } from './components/componentsindex'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div>
-      <Home/>
+        <NavBar/>
     </div>
   )
 }

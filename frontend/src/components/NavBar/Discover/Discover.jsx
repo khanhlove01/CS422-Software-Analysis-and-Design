@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Discover = () => {
+const Discover = () => {
   return (
     <div>Discover</div>
   )
 }
+
+export default Discover;
