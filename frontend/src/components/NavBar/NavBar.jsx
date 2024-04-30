@@ -66,6 +66,7 @@ const NavBar = () => {
   };
 
   const openSideBar = () => {
+    console.log(openSideMenu);
     if (!openSideMenu){
       setOpenSideMenu(true);
     }
@@ -159,8 +160,8 @@ const NavBar = () => {
 
       {/* Sidebar component */}
       {
-        openSideMenu && (
-          <div className={Style.SideBar}>
+        openSideMenu && ( 
+          <div className={Style.sideBar}>
             <SideBar setOpenSideMenu={setOpenSideMenu}/>
           </div>
         )
