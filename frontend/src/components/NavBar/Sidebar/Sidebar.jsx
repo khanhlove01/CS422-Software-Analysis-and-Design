@@ -12,6 +12,7 @@ import {
 
 //Internal Import
 import Style from "./SideBar.module.css";
+import { Button } from "../../componentsindex";
 
 const SideBar = ({setOpenSideMenu}) => {
   //Use state
@@ -158,8 +159,8 @@ const SideBar = ({setOpenSideMenu}) => {
       </div>
 
       <div className={Style.sideBar_button}>
-          <button>Create</button>
-          <button>Connect Wallet</button>
+          <Button btnName="Create" handleClick={()=>{}}/>
+          <Button btnName="Connect Wallet" handleClick={()=>{}}/>
       </div>
     </div>
   );
