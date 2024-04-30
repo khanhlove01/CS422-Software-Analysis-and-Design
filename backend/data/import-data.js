@@ -1,8 +1,7 @@
 const fs = require("fs");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const NFT = require("./../../models/nftModel");
-
+const NFT = require("../models/nftModel");
 dotenv.config({ path: "./config.env" });
 const DB = process.env.DATABASE.replace(
   "<PASSWORD>",
@@ -10,11 +9,7 @@ const DB = process.env.DATABASE.replace(
 );
 
 mongoose
-  .connect(DB, {
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useNewUrlParser: true,
-  })
+  .connect(DB)
   .then((con) => {
     // console.log(con.connection);
     console.log("DB Connection Successfully");
