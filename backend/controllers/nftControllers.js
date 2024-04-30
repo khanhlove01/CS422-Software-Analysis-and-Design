@@ -19,7 +19,15 @@ const getAllNfts = async (req,res) => {
         queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
         // console.log(JSON.parse(queryStr));
         // { difficulty: 'medium', duration: { '$gte': '5' } }
-        const query = NFT.find(JSON.parse(queryStr));
+        let query = NFT.find(JSON.parse(queryStr));
+
+        //SORTING
+
+        if(req.query.sort){
+            // console.log(req.query.sort);
+            const sortBy = req.query.sort.split(',').join(' ');
+            query = query.sort(sortBy);
+        }
         
         const nfts = await query;
 
@@ -32,6 +40,7 @@ const getAllNfts = async (req,res) => {
             }
         })
     } catch (error) {
+        console.log(error);
         res.status(500).json({
             status: 'fail',
             message: 'Server Error!'
