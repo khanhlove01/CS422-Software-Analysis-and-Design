@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+const slugify = require('slugify')
 const nftSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -7,6 +7,7 @@ const nftSchema = new mongoose.Schema({
         trim: true,
         unique: true
     },
+    slug: String,
     duration:{
         type: String,
         required: [true, 'A nft must have a duration'] 
@@ -63,6 +64,22 @@ nftSchema.virtual('durationWeeks').get(function(){
     return this.duration / 7
 })
 
+//Document Middleware: runs before .save() and .create()
+//Moongoose middleware
+nftSchema.pre('save',function(next){
+    this.slug = slugify(this.name, { lower: true });
+    next();
+})
+
+nftSchema.pre('save',function(next){
+    console.log('Will save document...');
+    next();
+})
+
+nftSchema.post("save", function(doc, next){
+    console.log(doc);
+    next();
+})
 const NFT = mongoose.model('NFT', nftSchema);
 
 module.exports = NFT;
