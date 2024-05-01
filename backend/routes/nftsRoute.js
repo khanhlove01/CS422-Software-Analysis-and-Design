@@ -9,7 +9,15 @@ nftsRouter
     .route('/top-5-nfts')
     .get(nftControllers.aliasTopNfts, nftControllers.getAllNfts);
 //STAT ROUTE
-nftsRouter.route('/nft-stats').get(nftControllers.getNFTsStats);
+nftsRouter
+    .route('/nft-stats')
+    .get(nftControllers.getNFTsStats);
+
+//Get montnly plan
+nftsRouter
+    .route('/monthly-plan/:year')
+    .get(nftControllers.getMonthlyPlan);
+
 //Router NFTs
 nftsRouter.route('/')
     .get(nftControllers.getAllNfts)
