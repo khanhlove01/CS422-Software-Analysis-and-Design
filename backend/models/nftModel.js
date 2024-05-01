@@ -71,15 +71,15 @@ nftSchema.pre('save',function(next){
     next();
 })
 
-nftSchema.pre('save',function(next){
-    console.log('Will save document...');
-    next();
-})
+// nftSchema.pre('save',function(next){
+//     console.log('Will save document...');
+//     next();
+// })
 
-nftSchema.post("save", function(doc, next){
-    console.log(doc);
-    next();
-})
+// nftSchema.post("save", function(doc, next){
+//     console.log(doc);
+//     next();
+// })
 const NFT = mongoose.model('NFT', nftSchema);
 
 module.exports = NFT;
