@@ -4,6 +4,12 @@ const NFT = require('../models/nftModel');
 // const nfts = JSON.parse(
 //     fs.readFileSync(`${__dirname}/../data/nft-simple.json`)
 // );
+const aliasTopNfts = (req,res,next) => {
+    req.query.limit = '5';
+    req.query.sort = '-ratingsAverage,price';
+    req.query.fields = "name,price,ratingsAverage,difficulty"
+    next();
+}
 
 const getAllNfts = async (req,res) => {
     try {
@@ -154,4 +160,5 @@ module.exports = {
     getSingleNFT, 
     updateNFT, 
     deleteNFT,
+    aliasTopNfts,
 }
