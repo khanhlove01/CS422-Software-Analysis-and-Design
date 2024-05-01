@@ -7,7 +7,9 @@ const nftControllers = require('../controllers/nftControllers');
 //TOP 5 NFTs BY PRICE
 nftsRouter
     .route('/top-5-nfts')
-    .get(nftControllers.aliasTopNfts, nftControllers.getAllNfts);   
+    .get(nftControllers.aliasTopNfts, nftControllers.getAllNfts);
+//STAT ROUTE
+nftsRouter.route('/nft-stats').get(nftControllers.getNFTsStats);
 //Router NFTs
 nftsRouter.route('/')
     .get(nftControllers.getAllNfts)
