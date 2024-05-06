@@ -60,11 +60,11 @@ const Footer = () => {
           <HelpCenter />
         </div>
 
-        <div className={Style.subsribe}>
+        <div className={Style.subscribe}>
           <h3>Subscribe</h3>
-          <div className={Style.subsribe_box}>
+          <div className={Style.subscribe_box}>
             <input type="email" placeholder="Enter your email *" />
-            <RiSendPlaneFill className={Style.subsribe_box_send} />
+            <RiSendPlaneFill className={Style.subscribe_box_send} />
           </div>
 
           <div className={Style.subsribe_box_info}>
