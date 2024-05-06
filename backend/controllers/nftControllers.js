@@ -1,6 +1,7 @@
 const fs = require("fs")
 const NFT = require('../models/nftModel');
 const APIFeatures = require('../Utils/apiFeatures');
+const { log } = require("console");
 //GET request
 // const nfts = JSON.parse(
 //     fs.readFileSync(`${__dirname}/../data/nft-simple.json`)
@@ -92,7 +93,7 @@ const createNFT = async (req,res) => {
     } catch (error) {
         res.status(400).json({
             status: 'fail',
-            message: "Invalid data sent!"
+            message: error
         });
     }
 }
