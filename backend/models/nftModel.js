@@ -102,6 +102,12 @@ nftSchema.post(/^find/, function(docs, next){
     //console.log(docs);
     next()
 })
+//Aggregation Middleware
+nftSchema.pre('aggregate', function(next){
+    this.pipeline().unshift({ $match: { secretNFT: { $ne: true } } });
+    //console.log(this.pipeline());
+    next()
+})
 const NFT = mongoose.model('NFT', nftSchema);
 
 module.exports = NFT;
