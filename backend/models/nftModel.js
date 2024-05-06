@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+const slugify = require('slugify')
 const nftSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -7,6 +7,7 @@ const nftSchema = new mongoose.Schema({
         trim: true,
         unique: true
     },
+    slug: String,
     duration:{
         type: String,
         required: [true, 'A nft must have a duration'] 
@@ -54,8 +55,53 @@ const nftSchema = new mongoose.Schema({
         select: false
     },
     startDates: [Date],
+    secretNFT:{
+        type: Boolean,
+        default: false
+    },
+},{
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true }
 })
 
+nftSchema.virtual('durationWeeks').get(function(){
+    return this.duration / 7
+})
+
+//Document Middleware: runs before .save() and .create()
+//Moongoose middleware
+nftSchema.pre('save',function(next){
+    this.slug = slugify(this.name, { lower: true });
+    next();
+})
+
+// nftSchema.pre('save',function(next){
+//     console.log('Will save document...');
+//     next();
+// })
+
+// nftSchema.post("save", function(doc, next){
+//     console.log(doc);
+//     next();
+// })
+
+//Query Middleware
+nftSchema.pre(/^find/, function(next){
+    this.find({ secretNFT: { $ne: true } });
+    this.start = Date.now();
+    next();
+})
+
+// nftSchema.pre("findOne", function(next){
+//     this.find({ secretNFT: { $ne: true } });
+//     next();
+// })
+// ------post
+nftSchema.post(/^find/, function(docs, next){
+    console.log(`Query took ${Date.now() - this.start} times`);
+    //console.log(docs);
+    next()
+})
 const NFT = mongoose.model('NFT', nftSchema);
 
 module.exports = NFT;
