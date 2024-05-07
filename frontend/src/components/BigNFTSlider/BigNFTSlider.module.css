@@ -14,7 +14,7 @@
   border-radius: 1rem;
   padding: 2rem;
   z-index: 1111;
-  height: 90vh;
+  height: 100vh;
 }
 .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left h2 {
   font-size: 3rem;
@@ -121,8 +121,7 @@
 }
 .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_right .bigNFTSlider_box_right_box .bigNFTSlider_box_right_box_img {
   border-radius: 2rem;
-  width: 100%; /* Ensure the image fills the container horizontally */
-  height: 100%; /* Ensure the image fills the container vertically */
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
@@ -141,38 +140,38 @@
 }
 
 @media screen and (max-width: 65em) {
-  .bigNFTSlider_box {
+  .bigNFTSlider .bigNFTSlider_box {
     width: 90%;
     padding-top: 28rem;
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  .bigNFTSlider_box .bigNFTSlider_box_left {
+  .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left {
     /* height: 120vh; */
     height: 90vh;
     padding: 1.5rem;
   }
-  .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_creator {
+  .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_creator {
     gap: 1rem;
     grid-template-columns: 1.8fr 1fr;
   }
-  .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_creator .bigNFTSlider_box_left_creator_profile .bigNFTSlider_box_left_creator_profile_info {
+  .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_creator .bigNFTSlider_box_left_creator_profile .bigNFTSlider_box_left_creator_profile_info {
     font-size: 0.8rem;
     line-height: 1;
   }
-  .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_creator .bigNFTSlider_box_left_creator_collection .bigNFTSlider_box_left_creator_collection_icon {
+  .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_creator .bigNFTSlider_box_left_creator_collection .bigNFTSlider_box_left_creator_collection_icon {
     font-size: 1.5rem;
   }
-  .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_creator .bigNFTSlider_box_left_creator_collection .bigNFTSlider_box_left_creator_collection_info {
+  .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_creator .bigNFTSlider_box_left_creator_collection .bigNFTSlider_box_left_creator_collection_info {
     font-size: 0.8rem;
   }
-  .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_bidding .bigNFTSlider_box_left_bidding_box_timer {
+  .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_bidding .bigNFTSlider_box_left_bidding_box_timer {
     gap: 2rem;
   }
-  .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_bidding .bigNFTSlider_box_left_bidding_box_timer .bigNFTSlider_box_left_bidding_box_timer_item p {
+  .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_bidding .bigNFTSlider_box_left_bidding_box_timer .bigNFTSlider_box_left_bidding_box_timer_item p {
     font-size: 1rem;
   }
-  .bigNFTSlider_box .bigNFTSlider_box_right {
+  .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_right {
     margin-top: -70rem;
   }
 }/*# sourceMappingURL=BigNFTSlider.module.css.map */
