@@ -39,11 +39,11 @@
   color: var(--icons-color);
 }
 .collection .collection_box {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1rem;
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 425px) {
