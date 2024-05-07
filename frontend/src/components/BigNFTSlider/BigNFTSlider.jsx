@@ -9,6 +9,7 @@ import { Button } from "../componentsindex";
 
 //IMAGE Import
 import test_img from "../../img/tmp.png";
+import test_img_2 from "../../img/tmp2.jpg";
 
 const BigNFTSlider = () => {
   const [idNumber, setIdNumber] = useState(0);
@@ -38,7 +39,7 @@ const BigNFTSlider = () => {
       price: "0000004 ETH",
       like: 243,
       image: test_img,
-      nftImage: test_img,
+      nftImage: test_img_2,
       time: {
         days: 77,
         hours: 11,
@@ -70,7 +71,7 @@ const BigNFTSlider = () => {
       price: "4664 ETH",
       like: 243,
       image: test_img,
-      nftImage: test_img,
+      nftImage: test_img_2,
       time: {
         days: 87,
         hours: 29,
@@ -89,7 +90,7 @@ const BigNFTSlider = () => {
 
   //Decrease function
   const dec = useCallback(()=>{
-    if (idNumber > 1){
+    if (idNumber > 0){
       setIdNumber(idNumber - 1);
     }
     console.log(idNumber);

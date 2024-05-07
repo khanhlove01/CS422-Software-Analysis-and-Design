@@ -122,6 +122,7 @@
 .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_right .bigNFTSlider_box_right_box .bigNFTSlider_box_right_box_img {
   border-radius: 2rem;
   width: 100%;
+  aspect-ratio: 5/6;
   -o-object-fit: cover;
      object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
@@ -147,8 +148,7 @@
     gap: 1rem;
   }
   .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left {
-    /* height: 120vh; */
-    height: 90vh;
+    height: 110vh;
     padding: 1.5rem;
   }
   .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_creator {
@@ -173,5 +173,6 @@
   }
   .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_right {
     margin-top: -70rem;
+    margin-bottom: 10rem;
   }
 }/*# sourceMappingURL=BigNFTSlider.module.css.map */
