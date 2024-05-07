@@ -14,8 +14,8 @@ const Service = () => {
           <img
             src={test_img}
             alt="Filter & Discover"
-            width={100}
-            height={100}
+            width={150}
+            height={150}
           />
 
           <p className={Style.service_box_item_step}>
@@ -31,8 +31,8 @@ const Service = () => {
           <img
             src={test_img}
             alt="Filter & Discover"
-            width={100}
-            height={100}
+            width={150}
+            height={150}
           />
 
           <p className={Style.service_box_item_step}>
@@ -48,8 +48,8 @@ const Service = () => {
           <img
             src={test_img}
             alt="Connect Wallet"
-            width={100}
-            height={100}
+            width={150}
+            height={150}
           />
 
           <p className={Style.service_box_item_step}>
@@ -65,8 +65,8 @@ const Service = () => {
           <img
             src={test_img}
             alt="Filter & Discover"
-            width={100}
-            height={100}
+            width={150}
+            height={150}
           />
 
           <p className={Style.service_box_item_step}>

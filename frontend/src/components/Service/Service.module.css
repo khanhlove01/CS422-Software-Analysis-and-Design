@@ -19,6 +19,9 @@
   background-color: var(--icons-color);
   color: var(--shadow-dark-color);
 }
+.service .service_box .service_box_item img {
+  border-radius: 1rem;
+}
 
 @media screen and (max-width: 35em) {
   .service {

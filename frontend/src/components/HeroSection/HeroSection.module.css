@@ -20,6 +20,7 @@
 .heroSection .heroSection_box .heroSection_box_right img {
   width: 600px;
   height: 600px;
+  border-radius: 2rem;
 }
 
 @media screen and (max-width: 35em) {
