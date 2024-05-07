@@ -11,7 +11,7 @@ import { Button } from "../componentsindex";
 import test_img from "../../img/tmp.png";
 
 const BigNFTSlider = () => {
-  const [idNumber, setIdNumber] = useState(1);
+  const [idNumber, setIdNumber] = useState(0);
 
   const sliderData = [
     {
@@ -95,9 +95,6 @@ const BigNFTSlider = () => {
     console.log(idNumber);
   }, [idNumber])
 
-  useEffect(()=>{
-    inc();
-  })
 
   return (
     <div className={Style.bigNFTSlider}>
@@ -195,7 +192,7 @@ const BigNFTSlider = () => {
         </div>
         <div className={Style.bigNFTSlider_box_right}>
           <div className={Style.bigNFTSlider_box_right_box}>
-            <img src={sliderData[idNumber].nftImage} alt="NFT Image" />
+            <img src={sliderData[idNumber].nftImage} alt="NFT Image" className={Style.bigNFTSlider_box_right_box_img} />
             <div className={Style.bigNFTSlider_box_right_box_like}>
               <AiFillHeart/>
               <span>{sliderData[idNumber].like}</span>
