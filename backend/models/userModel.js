@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
-const { validate } = require('./nftModel');
+const bcrypt = require('bcryptjs');
 
 //name,email,photo,password,passwordConfirmed
 const userSchema = new mongoose.Schema({
@@ -23,8 +23,23 @@ const userSchema = new mongoose.Schema({
     },
     passwordConfirmed: {
         type: String,
-        required: [true, 'Please confirm your password']
+        required: [true, 'Please confirm your password'],
+        validate:{
+            validator: function(el){
+                return el === this.password;
+            },
+            message: 'Passwords are not the same'
+        }
     }
+});
+
+userSchema.pre('save', async function(next){
+    if(!this.isModified('password')) return next();
+    //HASh the password with cost of 12
+    this.password = await bcrypt.hash(this.password, 12);
+    //Delete the passwordConfirmed field
+    this.passwordConfirmed = undefined;
+    next();
 });
 
 const User = mongoose.model('User', userSchema);
