@@ -1,7 +1,6 @@
 const fs = require("fs")
 const NFT = require('../models/nftModel');
 const APIFeatures = require('../Utils/apiFeatures');
-const { log } = require("console");
 const catchAsync = require("../Utils/catchAsync");
 const AppError = require("../Utils/appError");
 //GET request

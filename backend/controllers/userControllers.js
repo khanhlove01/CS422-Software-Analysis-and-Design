@@ -1,39 +1,47 @@
 const fs = require("fs")
 
 //================ USERS =================
-const getAllUsers = (req,res) => {
-    res.status(500).json({
-        status: 'error',
-        message: 'This route is not yet defined'
-    })
-}
+const User = require('../models/userModel');
+const catchAsync = require("../Utils/catchAsync");
+const AppError = require("../Utils/appError");
+const getAllUsers = catchAsync (async(req,res) => {
+    const users = await User.find();
 
-const createUser = (req,res) => {
-    res.status(500).json({
-        status: 'error',
-        message: 'This route is not yet defined'
+    res.status(200).json({
+        status: 'success',
+        results: users.length,
+        data: {
+            users
+        }
     })
-}
+})
 
-const getSingleUser = (req,res) => {
+const createUser = catchAsync (async(req,res) => {
     res.status(500).json({
         status: 'error',
         message: 'This route is not yet defined'
     })
-}
+})
 
-const updateUser = (req,res) => {
+const getSingleUser = catchAsync (async(req,res) => {
     res.status(500).json({
         status: 'error',
         message: 'This route is not yet defined'
     })
-}
+})
 
-const deleteUser = (req,res) => {
+const updateUser = catchAsync (async(req,res) => {
     res.status(500).json({
         status: 'error',
         message: 'This route is not yet defined'
     })
-}
+})
+
+const deleteUser = catchAsync (async(req,res) => {
+    res.status(500).json({
+        status: 'error',
+        message: 'This route is not yet defined'
+    })
+})
 
 module.exports = {getAllUsers, createUser, getSingleUser, updateUser, deleteUser}
