@@ -1,0 +1,12 @@
+.banner .banner_img_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 35em) {
+  .banner .banner_img_mobile {
+    display: block;
+  }
+  .banner .banner_img {
+    display: none;
+  }
+}/*# sourceMappingURL=Banner.module.css.map */
