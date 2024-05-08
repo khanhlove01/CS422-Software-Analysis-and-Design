@@ -8,13 +8,13 @@ import Style from "./DaysComponents.module.css";
 import test_img from "../../../img/tmp.png";
 import test_img_2 from "../../../img/tmp2.jpg";
 
-const DaysComponents = () => {
+const DaysComponents = ({el, i}) => {
   return (
     <div className={Style.daysComponent}>
       <div className={Style.daysComponent_box}>
         <div className={Style.daysComponent_box_img}>
           <img
-            src={test_img_2}
+            src={el.background}
             className={Style.daysComponent_box_img_img}
             alt="profile background"
           />
@@ -22,7 +22,7 @@ const DaysComponents = () => {
 
         <div className={Style.daysComponent_box_profile}>
           <img
-            src={test_img}
+            src={el.user}
             alt="profile"
             width={160}
             height={160}
@@ -30,7 +30,7 @@ const DaysComponents = () => {
             objectFit="covers"
           />
           <img
-            src={test_img_2}
+            src={el.user}
             alt="profile"
             width={160}
             height={160}
@@ -38,7 +38,7 @@ const DaysComponents = () => {
             objectFit="covers"
           />
           <img
-            src={test_img}
+            src={el.user}
             alt="profile"
             width={160}
             height={160}

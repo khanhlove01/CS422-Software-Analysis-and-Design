@@ -10,8 +10,7 @@ import Style from "./Collection.module.css";
 import DaysComponent from "./DaysComponents/DaysComponents";
 
 //Image Import
-import test_img from "../../img/tmp.png";
-import test_img_2 from "../../img/tmp2.jpg";
+import images from "../../img/index"
 
 
 const Collection = () => {
@@ -19,9 +18,88 @@ const Collection = () => {
   const[following, setFollowing] = useState(false);
   const[news, setNews] = useState(false);
 
-  const CardArray = [1,2,3,4,5,6,7,8];
-  const followingArray = [1,2,3,4];
-  const newsArray = [1,2,3,4,5,6];
+  const CardArray = [
+    {
+      background: images.test_img_2,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+  ];
+  const FollowingArray = [
+    {
+      background: images.test_img_2,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+  ];
+  const NewsArray = [
+    {
+      background: images.test_img_2,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img_2,
+    },
+  ];
   const openPopular = () => {
     if (!popular) {
       setPopular(true);
@@ -74,7 +152,7 @@ const Collection = () => {
 
       {following && (
         <div className={Style.collection_box}>
-          {followingArray.map((el, i) => (
+          {FollowingArray.map((el, i) => (
             <DaysComponent key={i + 1} i={i} el={el} />
           ))}
         </div>
@@ -82,7 +160,7 @@ const Collection = () => {
 
       {news && (
         <div className={Style.collection_box}>
-          {newsArray.map((el, i) => (
+          {NewsArray.map((el, i) => (
             <DaysComponent key={i + 1} i={i} el={el} />
           ))}
         </div>
