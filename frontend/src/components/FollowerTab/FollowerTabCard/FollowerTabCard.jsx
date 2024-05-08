@@ -26,21 +26,18 @@ const FollowerTabCard = ({ i, el }) => {
           #{i + 1} <span>🥇</span>
         </p>
       </div>
-      <div className={Style.FollowerTabCard_box}>
-        <div className={Style.FollowerTabCard_box_img}>
+      <div className={Style.followerTabCard_box}>
+        <div className={Style.followerTabCard_box_img}>
           <img
-            className={Style.FollowerTabCard_box_img_img}
+            className={Style.followerTabCard_box_img_img}
             src={test_img}
             alt="profile braground"
-            width={500}
-            height={300}
-            objectFit="cover"
           />
         </div>
 
-        <div className={Style.FollowerTabCard_box_profile}>
+        <div className={Style.followerTabCard_box_profile}>
           <img
-            className={Style.FollowerTabCard_box_profile_img}
+            className={Style.followerTabCard_box_profile_img}
             alt="profile picture"
             width={50}
             height={50}
@@ -48,8 +45,8 @@ const FollowerTabCard = ({ i, el }) => {
           />
         </div>
 
-        <div className={Style.FollowerTabCard_box_info}>
-          <div className={Style.FollowerTabCard_box_info_name}>
+        <div className={Style.followerTabCard_box_info}>
+          <div className={Style.followerTabCard_box_info_name}>
             <h4>
               NhutThi
               {""}{" "}
@@ -60,7 +57,7 @@ const FollowerTabCard = ({ i, el }) => {
             <p>123 ETH</p>
           </div>
 
-          <div className={Style.FollowerTabCard_box_info_following}>
+          <div className={Style.followerTabCard_box_info_following}>
             {following ? (
               <a onClick={() => followMe()}>
                 Follow{""}{" "}
