@@ -2,11 +2,11 @@ const User = require('../models/userModel');
 const catchAsync = require('../Utils/catchAsync');
 const jwt = require('jsonwebtoken');
 const AppError = require('../Utils/appError');
-
+const { promisify } = require('util');
 //Sign token
 const signToken = id => {
     return jwt.sign({ id }, process.env.JWT_SCERET, {
-        expiresIn: process.env.JWT_EXPIRES_IN
+        expiresIn: '50d'
     });
 }
 //Signup
@@ -67,14 +67,14 @@ const protect = catchAsync(async (req, res, next) => {
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
         token = req.headers.authorization.split(' ')[1];
     }
-    console.log(token);
+    // console.log(token);
     if (!token) {
         return next(new AppError('You are not logged in! Please log in to get access', 401));
     }
 
-    // //2) Verification token
-    // const decoded = await promisify(jwt.verify)(token, process.env.JWT_SCERET);
-
+    //2) Verification token
+    const decoded = await promisify(jwt.verify)(token, process.env.JWT_SCERET);
+    // console.log(decoded);
     // //3) Check if user still exists
     // const currentUser = await User.findById(decoded.id);
     // if (!currentUser) {
