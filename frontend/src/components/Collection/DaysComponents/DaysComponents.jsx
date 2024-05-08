@@ -24,24 +24,24 @@ const DaysComponents = () => {
           <img
             src={test_img}
             alt="profile"
-            width={200}
-            height={200}
+            width={160}
+            height={160}
             className={Style.daysComponent_box_img_1}
             objectFit="covers"
           />
           <img
             src={test_img_2}
             alt="profile"
-            width={200}
-            height={200}
+            width={160}
+            height={160}
             className={Style.daysComponent_box_img_2}
             objectFit="covers"
           />
           <img
             src={test_img}
             alt="profile"
-            width={200}
-            height={200}
+            width={160}
+            height={160}
             className={Style.daysComponent_box_img_3}
             objectFit="covers"
           />
