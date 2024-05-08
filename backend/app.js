@@ -5,10 +5,12 @@ const globalErrorHandler = require("./controllers/errorController")
 const nftsRouter = require("./routes/nftsRoute")
 const usersRouter = require("./routes/usersRoute")
 const rateLimit = require("express-rate-limit")
+const helmet = require("helmet")
 
 const app = express()
-app.use(express.json())
-
+app.use(express.json({limit: '10kb'}))
+//SECURITY HTTP HEADERS
+// app.use(helmet())
 //LIMIT REQUEST FROM THE SAME IP
 const limiter = rateLimit({
     max: 100,
