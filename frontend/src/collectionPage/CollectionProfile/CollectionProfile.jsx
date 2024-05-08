@@ -7,7 +7,7 @@ import {
 } from "react-icons/ti";
 
 //INTERNAL IMPORT
-import Style from "./collectionProfile.module.css";
+import Style from "./CollectionProfile.module.css";
 import images from "../../img/index";
 
 const collectionProfile = () => {
@@ -17,10 +17,10 @@ const collectionProfile = () => {
       <div className={Style.collectionProfile_box}>
         <div className={Style.collectionProfile_box_left}>
           <img
-            src={images.nft_image_1}
+            src={images.test_img_2}
             alt="nft image"
-            width={800}
-            height={800}
+            width={80}
+            height={80}
             className={Style.collectionProfile_box_left_img}
           />
 

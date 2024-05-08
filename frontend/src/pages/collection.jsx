@@ -11,6 +11,7 @@ const Collection = () => {
   return (
     <div className={Style.collection}>
       <Banner bannerImage={images.test_img_2} />
+      <CollectionProfile/>
     </div>
   );
 };
