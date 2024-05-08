@@ -7,8 +7,8 @@ import images from "../../img/index.js"
 
 const Video = () => {
   return (
-    <div className={Style.Video}>
-      <div className={Style.Video_box}>
+    <div className={Style.video}>
+      <div className={Style.video_box}>
         <h1>
           <span>🎬</span> The Videos
         </h1>
@@ -17,19 +17,16 @@ const Video = () => {
           perspectives on just about any topic. Everyone’s welcome.
         </p>
 
-        <div className={Style.Video_box_frame}>
-          <div className={Style.Video_box_frame_left}>
+        <div className={Style.video_box_frame}>
+          <div className={Style.video_box_frame_left}>
             <img
               src={images.test_img_2}
               alt="Video image"
-              width={1920}
-              height={1080}
-              objectFit="cover"
-              className={Style.Video_box_frame_left_img}
+              className={Style.video_box_frame_left_img}
             />
           </div>
 
-          <div className={Style.Video_box_frame_right}>Hey</div>
+          <div className={Style.video_box_frame_right}>Hey</div>
         </div>
       </div>
     </div>
