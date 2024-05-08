@@ -10,7 +10,6 @@ import Filter from "../components/Filter/Filter";
 const Collection = () => {
   return (
     <div className={Style.collection}>
-        Collection
       <Banner bannerImage={images.test_img_2} />
     </div>
   );
