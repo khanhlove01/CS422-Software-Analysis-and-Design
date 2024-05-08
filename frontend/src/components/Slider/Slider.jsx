@@ -53,7 +53,7 @@ const Slider = () => {
           </div>
         </div>
 
-        <motion.div className={Style.slider_box_itmes} ref={dragSlider}>
+        <motion.div className={Style.slider_box_items} ref={dragSlider}>
           <motion.div
             ref={dragSlider}
             className={Style.slider_box_item}
