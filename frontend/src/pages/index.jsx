@@ -12,6 +12,7 @@ import {
   Filter,
   NFTCard,
   Collection,
+  FollowerTab,
 } from "../components/componentsindex";
 
 const Home = () => {
@@ -36,6 +37,7 @@ const Home = () => {
         paragraph="Explore the NFTs in the most featured categories"
       />
       <Category />
+      <FollowerTab/>
       <Subscribe />
     </div>
   );
