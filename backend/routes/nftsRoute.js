@@ -27,6 +27,9 @@ nftsRouter.route('/')
 nftsRouter.route('/:id')
     .get(nftControllers.getSingleNFT)
     .patch(nftControllers.updateNFT)
-    .delete(nftControllers.deleteNFT);
+    .delete(
+        authController.protect,
+        authController.restrictTo("admin","guide") ,
+        nftControllers.deleteNFT);
 
 module.exports = nftsRouter;
