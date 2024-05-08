@@ -13,32 +13,90 @@ import FollowerTabCard from "./FollowerTabCard/FollowerTabCard";
 import test_img from "../../img/tmp.png";
 import test_img_2 from "../../img/tmp2.jpg";
 import images from "../../img/index";
+import { TbBackground } from "react-icons/tb";
 
 const FollowerTab = () => {
   const CardArray = [
-    images.test_img_2,
-    images.test_img,
-    images.test_img_2,
-    images.test_img_2,
-    images.test_img,
-    images.test_img,
-    images.test_img_2,
-    images.test_img,
+    {
+      background: images.test_img_2,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
   ];
   const FollowingArray = [
-    images.test_img_2,
-    images.test_img,
-    images.test_img,
-    images.test_img_2,
-    images.test_img,
-    images.test_img_2,
+    {
+      background: images.test_img_2,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
   ];
   const NewsArray = [
-    images.test_img_2,
-    images.test_img,
-    images.test_img_2,
-    images.test_img_2,
-    images.test_img,
+    {
+      background: images.test_img_2,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img_2,
+    },
+    {
+      background: images.test_img,
+      user: images.test_img,
+    },
+    {
+      background: images.test_img_2,
+      user: images.test_img_2,
+    },
   ];
 
   const [popular, setPopular] = useState(true);

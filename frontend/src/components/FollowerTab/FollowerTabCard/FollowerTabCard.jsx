@@ -29,7 +29,7 @@ const FollowerTabCard = ({ i, el }) => {
         <div className={Style.followerTabCard_box_img}>
           <img
             className={Style.followerTabCard_box_img_img}
-            src={images.test_img_2}
+            src={el.background}
             alt="profile braground"
           />
         </div>
@@ -40,7 +40,7 @@ const FollowerTabCard = ({ i, el }) => {
             alt="profile picture"
             width={80}
             height={80}
-            src={el}
+            src={el.user}
           />
         </div>
 
