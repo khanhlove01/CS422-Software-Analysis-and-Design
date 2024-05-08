@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"Brand.module.css"}
+{"version":3,"sources":["Brand.module.scss","Brand.module.css"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,iBAAA;EACA,mBAAA;ACCF;ADAE;EACE,UAAA;EACA,cAAA;EAEA,aAAA;EACA,gCAAA;EACA,SAAA;EACA,mBAAA;ACCJ;ADCM;EACE,eAAA;EACA,gBAAA;EACA,mBAAA;ACCR;ADCM;EACE,iBAAA;EACA,iBAAA;ACCR;ADCM;EACE,aAAA;EACA,mBAAA;EACA,SAAA;EACA,gBAAA;ACCR;ADCM;EACE,eAAA;ACCR;;ADKA;EAEQ;IACI,0BAAA;ECHV;EDKc;IACI,iBAAA;ECHlB;EDKc;IACI,mBAAA;ECHlB;AACF","file":"Brand.module.css"}
