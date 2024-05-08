@@ -11,7 +11,6 @@ const filterObj = (obj, ...allowedFields) => {
         if(allowedFields.includes(el)) newObj[el] = obj[el];
     })
     return newObj;
-
 }
 
 const updateMe = catchAsync(async (req, res, next) => {
@@ -35,6 +34,15 @@ const updateMe = catchAsync(async (req, res, next) => {
         data: {
             user: updatedUser
         }
+    })
+})
+
+const deleteMe = catchAsync(async (req, res, next) => {
+    await User.findByIdAndUpdate(req.user.id, {active: false});
+
+    res.status(204).json({
+        status: 'success',
+        data: null
     })
 })
 
@@ -78,4 +86,12 @@ const deleteUser = catchAsync (async(req,res) => {
     })
 })
 
-module.exports = {getAllUsers, createUser, getSingleUser, updateUser, deleteUser,updateMe}
+module.exports = {
+    getAllUsers, 
+    createUser, 
+    getSingleUser, 
+    updateUser, 
+    deleteUser,
+    updateMe, 
+    deleteMe
+}
