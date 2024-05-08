@@ -1,6 +1,7 @@
 const express = require('express');
 const nftsRouter = express.Router();
 const nftControllers = require('../controllers/nftControllers');
+const authController = require('../controllers/authController');
 
 //nftsRouter.param('id', nftControllers.checkId);
 
@@ -20,7 +21,7 @@ nftsRouter
 
 //Router NFTs
 nftsRouter.route('/')
-    .get(nftControllers.getAllNfts)
+    .get(authController.protect, nftControllers.getAllNfts)
     .post(nftControllers.createNFT);
 
 nftsRouter.route('/:id')
