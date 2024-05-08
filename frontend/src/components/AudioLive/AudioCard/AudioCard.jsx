@@ -4,6 +4,7 @@ import { TbPlayerPlay, TbPlayerPause } from "react-icons/tb";
 
 //Internal Import
 import Style from "./AudioCard.module.css";
+import LikeProfile from "../../LikeProfile/LikeProfile";
 
 //Image import
 import test_img from "../../../img/tmp.png";
@@ -77,7 +78,7 @@ const AudioCard = () => {
           </div>
 
           <div className={Style.audioCard_box_details_stock}>
-            <div>Like Profile</div>
+            <LikeProfile/>
             <small>24 in stock</small>
           </div>
         </div>

@@ -1,0 +1,11 @@
+.like {
+  display: flex;
+  align-items: flex-start;
+}
+.like .like_box {
+  border: 3px solid var(--icons-color);
+  border-radius: 50%;
+}
+.like .like_box .like_box_img {
+  border-radius: 50%;
+}/*# sourceMappingURL=LikeProfile.module.css.map */

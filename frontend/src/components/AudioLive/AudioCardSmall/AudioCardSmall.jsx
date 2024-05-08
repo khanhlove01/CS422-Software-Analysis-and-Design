@@ -3,7 +3,7 @@ import { TbPlayerPlay, TbPlayerPause } from "react-icons/tb";
 
 //Internal Import
 import Style from "./AudioCardSmall.module.css";
-
+import LikeProfile from "../../LikeProfile/LikeProfile";
 //Image import
 import test_img from "../../../img/tmp.png";
 import test_img_2 from "../../../img/tmp2.jpg";
@@ -32,7 +32,7 @@ const AudioCardSmall = () => {
         <div className={Style.audioPlayer_box_info}>
           <h4>NFT music #1142</h4>
           <div className={Style.audioPlayer_box_info_box}>
-            <div>Like Profile</div>
+            <LikeProfile/>
             <div className={Style.audioPlayer_box_info_box_price}>
               <small>Price</small>
               <p>1.00 ETH</p>
