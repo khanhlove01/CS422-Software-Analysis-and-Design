@@ -6,11 +6,41 @@ import { BsImages } from "react-icons/bs";
 import Style from "./NFTCard.module.css";
 
 //Image Import
-import test_img from "../../img/tmp.png";
-import test_img_2 from "../../img/tmp2.jpg";
+import images from "../../img/index"
 
 const NFTCard = () => {
-  const featureArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const featureArray = [{
+    background: images.test_img_2,
+    user: images.test_img,
+  },
+  {
+    background: images.test_img_2,
+    user: images.test_img_2,
+  },
+  {
+    background: images.test_img,
+    user: images.test_img,
+  },
+  {
+    background: images.test_img_2,
+    user: images.test_img,
+  },
+  {
+    background: images.test_img,
+    user: images.test_img_2,
+  },
+  {
+    background: images.test_img,
+    user: images.test_img,
+  },
+  {
+    background: images.test_img_2,
+    user: images.test_img_2,
+  },
+  {
+    background: images.test_img,
+    user: images.test_img,
+  },];
   const [like, setLike] = useState(true);
 
   const likeNft = () => {
@@ -26,7 +56,7 @@ const NFTCard = () => {
         <div className={Style.NFTCard_box} key={i + 1}>
           <div className={Style.NFTCard_box_img}>
             <img
-              src={test_img_2}
+              src={el.background}
               alt="NFT images"
               className={Style.NFTCard_box_img_img}
             />
