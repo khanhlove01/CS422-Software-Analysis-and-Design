@@ -77,7 +77,6 @@ const NavBar = () => {
 
   return (
     <div className={Style.navbar}>
-      <div>Navbar</div>
       <div className={Style.navbar_container}>
         <div className={Style.navbar_container_left}>
           <div className={Style.logo}>
