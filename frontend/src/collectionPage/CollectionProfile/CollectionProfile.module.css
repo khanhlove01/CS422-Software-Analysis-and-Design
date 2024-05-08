@@ -85,4 +85,67 @@
 }
 .collectionProfile .collectionProfile_box .collectionProfile_box_middle .collectionProfile_box_middle_box .collectionProfile_box_middle_box_item span {
   color: var(--icons-color);
+}
+
+@media screen and (max-width: 35em) {
+  .collectionProfile .collectionProfile_box {
+    width: 90%;
+    grid-template-columns: 1fr;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle {
+    padding: 1rem;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle h1 {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle p {
+    line-height: 1.3;
+    width: 100%;
+    margin-top: -0.5rem;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle .collectionProfile_box_middle_box {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle .collectionProfile_box_middle_box .collectionProfile_box_middle_box_item {
+    line-height: 0;
+    padding: 2rem 1rem;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle .collectionProfile_box_middle_box .collectionProfile_box_middle_box_item p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .collectionProfile .collectionProfile_box {
+    width: 90%;
+    grid-template-columns: 1fr;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle {
+    padding: 1rem;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle h1 {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle p {
+    line-height: 1.3;
+    width: 100%;
+    margin-top: -0.5rem;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle .collectionProfile_box_middle_box {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle .collectionProfile_box_middle_box .collectionProfile_box_middle_box_item {
+    line-height: 0;
+    padding: 2rem 1rem;
+  }
+  .collectionProfile .collectionProfile_box .collectionProfile_box_middle .collectionProfile_box_middle_box .collectionProfile_box_middle_box_item p {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=CollectionProfile.module.css.map */
