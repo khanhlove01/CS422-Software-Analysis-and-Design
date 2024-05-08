@@ -150,12 +150,16 @@ const updateNFT = catchAsync(async (req,res,next) => {
 
 //Delete method
 const deleteNFT = catchAsync(async (req,res,next) => {
+    // console.log('====================================');
+    // console.log("hello");
+    // console.log('====================================');
     const nft = await NFT.findByIdAndDelete(req.params.id);
     if(!nft){
         return next(new AppError('NFT not found with that id!', 404));
     }
-    res.status(204).json({
+    res.status(201).json({
         status: 'success',
+        message: 'NFT deleted successfully!',
         data: null
     })   
     // try {
