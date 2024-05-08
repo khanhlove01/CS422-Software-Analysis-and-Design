@@ -38,9 +38,12 @@
       margin-top: -2rem;
       position: relative;
       .followerTabCard_box_profile_img {
+        position: relative;
         border-radius: 50%;
         padding: 1rem;
-        z-index: 222;
+        z-index: 22222;
+        margin-top: -1.2rem;
+        margin-right: -0.3rem;
       }
     }
     .followerTabCard_box_profile::before {

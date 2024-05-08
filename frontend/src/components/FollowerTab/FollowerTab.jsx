@@ -12,11 +12,34 @@ import FollowerTabCard from "./FollowerTabCard/FollowerTabCard";
 //Image Import
 import test_img from "../../img/tmp.png";
 import test_img_2 from "../../img/tmp2.jpg";
+import images from "../../img/index";
 
 const FollowerTab = () => {
-  const CardArray = [1, 2, 3, 4, 5, 6, 7, 8];
-  const FollowingArray = [1, 2, 3, 4, 5, 6];
-  const NewsArray = [1, 2, 3, 4, 5];
+  const CardArray = [
+    images.test_img_2,
+    images.test_img,
+    images.test_img_2,
+    images.test_img_2,
+    images.test_img,
+    images.test_img,
+    images.test_img_2,
+    images.test_img,
+  ];
+  const FollowingArray = [
+    images.test_img_2,
+    images.test_img,
+    images.test_img,
+    images.test_img_2,
+    images.test_img,
+    images.test_img_2,
+  ];
+  const NewsArray = [
+    images.test_img_2,
+    images.test_img,
+    images.test_img_2,
+    images.test_img_2,
+    images.test_img,
+  ];
 
   const [popular, setPopular] = useState(true);
   const [following, setFollowing] = useState(false);
