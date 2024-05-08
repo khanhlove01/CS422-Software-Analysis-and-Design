@@ -10,7 +10,7 @@ import test_img from "../../img/tmp.png";
 import test_img_2 from "../../img/tmp2.jpg";
 
 const Slider = () => {
-  const sliderArray = [1, 2, 3, 4, 5, 6, 7];
+  const sliderArray = [1, 2, 3, 4, 5, 6];
   const [width, setWidth] = useState(0);
   const dragSlider = useRef();
 
