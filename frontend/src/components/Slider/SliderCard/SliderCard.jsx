@@ -5,9 +5,6 @@ import { motion } from "framer-motion";
 import Style from "./SliderCard.module.css";
 import LikeProfile from "../../LikeProfile/LikeProfile";
 
-//Image import
-import test_img from "../../../img/tmp.png";
-import test_img_2 from "../../../img/tmp2.jpg";
 
 const SliderCard = ({ el, i }) => {
   return (
@@ -15,7 +12,7 @@ const SliderCard = ({ el, i }) => {
       <div className={Style.sliderCard_box}>
         <motion.div className={Style.sliderCard_box_img}>
           <img
-            src={test_img_2}
+            src={el.background}
             className={Style.sliderCard_box_img_img}
             alt="slider profile"
             objectFit="cover"

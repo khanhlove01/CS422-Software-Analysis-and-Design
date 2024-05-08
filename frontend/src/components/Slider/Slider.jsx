@@ -6,11 +6,33 @@ import { motion } from "framer-motion";
 import Style from "./Slider.module.css";
 import SliderCard from "./SliderCard/SliderCard";
 //Image import
-import test_img from "../../img/tmp.png";
-import test_img_2 from "../../img/tmp2.jpg";
+import images from "../../img/index"
 
 const Slider = () => {
-  const sliderArray = [1, 2, 3, 4, 5, 6];
+  const sliderArray = [{
+    background: images.test_img_2,
+    user: images.test_img_2,
+  },
+  {
+    background: images.test_img,
+    user: images.test_img,
+  },
+  {
+    background: images.test_img_2,
+    user: images.test_img,
+  },
+  {
+    background: images.test_img,
+    user: images.test_img_2,
+  },
+  {
+    background: images.test_img,
+    user: images.test_img,
+  },
+  {
+    background: images.test_img_2,
+    user: images.test_img_2,
+  },];
   const [width, setWidth] = useState(0);
   const dragSlider = useRef();
 
