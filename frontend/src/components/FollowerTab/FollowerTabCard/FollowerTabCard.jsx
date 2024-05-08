@@ -3,25 +3,25 @@ import { MdVerified } from "react-icons/md";
 import { TiTick } from "react-icons/ti";
 
 //Internal Import
-import Style from "./FollowerTabCard.module.css"
+import Style from "./FollowerTabCard.module.css";
 
 //Image Import
 import test_img from "../../../img/tmp.png";
 import test_img_2 from "../../../img/tmp2.jpg";
 
-const FollowerTabCard = ({i, el}) => {
-    const [following, setFollowing] = useState(false);
+const FollowerTabCard = ({ i, el }) => {
+  const [following, setFollowing] = useState(false);
 
-    const followMe = () => {
-        if (!following) {
-          setFollowing(true);
-        } else {
-          setFollowing(false);
-        }
-      };
+  const followMe = () => {
+    if (!following) {
+      setFollowing(true);
+    } else {
+      setFollowing(false);
+    }
+  };
   return (
     <div className={Style.followerTabCard}>
-        <div className={Style.followerTabCard_rank}>
+      <div className={Style.followerTabCard_rank}>
         <p>
           #{i + 1} <span>🥇</span>
         </p>
@@ -75,7 +75,7 @@ const FollowerTabCard = ({i, el}) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FollowerTabCard
+export default FollowerTabCard;

@@ -15,9 +15,9 @@
   margin-bottom: 1rem;
 }
 .daysComponent .daysComponent_box .daysComponent_box_profile {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
 }
 .daysComponent .daysComponent_box .daysComponent_box_profile .daysComponent_box_img_1 {
   border-bottom-left-radius: 1rem;
