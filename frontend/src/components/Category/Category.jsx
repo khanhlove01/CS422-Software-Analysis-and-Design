@@ -5,18 +5,48 @@ import { BsCircleFill } from "react-icons/bs";
 import Style from "./Category.module.css";
 
 //Image Import
-import test_img from "../../img/tmp.png";
-import test_img_2 from "../../img/tmp2.jpg";
+import images from "../../img/index"
 
 const Category = () => {
-  const CategoryArray = [1, 2, 3, 4, 5, 6];
+  const CategoryArray = [{
+    background: images.test_img_2,
+    user: images.test_img,
+  },
+  {
+    background: images.test_img_2,
+    user: images.test_img_2,
+  },
+  {
+    background: images.test_img,
+    user: images.test_img,
+  },
+  {
+    background: images.test_img_2,
+    user: images.test_img,
+  },
+  {
+    background: images.test_img,
+    user: images.test_img_2,
+  },
+  {
+    background: images.test_img,
+    user: images.test_img,
+  },
+  {
+    background: images.test_img_2,
+    user: images.test_img_2,
+  },
+  {
+    background: images.test_img,
+    user: images.test_img,
+  },];
   return (
     <div className={Style.container_category}>
       <div className={Style.category}>
         {CategoryArray.map((el, i) => (
           <div className={Style.category_box} key={i + 1}>
             <img
-              src={test_img_2}
+              src={el.background}
               className={Style.category_box_img}
               alt="Background image"
               
