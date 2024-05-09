@@ -6,6 +6,7 @@ import { NavBar, Footer } from './components/componentsindex';
 import './styles/global.css';
 import Author from './pages/author';
 import SearchPage from "./pages/searchPage"
+import LoginPage from './pages/loginPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/collection' element={<Collection/>} />
         <Route path='/author' element={<Author/>} />
         <Route path='/search-page' element={<SearchPage/>} />
+        <Route path='/login' element={<LoginPage/>} />
       </Routes>
       <Footer />
     </div>
