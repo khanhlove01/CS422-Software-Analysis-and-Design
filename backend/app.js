@@ -6,8 +6,10 @@ const nftsRouter = require("./routes/nftsRoute")
 const usersRouter = require("./routes/usersRoute")
 const rateLimit = require("express-rate-limit")
 const helmet = require("helmet")
+const cors = require('cors');
 
 const app = express()
+app.use(cors());
 app.use(express.json({limit: '10kb'}))
 //SECURITY HTTP HEADERS
 // app.use(helmet())
