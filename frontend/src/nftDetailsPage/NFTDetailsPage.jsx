@@ -1,9 +1,9 @@
 import React from 'react'
 
-const nftDetailPage = () => {
+const NFTDetailsPage = () => {
   return (
     <div>nftDetailPage</div>
   )
 }
 
-export default nftDetailPage
+export default NFTDetailsPage

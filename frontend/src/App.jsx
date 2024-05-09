@@ -7,6 +7,7 @@ import './styles/global.css';
 import Author from './pages/author';
 import SearchPage from "./pages/searchPage"
 import LoginPage from './pages/loginPage';
+import NFTDetails from './pages/nftDetails';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/author' element={<Author/>} />
         <Route path='/search-page' element={<SearchPage/>} />
         <Route path='/login' element={<LoginPage/>} />
+        <Route path='/NFT-details' element={<NFTDetails/>} />
       </Routes>
       <Footer />
     </div>
