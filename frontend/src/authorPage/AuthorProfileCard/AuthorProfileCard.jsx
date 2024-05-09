@@ -61,7 +61,7 @@ const AuthorProfileCard = () => {
           </h2>
 
           <div className={Style.authorProfileCard_box_info_address}>
-            <input type="text"  id="myInput" />
+            <input type="text" value={"0x105931069813069"}  id="myInput" />
             <FiCopy
               onClick={() => copyAddress()}
               className={Style.authorProfileCard_box_info_address_icon}
