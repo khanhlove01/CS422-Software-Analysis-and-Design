@@ -4,6 +4,7 @@ import Home from './pages';
 import Collection from './pages/collection';
 import { NavBar, Footer } from './components/componentsindex';
 import './styles/global.css';
+import Author from './pages/author';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/collection' element={<Collection/>} />
+        <Route path='/author' element={<Author/>} />
       </Routes>
       <Footer />
     </div>
