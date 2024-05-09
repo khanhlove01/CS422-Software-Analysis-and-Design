@@ -165,7 +165,7 @@ const NFTDescription = () => {
           <div className={Style.NFTDescription_box_profile_box}>
             <div className={Style.NFTDescription_box_profile_box_left}>
               <img
-                src={images.user1}
+                src={images.test_img_2}
                 alt="profile"
                 width={40}
                 height={40}
@@ -184,11 +184,11 @@ const NFTDescription = () => {
 
             <div className={Style.NFTDescription_box_profile_box_right}>
               <img
-                src={images.creatorbackground1}
+                src={images.test_img}
                 alt="profile"
                 width={40}
                 height={40}
-                className={Style.NFTDescription_box_profile_box_left_img}
+                className={Style.NFTDescription_box_profile_box_right_img}
               />
 
               <div className={Style.NFTDescription_box_profile_box_right_info}>
