@@ -11,7 +11,7 @@ const Discover = () => {
     },
     {
       name: "Search",
-      link: "search",
+      link: "search-page",
     },
     {
       name: "Author Profile",
