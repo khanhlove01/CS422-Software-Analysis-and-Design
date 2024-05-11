@@ -20,7 +20,7 @@ const Account = () => {
 
       <div className={Style.account_box}>
         <div className={Style.account_box_img}>
-          <input />
+          {/* <input /> */}
           <img
             src={images.test_img_2}
             alt="account upload"
