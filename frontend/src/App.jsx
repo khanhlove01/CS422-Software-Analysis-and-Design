@@ -8,6 +8,7 @@ import Author from './pages/author';
 import SearchPage from "./pages/searchPage"
 import LoginPage from './pages/loginPage';
 import NFTDetails from './pages/nftDetails';
+import Account from './pages/account';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/search-page' element={<SearchPage/>} />
         <Route path='/login' element={<LoginPage/>} />
         <Route path='/NFT-details' element={<NFTDetails/>} />
+        <Route path='/account' element={<Account/>} />
       </Routes>
       <Footer />
     </div>
