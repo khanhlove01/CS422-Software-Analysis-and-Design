@@ -8,6 +8,15 @@ import Form from "../accountPage/Form/Form";
 
 const Account = () => {
   const [fileUrl, setFileUrl] = useState(null);
+  const onDrop = useCallback(async (acceptedFile) => {
+    setFileUrl(acceptedFile[0]);
+  }, []);
+
+  const { getRootProps, getInputProps } = useDropzone({
+    onDrop,
+    accept: "image/*",
+    maxSize: 5000000,
+  });
   return (
     <div className={Style.account}>
       <div className={Style.account_info}>
@@ -19,8 +28,8 @@ const Account = () => {
       </div>
 
       <div className={Style.account_box}>
-        <div className={Style.account_box_img}>
-          {/* <input /> */}
+        <div className={Style.account_box_img} {...getRootProps()}>
+        <input {...getInputProps()} />
           <img
             src={images.test_img_2}
             alt="account upload"
