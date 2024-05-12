@@ -13,6 +13,7 @@ import UploadNFTPage from './pages/uploadNFTPage';
 import ConnectWalletPage from './pages/connectWalletPage';
 import ContactUsPage from './pages/contactUsPage';
 import SignUpPage from './pages/signUpPage';
+import AboutUsPage from './pages/aboutUsPage';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path='/connect-wallet' element={<ConnectWalletPage/>} />
         <Route path='/contact-us' element={<ContactUsPage/>} />
         <Route path='/sign-up' element={<SignUpPage/>} />
+        <Route path='/about-us' element={<AboutUsPage/>} />
       </Routes>
       <Footer />
     </div>
