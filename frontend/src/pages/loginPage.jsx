@@ -1,12 +1,21 @@
-import React from 'react'
-import { LoginForm } from '../loginPage/loginIndex'
+import React from "react";
 
-const LoginPage = () => {
+//INTERNAL IMPORT
+import Style from "../styles/login.module.css";
+import LoginAndSignUp from "../loginAndSignUp/LoginAndSignUp";
+
+const loginPage = () => {
   return (
-    <div>
-        <LoginForm/>
+    <div className={Style.login}>
+      <div className={Style.login_box}>
+        <h1>Login</h1>
+        <LoginAndSignUp />
+        <p className={Style.login_box_para}>
+          New user? <a href="#">Create an account</a>
+        </p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default LoginPage
+export default loginPage;
