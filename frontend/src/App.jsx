@@ -14,6 +14,7 @@ import ConnectWalletPage from './pages/connectWalletPage';
 import ContactUsPage from './pages/contactUsPage';
 import SignUpPage from './pages/signUpPage';
 import AboutUsPage from './pages/aboutUsPage';
+import SubscriptionPage from './pages/subscriptionPage';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path='/contact-us' element={<ContactUsPage/>} />
         <Route path='/sign-up' element={<SignUpPage/>} />
         <Route path='/about-us' element={<AboutUsPage/>} />
+        <Route path='/subscription' element={<SubscriptionPage/>} />
       </Routes>
       <Footer />
     </div>
