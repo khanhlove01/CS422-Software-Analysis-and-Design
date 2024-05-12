@@ -69,20 +69,20 @@ const UploadNFT = (uploadToIPFS, createNFT) => {
       />
 
       <div className={Style.upload_box}>
-        <div className={formStyle.Form_box_input}>
+        <div className={Style.upload_box_input}>
           <label htmlFor="nft">Item Name</label>
           <input
             type="text"
             placeholder="shoaib bhai"
-            className={formStyle.Form_box_input_userName}
+            className={Style.upload_box_input_userName}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
 
-        <div className={formStyle.Form_box_input}>
+        <div className={Style.upload_box_input}>
           <label htmlFor="website">Website</label>
-          <div className={formStyle.Form_box_input_box}>
-            <div className={formStyle.Form_box_input_box_icon}>
+          <div className={Style.upload_box_input_box}>
+            <div className={Style.upload_box_input_box_icon}>
               <MdOutlineHttp />
             </div>
 
@@ -100,7 +100,7 @@ const UploadNFT = (uploadToIPFS, createNFT) => {
           </p>
         </div>
 
-        <div className={formStyle.Form_box_input}>
+        <div className={Style.upload_box_input}>
           <label htmlFor="description">Description</label>
           <textarea
             name=""
@@ -116,7 +116,7 @@ const UploadNFT = (uploadToIPFS, createNFT) => {
           </p>
         </div>
 
-        <div className={formStyle.Form_box_input}>
+        <div className={Style.upload_box_input}>
           <label htmlFor="name">Choose collection</label>
           <p className={Style.upload_box_input_para}>
             Choose an exiting collection or create a new one
@@ -151,11 +151,11 @@ const UploadNFT = (uploadToIPFS, createNFT) => {
           </div>
         </div>
 
-        <div className={formStyle.Form_box_input_social}>
-          <div className={formStyle.Form_box_input}>
+        <div className={Style.upload_box_input_social}>
+          <div className={Style.upload_box_input}>
             <label htmlFor="Royalties">Royalties</label>
-            <div className={formStyle.Form_box_input_box}>
-              <div className={formStyle.Form_box_input_box_icon}>
+            <div className={Style.upload_box_input_box}>
+              <div className={Style.upload_box_input_box_icon}>
                 <FaPercent />
               </div>
               <input
@@ -165,10 +165,10 @@ const UploadNFT = (uploadToIPFS, createNFT) => {
               />
             </div>
           </div>
-          <div className={formStyle.Form_box_input}>
+          <div className={Style.upload_box_input}>
             <label htmlFor="size">Size</label>
-            <div className={formStyle.Form_box_input_box}>
-              <div className={formStyle.Form_box_input_box_icon}>
+            <div className={Style.upload_box_input_box}>
+              <div className={Style.upload_box_input_box_icon}>
                 <MdOutlineAttachFile />
               </div>
               <input
@@ -178,10 +178,10 @@ const UploadNFT = (uploadToIPFS, createNFT) => {
               />
             </div>
           </div>
-          <div className={formStyle.Form_box_input}>
+          <div className={Style.upload_box_input}>
             <label htmlFor="Propertie">Propertie</label>
-            <div className={formStyle.Form_box_input_box}>
-              <div className={formStyle.Form_box_input_box_icon}>
+            <div className={Style.upload_box_input_box}>
+              <div className={Style.upload_box_input_box_icon}>
                 <AiTwotonePropertySafety />
               </div>
               <input
@@ -192,10 +192,10 @@ const UploadNFT = (uploadToIPFS, createNFT) => {
             </div>
           </div>
 
-          <div className={formStyle.Form_box_input}>
+          <div className={Style.upload_box_input}>
             <label htmlFor="Price">Price</label>
-            <div className={formStyle.Form_box_input_box}>
-              <div className={formStyle.Form_box_input_box_icon}>
+            <div className={Style.upload_box_input_box}>
+              <div className={Style.upload_box_input_box_icon}>
                 <AiTwotonePropertySafety />
               </div>
               <input
