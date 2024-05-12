@@ -73,4 +73,14 @@
   border: 0;
   background-color: transparent;
   outline: none;
+}
+
+@media screen and (max-width: 35em) {
+  .contactus .contactus_box {
+    width: 90%;
+  }
+  .contactus .contactus_box .contactus_box_box {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }/*# sourceMappingURL=contactUsPage.module.css.map */

@@ -30,19 +30,19 @@
         }
       }
       .contactus_box_box_right {
-        .button{
-            margin-top: 2rem;
+        .button {
+          margin-top: 2rem;
         }
         .contactus_box_input {
           margin-top: 2rem;
-          textarea{
+          textarea {
             width: 100%;
             background-color: transparent;
             outline: none;
             border-radius: 1rem;
             padding: 1rem;
             border: 1px solid var(--icons-color);
-        }
+          }
           .contactus_box_input_userName {
             width: 100%;
             border: 1px solid var(--icons-color);
@@ -74,9 +74,20 @@
               background-color: transparent;
               outline: none;
             }
-            
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 35em) {
+  .contactus {
+    .contactus_box {
+      width: 90%;
+      .contactus_box_box {
+        grid-template-columns: 1fr;
+        gap: 1rem;
       }
     }
   }
