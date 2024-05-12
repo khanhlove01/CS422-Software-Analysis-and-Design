@@ -10,6 +10,7 @@ import LoginPage from './pages/loginPage';
 import NFTDetails from './pages/nftDetails';
 import Account from './pages/account';
 import UploadNFTPage from './pages/uploadNFTPage';
+import ConnectWalletPage from './pages/connectWalletPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/NFT-details' element={<NFTDetails/>} />
         <Route path='/account' element={<Account/>} />
         <Route path='/upload-NFT' element={<UploadNFTPage/>} />
+        <Route path='/connect-wallet' element={<ConnectWalletPage/>} />
       </Routes>
       <Footer />
     </div>
