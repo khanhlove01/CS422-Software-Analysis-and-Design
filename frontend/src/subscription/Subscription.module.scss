@@ -4,11 +4,10 @@
     border-radius: 1rem;
     position: relative;
     transition:  all .3s ease-in;
+    
     cursor: pointer;
     .SubscriptionBox_box{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        
         .SubscriptionBox_box_container{
             .SubscriptionBox_box_span{
                 font-size: 2rem;
