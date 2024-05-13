@@ -37,7 +37,7 @@ function App() {
         <Route path='/about-us' element={<AboutUsPage/>} />
         <Route path='/subscription' element={<SubscriptionPage/>} />
         <Route path='/forget-password' element={<ForgetPasswordPage/>} />
-        <Route path='/reset-password' element={<ResetPasswordPage/>} />
+        <Route path='/resetPassword' element={<ResetPasswordPage/>} />
       </Routes>
       <Footer />
     </div>
