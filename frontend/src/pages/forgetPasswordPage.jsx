@@ -22,6 +22,7 @@ const handleForgetPassword = async (e) => {
       })
       e.preventDefault();
       console.log("Sent successful!");
+      console.log(response.data.data);
     } catch (error) {
       console.log(error);
     }
