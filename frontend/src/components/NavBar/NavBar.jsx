@@ -67,26 +67,28 @@ const NavBar = () => {
 
   const openSideBar = () => {
     console.log(openSideMenu);
-    if (!openSideMenu){
+    if (!openSideMenu) {
       setOpenSideMenu(true);
-    }
-    else{
+    } else {
       setOpenSideMenu(false);
     }
-  }
+  };
 
   return (
     <div className={Style.navbar}>
       <div className={Style.navbar_container}>
         <div className={Style.navbar_container_left}>
-          <div className={Style.logo}>
-            <img
-              src="https://cdn-teams-slug.flaticon.com/google.jpg"
-              alt="NFF MARKET PLACE"
-              width={100}
-              height={100}
-            />
-          </div>
+          <Link to={"/"}>
+            <div className={Style.logo}>
+              <img
+                src="https://cdn-teams-slug.flaticon.com/google.jpg"
+                alt="NFF MARKET PLACE"
+                width={100}
+                height={100}
+              />
+            </div>
+          </Link>
+
           <div className={Style.navbar_container_left_box_input}>
             <div className={Style.navbar_container_left_box_input_box}>
               <input type="text" placeholder="Search NFT" />
@@ -128,7 +130,9 @@ const NavBar = () => {
           {/* Create button section */}
           <div className={Style.navbar_container_right_button}>
             {/* <Button btnText="Create" /> */}
-            <Button btnName="Create" handleClick={()=>{}}/>
+            <Link to={"/upload-nft"}>
+              <Button btnName="Create" handleClick={() => {}} />
+            </Link>
           </div>
 
           {/* Profile section */}
@@ -158,13 +162,11 @@ const NavBar = () => {
       </div>
 
       {/* Sidebar component */}
-      {
-        openSideMenu && ( 
-          <div className={Style.sideBar}>
-            <SideBar setOpenSideMenu={setOpenSideMenu}/>
-          </div>
-        )
-      }
+      {openSideMenu && (
+        <div className={Style.sideBar}>
+          <SideBar setOpenSideMenu={setOpenSideMenu} />
+        </div>
+      )}
     </div>
   );
 };

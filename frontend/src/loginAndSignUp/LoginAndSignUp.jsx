@@ -24,31 +24,7 @@ const LoginAndSignUp = () => {
     ];
     return (
       <div className={Style.user}>
-        <div className={Style.user_box}>
-          <div className={Style.user_box_social}>
-            {socialImage.map((el, i) => (
-              <div
-                key={i + 1}
-                onClick={() => setActiveBtn(i + 1)}
-                className={`${Style.user_box_social_item} ${
-                  activeBtn == i + 1 ? Style.active : ""
-                }`}
-              >
-                <img
-                  src={el.social}
-                  alt={el.name}
-                  width={30}
-                  height={30}
-                  className={Style.user_box_social_item_img}
-                />
-                <p>
-                  <span>{el.name}</span>
-                </p>
-              </div>
-            ))}
-          </div>
-          <p className={Style.user_box_or}>OR</p>
-  
+        <div className={Style.user_box}>  
           <div className={Style.user_box_input}>
             <div className={Style.user_box_input_box}>
               <label htmlFor="email">Email address</label>
