@@ -8,7 +8,7 @@
       display: flex;
       justify-content: center;
       .daysComponent_box_img_img {
-        width: 500px;
+        width: 100%;
         height: 300px;
         border-radius: 1rem;
         margin-bottom: 1rem;
@@ -19,6 +19,9 @@
       justify-content: space-between;
       //grid-template-columns: repeat(3, 1fr);
       gap: 0.25rem;
+      img{
+        width: 32%;
+      }
       .daysComponent_box_img_1 {
         border-bottom-left-radius: 1rem;
       }

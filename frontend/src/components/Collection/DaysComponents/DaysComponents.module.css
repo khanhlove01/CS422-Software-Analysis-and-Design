@@ -9,7 +9,7 @@
   justify-content: center;
 }
 .daysComponent .daysComponent_box .daysComponent_box_img .daysComponent_box_img_img {
-  width: 500px;
+  width: 100%;
   height: 300px;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -18,6 +18,9 @@
   display: flex;
   justify-content: space-between;
   gap: 0.25rem;
+}
+.daysComponent .daysComponent_box .daysComponent_box_profile img {
+  width: 32%;
 }
 .daysComponent .daysComponent_box .daysComponent_box_profile .daysComponent_box_img_1 {
   border-bottom-left-radius: 1rem;
