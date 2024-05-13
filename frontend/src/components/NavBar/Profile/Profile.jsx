@@ -1,13 +1,14 @@
 import React from "react";
-
+import { useContext } from "react";
 import { FaUserAlt, FaRegImage, FaUserEdit } from "react-icons/fa";
 import { MdHelpCenter } from "react-icons/md";
 import { TbDownloadOff, TbDownload } from "react-icons/tb";
-
+import { AuthContext } from "../../../context/authContext";
 //Internal import
 import Style from "./Profile.module.css";
 
 const Profile = () => {
+  const { currentUser, login, logout } = useContext(AuthContext);
   return (
     <div className={Style.profile}>
       <div className={Style.profile_account}>
@@ -55,7 +56,7 @@ const Profile = () => {
           <div className={Style.profile_menu_one_item}>
             <TbDownload />
             <p>
-              <a href="./logout">Logout</a>
+              <a href="./login" onClick={logout}>Logout</a>
             </p>
           </div>
         </div>
