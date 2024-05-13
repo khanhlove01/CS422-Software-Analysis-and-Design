@@ -42,20 +42,6 @@ const loginPage = () => {
     }
   };
 
-  const socialImage = [
-    {
-      social: images.test_img,
-      name: "Continue with Facebook",
-    },
-    {
-      social: images.test_img_2,
-      name: "Continue with twitter",
-    },
-    {
-      social: images.test_img_3,
-      name: "Continue with Facebook",
-    },
-  ];
   return (
     <div className={Style.login}>
       <div className={Style.login_box}>

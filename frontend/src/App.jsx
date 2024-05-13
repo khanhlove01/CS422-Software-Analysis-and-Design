@@ -15,6 +15,7 @@ import ContactUsPage from './pages/contactUsPage';
 import SignUpPage from './pages/signUpPage';
 import AboutUsPage from './pages/aboutUsPage';
 import SubscriptionPage from './pages/subscriptionPage';
+import ForgetPasswordPage from './pages/forgetPasswordPage';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path='/sign-up' element={<SignUpPage/>} />
         <Route path='/about-us' element={<AboutUsPage/>} />
         <Route path='/subscription' element={<SubscriptionPage/>} />
+        <Route path='/forget-password' element={<ForgetPasswordPage/>} />
       </Routes>
       <Footer />
     </div>
