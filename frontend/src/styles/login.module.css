@@ -82,7 +82,7 @@
   display: flex;
   justify-content: space-between;
   line-height: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .login .login_box .user .user_box .user_box_input .user_box_input_box input {
   padding: 1rem;

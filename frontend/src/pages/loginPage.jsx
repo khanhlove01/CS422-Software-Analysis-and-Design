@@ -68,7 +68,7 @@ const loginPage = () => {
                   htmlFor="email"
                   className={Style.user_box_input_box_label}
                 >
-                  Email address
+                  <p>Email address</p>
                 </label>
                 <input type="email" placeholder="example@emample.com" />
               </div>
