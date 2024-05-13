@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .navbar {
   width: 100%;
   padding-block: 1.5rem;
@@ -17,6 +18,11 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
+}
+.navbar .navbar_container .navbar_container_left .logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
 }
 .navbar .navbar_container .navbar_container_left .navbar_container_left_box_input_box {
   width: 60%;

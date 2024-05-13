@@ -80,12 +80,7 @@ const NavBar = () => {
         <div className={Style.navbar_container_left}>
           <Link to={"/"}>
             <div className={Style.logo}>
-              <img
-                src="https://cdn-teams-slug.flaticon.com/google.jpg"
-                alt="NFF MARKET PLACE"
-                width={100}
-                height={100}
-              />
+              <p>NFTMarketplace</p>
             </div>
           </Link>
 
