@@ -1,11 +1,16 @@
 import React from "react";
-
+import { useState } from "react";
 //Internal Import
 import Style from "../styles/login.module.css";
 import { Button } from "../components/componentsindex";
 import images from "../img/index";
 
 const SignUpPage = () => {
+  const [checkToast, setCheckToast] = useState(false);
+  const [inputs, setInputs] = useState({
+    username: "",
+    password: "",
+  });
   return (
     <div className={Style.login}>
       <div className={Style.login_box}>
