@@ -55,7 +55,7 @@ const Profile = () => {
           <div className={Style.profile_menu_one_item}>
             <TbDownload />
             <p>
-              <a href="./Disconnect">Disconnect</a>
+              <a href="./logout">Logout</a>
             </p>
           </div>
         </div>
