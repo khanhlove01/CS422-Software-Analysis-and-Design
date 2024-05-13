@@ -26,7 +26,7 @@ const Video = () => {
             />
           </div>
 
-          <div className={Style.video_box_frame_right}>Hey</div>
+          <div className={Style.video_box_frame_right}></div>
         </div>
       </div>
     </div>

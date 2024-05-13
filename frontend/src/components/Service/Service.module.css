@@ -16,8 +16,8 @@
 .service .service_box .service_box_item .service_box_item_step span {
   padding: 0.5rem 1.5rem;
   border-radius: 5rem;
-  background-color: var(--icons-color);
-  color: var(--shadow-dark-color);
+  background-color: var(--icons-bg-color);
+  color: var(--icons-color);
 }
 .service .service_box .service_box_item img {
   border-radius: 1rem;
