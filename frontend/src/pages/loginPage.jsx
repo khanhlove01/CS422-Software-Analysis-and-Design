@@ -14,7 +14,7 @@ const loginPage = () => {
   const navigate = useNavigate();
   const { currentUser, login, logout } = useContext(AuthContext);
   const [inputs, setInputs] = useState({
-    username: "",
+    email: "",
     password: "",
   });
 
@@ -22,25 +22,25 @@ const loginPage = () => {
     setInputs((preV) => ({ ...preV, [e.target.name]: e.target.value }));
   };
 
-  // const handleLogin = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const res = await login({
-  //       userId: inputs.username,
-  //       password: inputs.password,
-  //     });
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await login({
+        email: inputs.email,
+        password: inputs.password,
+      });
 
-  //     if (res) {
-  //       navigate("/");
-  //     }
-  //   } catch (err) {
-  //     console.log("====================================");
-  //     console.log(err);
-  //     toast.error("Please input again!!!")
-  //     console.log("====================================");
-  //     setInputs("")
-  //   }
-  // };
+      if (res) {
+        navigate("/");
+      }
+    } catch (err) {
+      console.log("====================================");
+      console.log(err);
+      toast.error("Please input again!!!")
+      console.log("====================================");
+      setInputs("")
+    }
+  };
 
   const socialImage = [
     {
@@ -70,7 +70,13 @@ const loginPage = () => {
                 >
                   <p>Email address</p>
                 </label>
-                <input type="email" placeholder="example@emample.com" />
+                <input 
+                  type="email" 
+                  placeholder="example@emample.com"
+                  name = "email"
+                  onChange={handleChange}
+                  value={inputs.email}
+                />
               </div>
 
               <div className={Style.user_box_input_box}>
@@ -83,11 +89,17 @@ const loginPage = () => {
                     <a href="#">Forget password</a>
                   </p>
                 </label>
-                <input type="password" />
+                <input 
+                  type="password" 
+                  name = "password"
+                  onChange={handleChange}
+                  value={inputs.password}
+                />
               </div>
             </div>
 
-            <Button btnName="Continue" classStyle={Style.button} />
+            {/* <Button btnName="Continue" classStyle={Style.button} handleClick={handleLogin}/> */}
+            <button onClick={handleLogin}>Submit</button>
           </div>
         </div>
         <p className={Style.login_box_para}>

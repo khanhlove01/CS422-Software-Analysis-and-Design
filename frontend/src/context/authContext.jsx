@@ -16,7 +16,7 @@ export const AuthContextProvider = ({children}) => {
     // parse a JSON string and convert it into a JavaScript object.
     const login = async (inputs) => {
         console.log(inputs);
-        const res = await axios.post(window.backendURL + "/user/sign-in", inputs);
+        const res = await axios.post("http://localhost:3000/api/v1/users/login", inputs);
 
         // console.log(res.data);
         if (res.data) {
@@ -33,34 +33,34 @@ export const AuthContextProvider = ({children}) => {
       }, [currentUser]);
 
     //profile image
-    const [profileImage, setProfileImage] = useState(
-        "https://images.pexels.com/photos/2783848/pexels-photo-2783848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    );
-    const fetchProfileImage = async () => {
-        try {
-        const response = await axios.get(
-            window.backendURL + `/user/profile-pic/${currentUser.userId}`
-        );
+    // const [profileImage, setProfileImage] = useState(
+    //     "https://images.pexels.com/photos/2783848/pexels-photo-2783848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    // );
+    // const fetchProfileImage = async () => {
+    //     try {
+    //     const response = await axios.get(
+    //         window.backendURL + `/user/profile-pic/${currentUser.userId}`
+    //     );
 
-        console.log(response);
+    //     console.log(response);
 
-        if (response.status === 200) {
-            const imageFilename = await response.data.profilePic;
-            setProfileImage(imageFilename);
-        } else {
-            console.log(`Unexpected response: ${JSON.stringify(response.data)}`);
-        }
-        } catch (error) {
-        console.error("Error fetching profile image:", error.message);
-        }
-    };
-    useEffect(() => {
-        fetchProfileImage();
-    }, []);
+    //     if (response.status === 200) {
+    //         const imageFilename = await response.data.profilePic;
+    //         setProfileImage(imageFilename);
+    //     } else {
+    //         console.log(`Unexpected response: ${JSON.stringify(response.data)}`);
+    //     }
+    //     } catch (error) {
+    //     console.error("Error fetching profile image:", error.message);
+    //     }
+    // };
+    // useEffect(() => {
+    //     fetchProfileImage();
+    // }, []);
 
     return (
         <AuthContext.Provider
-          value={{ currentUser, login, logout, profileImage, setProfileImage }}
+          value={{ currentUser, login, logout }}
         >
           {children}
         </AuthContext.Provider>
