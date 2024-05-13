@@ -98,8 +98,8 @@ const loginPage = () => {
               </div>
             </div>
 
-            {/* <Button btnName="Continue" classStyle={Style.button} handleClick={handleLogin}/> */}
-            <button onClick={handleLogin}>Submit</button>
+            <Button btnName="Continue" classStyle={Style.button} handleClick={handleLogin}/>
+            {/* <button onClick={handleLogin}>Submit</button> */}
           </div>
         </div>
         <p className={Style.login_box_para}>
