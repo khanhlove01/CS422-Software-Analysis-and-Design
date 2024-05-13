@@ -30,13 +30,30 @@ const SignUpPage = () => {
 
               <div className={Style.user_box_input_box}>
                 <label
+                  htmlFor="username"
+                  className={Style.user_box_input_box_label}
+                >
+                  <p>Username</p>
+                </label>
+                <input type="text" />
+              </div>
+
+              <div className={Style.user_box_input_box}>
+                <label
                   htmlFor="password"
                   className={Style.user_box_input_box_label}
                 >
                   <p>Password</p>
-                  <p>
-                    <a href="#">Forget password</a>
-                  </p>
+                </label>
+                <input type="password" />
+              </div>
+
+              <div className={Style.user_box_input_box}>
+                <label
+                  htmlFor="password"
+                  className={Style.user_box_input_box_label}
+                >
+                  <p>Confirm Password</p>
                 </label>
                 <input type="password" />
               </div>
