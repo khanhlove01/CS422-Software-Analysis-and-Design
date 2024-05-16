@@ -33,10 +33,13 @@
   align-items: center;
   gap: 1rem;
   font-size: 1.2rem;
-  background-color: var(--icons-color);
-  color: var(--main-bg-color);
+  background-color: var(--main-bg-color);
+  color: var(--icons-color);
   border-radius: 2rem;
   padding: 0 0.5rem;
+}
+.NFTCardTwo .NFTCardTwo_box .NFTCardTwo_box_like .NFTCardTwo_box_like_box .NFTCardTwo_box_like_box_box p .icon {
+  color: var(--icons-bg-color);
 }
 .NFTCardTwo .NFTCardTwo_box:hover {
   box-shadow: var(--box-shadow);
@@ -73,15 +76,15 @@
   padding: 1rem;
 }
 .NFTCardTwo .NFTCardTwo_box_price .NFTCardTwo_box_price_box p {
-  border: 1px solid var(--icons-color);
+  border: 1px solid var(--icons-bg-color);
   padding: 1.5rem 1rem 1rem 1rem;
   font-size: 1.4rem;
   margin-top: 0.5rem;
   border-radius: 0.3rem;
 }
 .NFTCardTwo .NFTCardTwo_box_price .NFTCardTwo_box_price_box small {
-  background-color: var(--icons-color);
-  color: var(--main-bg-color);
+  background-color: var(--icons-bg-color);
+  color: var(--icons-color);
   padding: 0.3rem;
   border-radius: 0.3rem;
   margin-left: 1rem;
