@@ -9,7 +9,8 @@
                 outline: none;
                 border-radius: 1rem;
                 padding: 1rem;
-                border: 1px solid var(--icons-color);
+                border: 1px solid var(--icons-bg-color);
+                color: var(--icons-color);
             }
             label{
                 display: block;
@@ -20,16 +21,17 @@
             }
             .Form_box_input_userName{
                 width: 100%;
-                border: 1px solid var(--icons-color);
+                border: 1px solid var(--icons-bg-color);
                 padding: 1rem;
                 border-radius: 1rem;
                 background-color: transparent;
                 margin-top: .5rem;
                 outline: none;
+                color: var(--icons-color);
             }
             .Form_box_input_box{
                 width: 100%;
-                border: 1px solid var(--icons-color);
+                border: 1px solid var(--icons-bg-color);
                 border-radius: 1rem;
                 align-items: center;
                 display: flex;
@@ -37,13 +39,14 @@
                 overflow: hidden;
                 .Form_box_input_box_icon{
                     font-size: 2rem;
-                    background-color: var(--icons-color);
+                    background-color: var(--icons-bg-color);
                     padding: .5rem 1rem;
-                    color: var(--main-bg-color);
+                    color: var(--icons-color);
                     display: grid;
                     cursor: pointer;
                 }
                 input{
+                    color: var(--icons-color);
                     width: 90%;
                     border: 0;
                     background-color: transparent;
@@ -56,6 +59,12 @@
         .Form_box_input::placeholder{
             font-size: 1.2rem;
             color: var(--icons-color);
+        }
+
+        .Form_box_input{
+            textarea::placeholder{
+                color: var(--icons-color);
+            }
         }
         .Form_box_input_social{
             display: grid;
