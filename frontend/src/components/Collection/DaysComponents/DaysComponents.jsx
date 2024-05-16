@@ -24,24 +24,18 @@ const DaysComponents = ({el, i}) => {
           <img
             src={el.user}
             alt="profile"
-            width={160}
-            height={160}
             className={Style.daysComponent_box_img_1}
             objectFit="covers"
           />
           <img
             src={el.user}
             alt="profile"
-            width={160}
-            height={160}
             className={Style.daysComponent_box_img_2}
             objectFit="covers"
           />
           <img
             src={el.user}
             alt="profile"
-            width={160}
-            height={160}
             className={Style.daysComponent_box_img_3}
             objectFit="covers"
           />
@@ -65,7 +59,7 @@ const DaysComponents = ({el, i}) => {
                 <span>
                   Shoaib Bhai
                   <small>
-                    <MdVerified />
+                    <MdVerified className={Style.daysComponent_box_title_info_profile_icons}/>
                   </small>
                 </span>
               </p>

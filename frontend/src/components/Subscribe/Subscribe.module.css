@@ -27,8 +27,8 @@
   font-weight: 700;
 }
 .subscribe .subscribe_box .subscribe_box_left .subscribe_box_left_box span {
-  background-color: var(--icons-color);
-  color: var(--main-bg-color);
+  background-color: var(--icons-bg-color);
+  color: var(--icons-color);
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   width: 4rem;
@@ -39,7 +39,7 @@
   padding: 2rem;
   width: 80%;
   border-radius: 4rem;
-  background-color: var(--icons-color);
+  background-color: var(--icons-bg-color);
   color: var(--main-bg-color);
   display: flex;
   align-items: center;
@@ -51,11 +51,11 @@
   width: 90%;
 }
 .subscribe .subscribe_box .subscribe_box_left .subscribe_box_left_input input::-moz-placeholder {
-  color: var(--main-bg-color);
+  color: var(--icons-color);
   font-size: 1.2rem;
 }
 .subscribe .subscribe_box .subscribe_box_left .subscribe_box_left_input input::placeholder {
-  color: var(--main-bg-color);
+  color: var(--icons-color);
   font-size: 1.2rem;
 }
 .subscribe .subscribe_box .subscribe_box_left .subscribe_box_left_input .subscribe_box_left_input_icon {

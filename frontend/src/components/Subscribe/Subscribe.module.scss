@@ -27,8 +27,8 @@
           font-weight: 700;
         }
         span {
-          background-color: var(--icons-color);
-          color: var(--main-bg-color);
+          background-color: var(--icons-bg-color);
+          color: var(--icons-color);
           padding: 0.5rem 1rem;
           border-radius: 2rem;
           width: 4rem;
@@ -40,7 +40,7 @@
         padding: 2rem;
         width: 80%;
         border-radius: 4rem;
-        background-color: var(--icons-color);
+        background-color: var(--icons-bg-color);
         color: var(--main-bg-color);
 
         display: flex;
@@ -52,7 +52,7 @@
           width: 90%;
         }
         input::placeholder {
-          color: var(--main-bg-color);
+          color: var(--icons-color);
           font-size: 1.2rem;
         }
         .subscribe_box_left_input_icon {

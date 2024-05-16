@@ -46,14 +46,23 @@
           span {
             font-weight: 600;
             padding-inline: 0.5rem;
+            small{
+              margin-left: 0.5rem;
+              color: var(--icons-bg-color);
+              .daysComponent_box_title_info_profile_icons{
+                width: 15px;
+                height: 15px;
+              }
+            }
           }
         }
         .daysComponent_box_title_info_price {
           small {
             font-weight: 600;
-            border: 3px solid var(--icons-color);
+            border: 3px solid var(--icons-bg-color);
             padding: 0.5rem;
             border-radius: 0.5rem;
+            
           }
         }
       }

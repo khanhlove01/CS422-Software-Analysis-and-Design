@@ -16,8 +16,8 @@
   z-index: 123;
 }
 .audioCard .audioCard_box .audioCard_box_like_time .audioCard_box_like {
-  background-color: var(--icons-color);
-  color: var(--shadow-dark-color);
+  background-color: var(--icons-bg-color);
+  color: var(--icons-color);
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -28,11 +28,11 @@
   overflow: hidden;
 }
 .audioCard .audioCard_box .audioCard_box_like_time .audioCard_box_like .audioCard_box_like_icon {
-  color: var(--main-bg-color);
+  color: var(--icons-color);
   font-size: 2rem;
 }
 .audioCard .audioCard_box .audioCard_box_like_time .audioCard_box_like .audioCard_box_like_icon_unlike {
-  color: var(--main-bg-color);
+  color: var(--icons-color);
   font-size: 2rem;
 }
 .audioCard .audioCard_box .audioCard_box_like_time .audioCard_box_time {
@@ -67,8 +67,8 @@
   display: flex;
   align-items: center;
   border-radius: 50%;
-  background-color: var(--icons-color);
-  color: var(--main-bg-color);
+  background-color: var(--icons-bg-color);
+  color: var(--icons-color);
   font-size: 2rem;
   cursor: pointer;
 }
@@ -95,15 +95,15 @@
   line-height: 0;
 }
 .audioCard .audioCard_box .audioCard_box_details .audioCard_box_details_info .audioCard_box_details_info_price {
-  border: 1px solid var(--icons-color);
+  border: 1px solid var(--icons-bg-color);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   height: 3rem;
   cursor: pointer;
 }
 .audioCard .audioCard_box .audioCard_box_details .audioCard_box_details_info .audioCard_box_details_info_price small {
-  background-color: var(--icons-color);
-  color: var(--main-bg-color);
+  background-color: var(--icons-bg-color);
+  color: var(--icons-color);
   padding: 0.4rem 0.5rem;
   border-radius: 0.5rem;
 }

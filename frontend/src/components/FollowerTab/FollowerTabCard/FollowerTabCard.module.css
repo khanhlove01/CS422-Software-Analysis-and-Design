@@ -70,6 +70,9 @@
   font-size: 1rem;
   line-height: 0;
 }
+.followerTabCard .followerTabCard_box .followerTabCard_box_info h4 span {
+  color: var(--icons-bg-color);
+}
 .followerTabCard .followerTabCard_box .followerTabCard_box_info .followerTabCard_box_info_following a {
   background-color: var(--shadow-dark-color);
   padding: 0.7rem 1.5rem;

@@ -27,9 +27,9 @@
   overflow: hidden;
 }
 .NFTCard .NFTCard_box .NFTCard_box_update .NFTCard_box_update_left {
-  background-color: var(--icons-color);
+  background-color: var(--main-bg-color);
   padding: 0.5rem 1rem;
-  color: var(--main-bg-color);
+  color: var(--icons-color);
   border-radius: 2rem;
   margin: 1rem;
 }
@@ -40,7 +40,7 @@
   gap: 0.5rem;
 }
 .NFTCard .NFTCard_box .NFTCard_box_update .NFTCard_box_update_left .NFTCard_box_update_left_like .NFTCard_box_update_left_like_icon {
-  color: var(--main-bg-color);
+  color: var(--icons-bg-color);
 }
 .NFTCard .NFTCard_box .NFTCard_box_update .NFTCard_box_update_right {
   background-color: var(--shadow-light-color);
@@ -100,14 +100,14 @@
   align-items: flex-end;
 }
 .NFTCard .NFTCard_box .NFTCard_box_update_details .NFTCard_box_update_details_price .NFTCard_box_update_details_price_box .NFTCard_box_update_details_price_box_box .NFTCard_box_update_details_price_box_bid {
-  border: 1px solid var(--icons-color);
+  border: 1px solid var(--icons-bg-color);
   padding: 0.2rem 0.5rem;
   align-items: center;
   border-radius: 0.3rem;
 }
 .NFTCard .NFTCard_box .NFTCard_box_update_details .NFTCard_box_update_details_price .NFTCard_box_update_details_price_box .NFTCard_box_update_details_price_box_box .NFTCard_box_update_details_price_box_bid small {
-  background-color: var(--icons-color);
-  color: var(--main-bg-color);
+  background-color: var(--icons-bg-color);
+  color: var(--icons-color);
   border-radius: 0.2rem;
   padding: 0.2rem;
 }

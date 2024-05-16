@@ -27,13 +27,13 @@
   box-shadow: var(--box-shadow);
 }
 .followerTab .followerTab_title .followerTab_tabs .followerTab_tabs_btn button {
-  background-color: var(--icons-color);
-  color: var(--main-bg-color);
+  background-color: var(--icons-bg-color);
+  color: var(--icons-color);
   padding: 1rem;
   border: none;
   border-radius: 4rem;
   cursor: pointer;
-  border: 1px solid var(--icons-color);
+  border: 1px solid var(--icons-bg-color);
   transition: all 0.3s ease-in;
 }
 .followerTab .followerTab_title .followerTab_tabs .followerTab_tabs_btn button:hover {
