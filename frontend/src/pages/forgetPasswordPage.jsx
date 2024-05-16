@@ -5,8 +5,10 @@ import Style from "../styles/login.module.css";
 import images from "../img/index";
 import { Button } from "../components/componentsindex";
 import axios from 'axios';
-
+import { useContext } from 'react';
+import { AuthContext } from '../context/authContext';
 const ForgetPasswordPage = () => {
+  const {linkResetPassword,setLinkResetPassword} = useContext(AuthContext)
   const [inputs, setInputs] = useState({
     email: "",
   });
@@ -22,6 +24,8 @@ const handleForgetPassword = async (e) => {
       })
       e.preventDefault();
       console.log("Sent successful!");
+      console.log(response.data.data);
+      setLinkResetPassword(response.data.data)
     } catch (error) {
       console.log(error);
     }

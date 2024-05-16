@@ -4,6 +4,7 @@ import { createContext, useEffect, useState } from "react";
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({children}) => {
+    const [linkResetPassword, setLinkResetPassword] = useState(null);
     const [currentUser, setCurrentUser] = useState(
         JSON.parse(localStorage.getItem("user")) || null
       );
@@ -60,7 +61,7 @@ export const AuthContextProvider = ({children}) => {
 
     return (
         <AuthContext.Provider
-          value={{ currentUser, login, logout }}
+          value={{ currentUser, login, logout, linkResetPassword,setLinkResetPassword }}
         >
           {children}
         </AuthContext.Provider>
