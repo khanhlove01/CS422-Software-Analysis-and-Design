@@ -49,6 +49,7 @@
   border: 0;
   outline: none;
   width: 90%;
+  color: var(--icons-color);
 }
 .subscribe .subscribe_box .subscribe_box_left .subscribe_box_left_input input::-moz-placeholder {
   color: var(--icons-color);

@@ -21,6 +21,7 @@
 }
 .daysComponent .daysComponent_box .daysComponent_box_profile img {
   width: 32%;
+  height: 100px;
 }
 .daysComponent .daysComponent_box .daysComponent_box_profile .daysComponent_box_img_1 {
   border-bottom-left-radius: 1rem;

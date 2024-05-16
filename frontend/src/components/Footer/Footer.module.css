@@ -15,7 +15,7 @@
 .footer .footer_box .footer_box_social .footer_social {
   display: flex;
   gap: 1.3rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   align-items: center;
 }
 .footer .footer_box .footer_box_social .footer_social a {
@@ -35,7 +35,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  background-color: var(--icons-color);
+  background-color: var(--icons-bg-color);
   color: var(--shadow-dark-color);
   border-radius: 5rem;
   margin-top: 3rem;
@@ -45,13 +45,13 @@
   border: none;
   outline: none;
   width: 90%;
-  color: var(--shadow-dark-color);
+  color: var(--icons-color);
 }
 .footer .footer_box .subscribe .subscribe_box input::-moz-placeholder {
-  color: var(--shadow-dark-color);
+  color: var(--icons-color);
 }
 .footer .footer_box .subscribe .subscribe_box input::placeholder {
-  color: var(--shadow-dark-color);
+  color: var(--icons-color);
 }
 .footer .footer_box .subscribe .subscribe_box .subscribe_box_send {
   cursor: pointer;

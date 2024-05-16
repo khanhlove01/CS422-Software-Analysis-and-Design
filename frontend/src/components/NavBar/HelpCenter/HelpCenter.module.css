@@ -3,9 +3,14 @@
   transition: all 0.3s ease-in;
   z-index: 222222222;
 }
+.helpCenter a {
+  color: var(--icons-color);
+}
 
 .helpCenter:hover {
   background-color: var(--icons-color);
-  color: var(--shadow-dark-color);
   border-radius: 0.3rem;
+}
+.helpCenter:hover a {
+  color: var(--shadow-dark-color);
 }/*# sourceMappingURL=HelpCenter.module.css.map */
