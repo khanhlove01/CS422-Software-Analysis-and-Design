@@ -117,7 +117,7 @@ const NFTDescription = () => {
             {social && (
               <div className={Style.NFTDescription_box_share_box_social}>
                 <a href="#">
-                  <TiSocialFacebook /> Facebooke
+                  <TiSocialFacebook /> Facebook
                 </a>
                 <a href="#">
                   <TiSocialInstagram /> Instragram
@@ -176,7 +176,7 @@ const NFTDescription = () => {
                 {/* <Link href={{ pathname: "/author", query: `${nft.seller}` }}> */}
                 <a href={{ pathname: "/author" }}>
                   <span>
-                    Karli Costa <MdVerified />
+                    Karli Costa <MdVerified className={Style.icon}/>
                   </span>
                 </a>
               </div>
@@ -194,7 +194,7 @@ const NFTDescription = () => {
               <div className={Style.NFTDescription_box_profile_box_right_info}>
                 <small>Collection</small> <br />
                 <span>
-                  Mokeny app <MdVerified />
+                  Mokeny app <MdVerified className={Style.icon}/>
                 </span>
               </div>
             </div>
@@ -202,7 +202,7 @@ const NFTDescription = () => {
 
           <div className={Style.NFTDescription_box_profile_biding}>
             <p>
-              <MdTimer /> <span>Auction ending in:</span>
+              <MdTimer className={Style.icon}/> <span>Auction ending in:</span>
             </p>
 
             <div className={Style.NFTDescription_box_profile_biding_box_timer}>

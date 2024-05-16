@@ -21,7 +21,7 @@
                 align-self: flex-start;
                 padding-inline: 2rem;
                 p{
-                    background-color: var(--icons-color);
+                    background-color: var(--shadow-dark-color);
                     padding: .2rem 1rem;
                     color: var(--main-bg-color);
                     display: flex;
@@ -31,7 +31,12 @@
                     cursor: pointer;
                 }
                 .NFTDetailsImg_box_NFT_like_icon{
-                    font-size: 1.4rem;
+                    font-size: 2rem;
+                    color: var(--icons-bg-color);
+                    
+                }
+                span{
+                    color: var(--icons-color);
                 }
                 
             }
@@ -46,12 +51,13 @@
             padding-inline: 1rem;
             cursor: pointer;
             margin-top: 1rem;
-            color: var( --shadow-dark-color);
-            .NFTDetailsImg_box_description_box{
-                padding: .1rem 1rem;
-                font-size: 1rem;
-            }
+            color: var( --icons-color);
             
+        }
+        .NFTDetailsImg_box_description_box{
+            padding: .1rem 1rem;
+            font-size: 1rem;
+
         }
         .NFTDetailsImg_box_details{
             display: flex;
@@ -63,14 +69,15 @@
             padding-inline: 1rem;
             cursor: pointer;
             margin-top: 1rem;
-            color: var( --shadow-dark-color);
-            .NFTDetailsImg_box_details_box{
-                padding: .1rem 1rem;
+            color: var( --icons-color);
+            
+        }
+        .NFTDetailsImg_box_details_box{                
+            padding: 1rem 1rem;             
+            font-size: 1rem;
+            p{
+                line-height: 1;
                 font-size: 1rem;
-                p{
-                    line-height: 1;
-                    font-size: 1rem;
-                }
             }
         }
     }
