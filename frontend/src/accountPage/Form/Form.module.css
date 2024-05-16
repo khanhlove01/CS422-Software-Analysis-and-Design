@@ -4,6 +4,12 @@
 .Form .Form_box .Form_box_input {
   margin-top: 2rem;
 }
+.Form .Form_box .Form_box_input input::-moz-placeholder {
+  color: var(--icons-color);
+}
+.Form .Form_box .Form_box_input input::placeholder {
+  color: var(--icons-color);
+}
 .Form .Form_box .Form_box_input textarea {
   width: 100%;
   background-color: transparent;
@@ -17,6 +23,7 @@
   display: block;
   width: 100%;
   margin-left: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 700;
   font-size: 1.3rem;
 }
@@ -26,7 +33,6 @@
   padding: 1rem;
   border-radius: 1rem;
   background-color: transparent;
-  margin-top: 0.5rem;
   outline: none;
   color: var(--icons-color);
 }

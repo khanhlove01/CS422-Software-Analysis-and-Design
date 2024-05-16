@@ -3,6 +3,9 @@
     .Form_box{
         .Form_box_input{
             margin-top: 2rem;
+            input::placeholder{
+                color: var(--icons-color);
+            }
             textarea{
                 width: 100%;
                 background-color: transparent;
@@ -16,6 +19,7 @@
                 display: block;
                 width: 100%;
                 margin-left: 1rem;
+                margin-bottom: 0.5rem;
                 font-weight: 700;
                 font-size: 1.3rem;
             }
@@ -25,7 +29,6 @@
                 padding: 1rem;
                 border-radius: 1rem;
                 background-color: transparent;
-                margin-top: .5rem;
                 outline: none;
                 color: var(--icons-color);
             }
