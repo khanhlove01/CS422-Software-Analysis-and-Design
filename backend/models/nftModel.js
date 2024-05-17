@@ -77,6 +77,14 @@ const nftSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
+    elemental:{
+        type: String,
+        required: [true, 'A nft must have a elemental type'],
+        enum: {
+            values: ['Forest', 'Sea', 'Sky','Player'],
+            message: 'elemental is either: Forest, Sea, Sky or Player'
+        }
+    }
 },{
     toJSON: { virtuals: true },
     toObject: { virtuals: true }
