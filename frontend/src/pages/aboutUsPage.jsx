@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaHandshake } from "react-icons/fa";
 
 //Internal Import
 import Style from "../styles/aboutUsPage.module.css"
@@ -48,7 +49,7 @@ const AboutUsPage = () => {
       <div className={Style.aboutus_box}>
         <div className={Style.aboutus_box_hero}>
           <div className={Style.aboutus_box_hero_left}>
-            <h1>👋 About Us.</h1>
+            <h1><FaHandshake className={Style.icon}/> About Us.</h1>
             <p>
               We’re impartial and independent, and every day we create
               distinctive, world-class programmes and content which inform,

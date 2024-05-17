@@ -12,6 +12,9 @@
   align-items: center;
   gap: 3rem;
 }
+.aboutus .aboutus_box .aboutus_box_hero .aboutus_box_hero_left .icon {
+  color: var(--icons-bg-color);
+}
 .aboutus .aboutus_box .aboutus_box_hero .aboutus_box_hero_left h1 {
   font-size: 3rem;
   line-height: 0.5;

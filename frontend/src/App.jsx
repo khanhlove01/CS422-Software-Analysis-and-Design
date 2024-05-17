@@ -34,7 +34,7 @@ function App() {
         <Route path='/connect-wallet' element={<ConnectWalletPage/>} />
         <Route path='/contact-us' element={<ContactUsPage/>} />
         <Route path='/sign-up' element={<SignUpPage/>} />
-        <Route path='/about-us' element={<AboutUsPage/>} />
+        <Route path='/about' element={<AboutUsPage/>} />
         <Route path='/subscription' element={<SubscriptionPage/>} />
         <Route path='/forget-password' element={<ForgetPasswordPage/>} />
         <Route path='/resetPassword/:id' element={<ResetPasswordPage/>} />

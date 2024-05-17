@@ -10,11 +10,14 @@
             align-items: center;
             gap: 3rem;
             .aboutus_box_hero_left{
+                .icon{
+                    color: var(--icons-bg-color);
+                }
                 h1{
                     font-size: 3rem;
                     line-height: .5;
                 }
-                p {
+                p { 
                     font-size: 1.5rem;
                     line-height: 1.5;
                  }

@@ -89,6 +89,7 @@
   border-radius: 1rem;
   outline: 0;
   border: 1px solid var(--shadow-dark-color);
+  color: var(--icons-color);
   background-color: transparent;
 }
 
