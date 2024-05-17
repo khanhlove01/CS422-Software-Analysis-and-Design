@@ -160,7 +160,7 @@ const NavBar = () => {
           <div className={Style.navbar_container_right_profile_box} ref={profileRef}>
             <div className={Style.navbar_container_right_profile}>
               <img
-                src="https://cdn-teams-slug.flaticon.com/google.jpg"
+                src="https://pbs.twimg.com/media/GCr11sgXEAADIpg?format=jpg&name=large"
                 alt="Profile"
                 width={40}
                 height={40}

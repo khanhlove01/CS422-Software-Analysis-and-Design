@@ -1,5 +1,5 @@
 import React from "react";
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import { FaUserAlt, FaRegImage, FaUserEdit } from "react-icons/fa";
 import { MdHelpCenter } from "react-icons/md";
 import { TbDownloadOff, TbDownload } from "react-icons/tb";
@@ -8,20 +8,24 @@ import { AuthContext } from "../../../context/authContext";
 import Style from "./Profile.module.css";
 
 const Profile = () => {
+  const [profileImage, setProfileImage] = useState(
+    "https://pbs.twimg.com/media/GCr11sgXEAADIpg?format=jpg&name=large"
+  );
   const { currentUser, login, logout } = useContext(AuthContext);
+  //console.log(currentUser);
   return (
     <div className={Style.profile}>
       <div className={Style.profile_account}>
         <img
-          src="https://cdn-teams-slug.flaticon.com/google.jpg"
+          src={profileImage}
           alt="user profile"
           width={50}
           height={50}
           className={Style.profile_account_img}
         />
         <div className={Style.profile_account_info}>
-          <p>Hello world</p>
-          <small>123456</small>
+          <p>{currentUser.data.user.name}</p>
+          <small>{currentUser.data.user.email}</small>
         </div>
       </div>
       <div className={Style.profile_menu}>

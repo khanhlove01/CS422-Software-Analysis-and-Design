@@ -4,6 +4,7 @@ import { createContext, useEffect, useState } from "react";
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({children}) => {
+    
     const [linkResetPassword, setLinkResetPassword] = useState(null);
     const [currentUser, setCurrentUser] = useState(
         JSON.parse(localStorage.getItem("user")) || null
@@ -19,7 +20,7 @@ export const AuthContextProvider = ({children}) => {
         console.log(inputs);
         const res = await axios.post("http://localhost:3000/api/v1/users/login", inputs);
 
-        // console.log(res.data);
+        console.log(res.data);
         if (res.data) {
         setCurrentUser(res.data); //set current user json
         return true;
@@ -34,9 +35,6 @@ export const AuthContextProvider = ({children}) => {
       }, [currentUser]);
 
     //profile image
-    // const [profileImage, setProfileImage] = useState(
-    //     "https://images.pexels.com/photos/2783848/pexels-photo-2783848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    // );
     // const fetchProfileImage = async () => {
     //     try {
     //     const response = await axios.get(
