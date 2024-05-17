@@ -16,45 +16,86 @@
       align-self: flex-start;
       margin-bottom: 10rem;
       .contactus_box_box_left {
+        display: flex;
+        flex-direction: column;
         .contactus_box_box_left_item {
+          h3 {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            align-items: center;
+            .icon {
+              font-size: 2rem;
+              color: var(--icons-bg-color);
+            }
+          }
+
           p {
             line-height: 1.2;
             width: 80%;
             font-size: 1rem;
           }
-          a {
-            font-size: 1.5rem;
-            border-radius: 50%;
-            padding: 0.3rem;
+          .contactus_box_box_left_item_social {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 2rem;
+            a {
+              padding: 0.5rem;
+              border-radius: 50%;
+              transition: all 0.3s ease-in;
+              display: grid;
+            }
+            a:hover {
+              background-color: var(--icons-color);
+              color: var(--shadow-dark-color);
+              box-shadow: var(--box-shadow);
+            }
           }
         }
       }
       .contactus_box_box_right {
-        .button {
-          margin-top: 2rem;
+        .button_container {
+          margin-top: 1rem;
+          button{
+            width: 100%;
+          }
         }
+
         .contactus_box_input {
           margin-top: 2rem;
+          label {
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
           textarea {
             width: 100%;
             background-color: transparent;
             outline: none;
             border-radius: 1rem;
             padding: 1rem;
-            border: 1px solid var(--icons-color);
+            border: 1px solid var(--icons-bg-color);
+            color: var(--icons-color);
+          }
+          input::placeholder {
+            color: var(--icons-color);
+          }
+          textarea::placeholder {
+            color: var(--icons-color);
           }
           .contactus_box_input_userName {
             width: 100%;
-            border: 1px solid var(--icons-color);
+            border: 1px solid var(--icons-bg-color);
             padding: 1rem;
             border-radius: 1rem;
             background-color: transparent;
             margin-top: 0.5rem;
             outline: none;
+            color: var(--icons-color);
           }
           .contactus_box_input_box {
             width: 100%;
-            border: 1px solid var(--icons-color);
+            border: 1px solid var(--icons-bg-color);
             border-radius: 1rem;
             align-items: center;
             display: flex;
@@ -62,13 +103,14 @@
             overflow: hidden;
             .contactus_box_input_box_icon {
               font-size: 2rem;
-              background-color: var(--icons-color);
+              background-color: var(--icons-bg-color);
               padding: 0.5rem 1rem;
-              color: var(--main-bg-color);
+              color: var(--icons-color);
               display: grid;
               cursor: pointer;
             }
             input {
+              color: var(--icons-color);
               width: 90%;
               border: 0;
               background-color: transparent;
