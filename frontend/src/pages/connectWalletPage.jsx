@@ -32,7 +32,7 @@ const ConnectWalletPage = () => {
       <div className={Style.connectWallet_box}>
         <h1>Connect your wallet</h1>
         <p className={Style.connectWallet_box_para}>
-          Choose a wallet you want to connect. There are several wallet providers
+          Choose a wallet you want to connect. There are several wallet providers.
         </p>
 
         <div className={Style.connectWallet_box_provider}>

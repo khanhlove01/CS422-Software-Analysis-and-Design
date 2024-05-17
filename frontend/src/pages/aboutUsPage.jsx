@@ -1,5 +1,7 @@
 import React from 'react'
 import { FaHandshake } from "react-icons/fa";
+import { FaHeartbeat } from "react-icons/fa";
+import { FaRegSnowflake } from "react-icons/fa";
 
 //Internal Import
 import Style from "../styles/aboutUsPage.module.css"
@@ -62,7 +64,7 @@ const AboutUsPage = () => {
         </div>
 
         <div className={Style.aboutus_box_title}>
-          <h2>⛱ Founder</h2>
+          <h2><FaHeartbeat className={Style.icon}/> Founder</h2>
           <p>
             We’re impartial and independent, and every day we create
             distinctive, world-class programmes and content
@@ -76,8 +78,6 @@ const AboutUsPage = () => {
                 <img
                   src={el.images}
                   alt={el.name}
-                  width={500}
-                  height={500}
                   className={Style.aboutus_box_founder_box_img_img}
                 />
                 <h3>{el.name}</h3>
@@ -88,7 +88,7 @@ const AboutUsPage = () => {
         </div>
 
         <div className={Style.aboutus_box_title}>
-          <h2>🚀 Fast Facts</h2>
+          <h2><FaRegSnowflake className={Style.icon}/> Fast Facts</h2>
           <p>
             We’re impartial and independent, and every day we create
             distinctive, world-class programmes and content

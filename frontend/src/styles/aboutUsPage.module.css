@@ -13,6 +13,7 @@
   gap: 3rem;
 }
 .aboutus .aboutus_box .aboutus_box_hero .aboutus_box_hero_left .icon {
+  padding-top: 0.8rem;
   color: var(--icons-bg-color);
 }
 .aboutus .aboutus_box .aboutus_box_hero .aboutus_box_hero_left h1 {
@@ -28,6 +29,10 @@
 }
 .aboutus .aboutus_box .aboutus_box_title {
   margin-top: 5rem;
+}
+.aboutus .aboutus_box .aboutus_box_title .icon {
+  padding-top: 0.8rem;
+  color: var(--icons-bg-color);
 }
 .aboutus .aboutus_box .aboutus_box_title h2 {
   font-size: 3rem;
@@ -48,20 +53,29 @@
   gap: 2rem;
 }
 .aboutus .aboutus_box .aboutus_box_founder .aboutus_box_founder_box .aboutus_box_founder_box_img {
-  background-color: var(--icons-color);
+  background-color: var(--icons-bg-color);
   color: var(--main-bg-color);
   padding: 1rem;
   border-radius: 1rem;
+  text-align: center;
 }
 .aboutus .aboutus_box .aboutus_box_founder .aboutus_box_founder_box .aboutus_box_founder_box_img .aboutus_box_founder_box_img_img {
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  height: 200px;
   border-radius: 1rem;
 }
 .aboutus .aboutus_box .aboutus_box_founder .aboutus_box_founder_box .aboutus_box_founder_box_img h3 {
-  line-height: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1; /* Adjusted line-height */
   font-size: 2rem;
 }
 .aboutus .aboutus_box .aboutus_box_founder .aboutus_box_founder_box .aboutus_box_founder_box_img p {
-  line-height: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1;
   font-size: 1.2rem;
 }
 .aboutus .aboutus_box .aboutus_box_facts .aboutus_box_facts_box {

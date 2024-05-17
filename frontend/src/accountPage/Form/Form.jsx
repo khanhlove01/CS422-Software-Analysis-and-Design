@@ -18,7 +18,7 @@ const Form = () => {
       <div className={Style.Form_box}>
         <form>
           <div className={Style.Form_box_input}>
-            <label htmlFor="name">Username</label>
+            <label htmlFor="name">Full Name</label>
             <input
               type="text"
               placeholder="shoaib bhai"
