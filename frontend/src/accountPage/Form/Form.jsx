@@ -21,7 +21,7 @@ const Form = () => {
             <label htmlFor="name">Full Name</label>
             <input
               type="text"
-              placeholder="shoaib bhai"
+              placeholder="Enter your name..."
               className={Style.Form_box_input_userName}
             />
           </div>
@@ -32,7 +32,7 @@ const Form = () => {
               <div className={Style.Form_box_input_box_icon}>
                 <HiOutlineMail />
               </div>
-              <input type="text" placeholder="Email*" />
+              <input type="text" placeholder="Enter your password..." />
             </div>
           </div>
 
@@ -43,7 +43,7 @@ const Form = () => {
               id=""
               cols="30"
               rows="6"
-              placeholder="something about yourself in few words"
+              placeholder="Write your description..."
             ></textarea>
           </div>
 
