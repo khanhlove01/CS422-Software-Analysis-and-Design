@@ -12,7 +12,7 @@ const Brand = () => {
     <div className={Style.brand}>
       <div className={Style.brand_box}>
         <div className={Style.brand_box_left}>
-          <img src={images.test_img_2} alt='brand logo' width={100} height={100}/>
+          {/* <img src={images.test_img_2} alt='brand logo' width={100} height={100}/> */}
           <h1>Earn free crypto with Ciscrypt</h1>
           <p>A creative agency that lead and inspire.</p>
           <div className={Style.brand_box_left_btn}>

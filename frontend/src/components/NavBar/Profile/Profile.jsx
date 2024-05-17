@@ -33,28 +33,10 @@ const Profile = () => {
             <p>
               <a href="./account">My profile</a>
             </p>
-          </div>
-          <div className={Style.profile_menu_one_item}>
-            <FaRegImage />
-            <p>
-              <a href="./my-items">My items</a>
-            </p>
-          </div>
-          <div className={Style.profile_menu_one_item}>
-            <FaUserEdit />
-            <p>
-              <a href="./edit-profile">Edit Profile</a>
-            </p>
-          </div>
+          </div>        
         </div>
 
         <div className={Style.profile_menu_one}>
-          <div className={Style.profile_menu_one_item}>
-            <MdHelpCenter />
-            <p>
-              <a href="./help">Help</a>
-            </p>
-          </div>
           <div className={Style.profile_menu_one_item}>
             <TbDownload />
             <p>

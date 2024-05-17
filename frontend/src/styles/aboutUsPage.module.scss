@@ -27,6 +27,7 @@
                 img{
                     width: 100%;
                     aspect-ratio: 5/3;
+                    border-radius: 1rem;
                 }
             }
         }
@@ -54,7 +55,7 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 2rem;
                 .aboutus_box_founder_box_img{
-                    background-color: var(--icons-bg-color);
+                    background-color: var(--icons-color);
                     color: var(--main-bg-color);
                     padding: 1rem;
                     border-radius: 1rem;
@@ -63,8 +64,8 @@
                         align-items: center;
                         width: 90%;
                         margin: 0 auto;
-                        height: 200px;
-                        border-radius: 1rem;
+                        aspect-ratio: 1/1;
+                        border-radius: 50%;
                     }
                     h3{
                         word-wrap:break-word;

@@ -11,23 +11,13 @@ import images from "../img/index"
 const AboutUsPage = () => {
     const founderArray = [
         {
-          name: "Niamh O'Shea",
-          position: "Co-founder and Chief Executive",
+          name: "Thi Hong Nhut",
+          position: "Co-founder",
           images: images.test_img,
         },
         {
-          name: "Danien Jame",
-          position: "Co-founder and Chief Executive",
-          images: images.test_img_2,
-        },
-        {
-          name: "Orla Dwyer",
-          position: "Co-founder, Chairman",
-          images: images.test_img_3,
-        },
-        {
-          name: "Dara Frazier",
-          position: "Co-Founder, Chief Strategy Officer",
+          name: "Tran Minh Khanh",
+          position: "Co-founder",
           images: images.test_img_2,
         },
       ];
