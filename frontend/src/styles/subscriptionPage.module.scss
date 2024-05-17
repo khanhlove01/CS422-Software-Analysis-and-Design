@@ -7,6 +7,10 @@
         .Subscription_box_info{
             text-align: center;
             line-height: 0;
+            .icon{
+                color: var(--icons-bg-color);
+                padding-top: 0.5rem;
+            }
             h1{
                 font-size: 4rem;
                 line-height: .5;

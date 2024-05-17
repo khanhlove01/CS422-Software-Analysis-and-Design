@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 //Import Icon
@@ -17,6 +17,18 @@ const NavBar = () => {
   const [notification, setNotification] = useState(false);
   const [profile, setProfile] = useState(false);
   const [openSideMenu, setOpenSideMenu] = useState(false);
+
+  const discoverRef = useRef(null);
+  const helpRef = useRef(null);
+  const notificationRef = useRef(null);
+  const profileRef = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const openMenu = (e) => {
     const btnText = e.target.innerText;
@@ -74,6 +86,20 @@ const NavBar = () => {
     }
   };
 
+  const handleClickOutside = (event) => {
+    if (
+      discoverRef.current && !discoverRef.current.contains(event.target) &&
+      helpRef.current && !helpRef.current.contains(event.target) &&
+      notificationRef.current && !notificationRef.current.contains(event.target) &&
+      profileRef.current && !profileRef.current.contains(event.target)
+    ) {
+      setDiscover(false);
+      setHelp(false);
+      setNotification(false);
+      setProfile(false);
+    }
+  };
+
   return (
     <div className={Style.navbar}>
       <div className={Style.navbar_container}>
@@ -94,7 +120,7 @@ const NavBar = () => {
         {/* End of left section */}
         <div className={Style.navbar_container_right}>
           {/* Discover section */}
-          <div className={Style.navbar_container_right_discover}>
+          <div className={Style.navbar_container_right_discover} ref={discoverRef}>
             <p onClick={(e) => openMenu(e)}>Discover</p>
             {discover && (
               <div className={Style.navbar_container_right_discover_box}>
@@ -104,7 +130,7 @@ const NavBar = () => {
           </div>
 
           {/* Help center section */}
-          <div className={Style.navbar_container_right_help}>
+          <div className={Style.navbar_container_right_help} ref={helpRef}>
             <p onClick={(e) => openMenu(e)}>Help Center</p>
             {help && (
               <div className={Style.navbar_container_right_help_box}>
@@ -114,7 +140,7 @@ const NavBar = () => {
           </div>
 
           {/* Notification section */}
-          <div className={Style.navbar_container_right_notify}>
+          <div className={Style.navbar_container_right_notify} ref={notificationRef}>
             <IoMdNotifications
               className={Style.notify}
               onClick={() => openNotification()}
@@ -131,7 +157,7 @@ const NavBar = () => {
           </div>
 
           {/* Profile section */}
-          <div className={Style.navbar_container_right_profile_box}>
+          <div className={Style.navbar_container_right_profile_box} ref={profileRef}>
             <div className={Style.navbar_container_right_profile}>
               <img
                 src="https://cdn-teams-slug.flaticon.com/google.jpg"

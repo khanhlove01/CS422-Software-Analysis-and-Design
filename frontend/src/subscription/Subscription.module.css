@@ -6,6 +6,11 @@
   transition: all 0.3s ease-in;
   cursor: pointer;
 }
+.SubscriptionBox .SubscriptionBox_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .SubscriptionBox .SubscriptionBox_box .SubscriptionBox_box_container .SubscriptionBox_box_span {
   font-size: 2rem;
   font-weight: 900;

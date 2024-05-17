@@ -30,12 +30,6 @@ const Subscription = ({ el, i }) => {
             ))}
           </div>
         </div>
-
-        <Button
-          btnName="Submit"
-          handleClick={() => {}}
-          classStyle={Style.button}
-        />
       </div>
     </div>
   );

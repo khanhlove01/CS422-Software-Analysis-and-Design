@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { IoDiamond } from "react-icons/io5";
 //Internal Import
 import Style from "../styles/subscriptionPage.module.css"
 import Subscription from '../subscription/Subscription';
@@ -44,7 +44,7 @@ const SubscriptionPage = () => {
         <div className={Style.Subscription}>
           <div className={Style.Subscription_box}>
             <div className={Style.Subscription_box_info}>
-              <h1>💎 Subscription</h1>
+              <h1><IoDiamond className={Style.icon}/> Subscription</h1>
               <p>Pricing to fit the needs of any companie size.</p>
             </div>
     
