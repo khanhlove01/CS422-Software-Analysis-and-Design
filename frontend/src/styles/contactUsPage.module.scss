@@ -64,6 +64,9 @@
 
         .contactus_box_input {
           margin-top: 2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
           label {
             font-weight: bold;
             font-size: 1.2rem;
@@ -89,7 +92,6 @@
             padding: 1rem;
             border-radius: 1rem;
             background-color: transparent;
-            margin-top: 0.5rem;
             outline: none;
             color: var(--icons-color);
           }

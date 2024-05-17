@@ -73,7 +73,7 @@ const ContactUsPage = () => {
                 <label htmlFor="name">Full Name</label>
                 <input
                   type="text"
-                  placeholder="shoaib bhai"
+                  placeholder="Enter your name..."
                   className={Style.contactus_box_input_userName}
                 />
               </div>
@@ -83,7 +83,7 @@ const ContactUsPage = () => {
                   <div className={Style.contactus_box_input_box_icon}>
                     <HiOutlineMail />
                   </div>
-                  <input type="text" placeholder="Email*" />
+                  <input type="text" placeholder="Enter your email...." />
                 </div>
               </div>
               <div className={Style.contactus_box_input}>
@@ -93,7 +93,7 @@ const ContactUsPage = () => {
                   id=""
                   cols="30"
                   rows="6"
-                  placeholder="something about yourself in few words"
+                  placeholder="Send us your message..."
                 ></textarea>
               </div>
               <div className={Style.button_container}>
