@@ -12,6 +12,7 @@ const Profile = () => {
     "https://pbs.twimg.com/media/GCr11sgXEAADIpg?format=jpg&name=large"
   );
   const { currentUser, login, logout } = useContext(AuthContext);
+  //console.log(currentUser);
   return (
     <div className={Style.profile}>
       <div className={Style.profile_account}>
@@ -23,8 +24,8 @@ const Profile = () => {
           className={Style.profile_account_img}
         />
         <div className={Style.profile_account_info}>
-          <p>Hello world</p>
-          <small>123456</small>
+          <p>{currentUser.data.user.name}</p>
+          <small>{currentUser.data.user.email}</small>
         </div>
       </div>
       <div className={Style.profile_menu}>
