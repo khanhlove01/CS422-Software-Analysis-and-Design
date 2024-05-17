@@ -1,9 +1,20 @@
 .connectWallet {
   width: 100%;
   margin-block: 5rem;
+  padding: 0rem 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+.connectWallet .connectWallet_img {
+  flex: 1;
+}
+.connectWallet .connectWallet_img .connectWallet_img_img {
+  width: 100%;
+  height: 100%;
 }
 .connectWallet .connectWallet_box {
-  width: 50%;
+  flex: 1;
   margin: 0 auto;
 }
 .connectWallet .connectWallet_box h1 {
@@ -13,7 +24,6 @@
 .connectWallet .connectWallet_box .connectWallet_box_para {
   font-size: 1.5rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid var(--shadow-dark-color);
 }
 .connectWallet .connectWallet_box .connectWallet_box_provider {
   margin-block: 5rem;
