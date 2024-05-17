@@ -19,6 +19,15 @@
   background-color: var(--icons-bg-color);
   color: var(--icons-color);
 }
+.service .service_box .service_box_item .service_box_item_img_water {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(0, 200, 255);
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+}
 .service .service_box .service_box_item img {
   border-radius: 1rem;
 }

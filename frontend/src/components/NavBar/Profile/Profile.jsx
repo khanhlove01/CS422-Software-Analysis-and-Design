@@ -29,7 +29,7 @@ const Profile = () => {
           <div className={Style.profile_menu_one_item}>
             <FaUserAlt />
             <p>
-              <a href="./myprofile">My profile</a>
+              <a href="./account">My profile</a>
             </p>
           </div>
           <div className={Style.profile_menu_one_item}>
