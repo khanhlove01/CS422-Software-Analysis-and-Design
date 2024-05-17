@@ -1,4 +1,5 @@
 import React from 'react'
+import Cookies from 'js-cookie'
 import { useState } from 'react';
 //INTERNAL IMPORT
 import Style from "../styles/login.module.css";
@@ -19,13 +20,16 @@ const handleChange = (e) => {
 
 const handleForgetPassword = async (e) => {
     try {
+      //e.preventDefault();
       const response = await axios.post("http://localhost:3000/api/v1/users/forgotPassword",{
         email: inputs.email
       })
-      e.preventDefault();
+      //setLinkResetPassword(response.data.data)
       console.log("Sent successful!");
-      console.log(response.data.data);
-      setLinkResetPassword(response.data.data)
+      console.log(response.data.data.resetToken);
+      const resetToken = response.data.data.resetToken;
+      Cookies.set('resetToken', resetToken);
+      //window.location.reload();
     } catch (error) {
       console.log(error);
     }
