@@ -5,6 +5,7 @@ import Style from "../styles/author.module.css";
 import { Banner, NFTCardTwo } from "../collectionPage/collectionindex";
 import { Brand, Title } from "../components/componentsindex";
 import FollowerTabCard from "../components/FollowerTab/FollowerTabCard/FollowerTabCard";
+import {FollowerTab} from "../components/componentsindex";
 import {
   AuthorNFTCardBox,
   AuthorProfileCard,
@@ -62,11 +63,12 @@ const Author = () => {
         heading="Popular Creators"
         paragraph="Click on music icon and enjoy NFT music and audio"
       />
-      <div className={Style.author_box}>
+      {/* <div className={Style.author_box}>
         {popularArray.map((el, i) => (
           <FollowerTabCard i={i} el={el} key={i + 1} />
         ))}
-      </div>
+      </div> */}
+      <FollowerTab/>
       <Brand/>
     </div>
   );

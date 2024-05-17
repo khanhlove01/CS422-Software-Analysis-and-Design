@@ -23,6 +23,9 @@
   line-height: 0;
   margin-top: -0.5rem;
 }
+.authorProfileCard .authorProfileCard_box .authorProfileCard_box_info h2 span {
+  color: var(--icons-bg-color);
+}
 .authorProfileCard .authorProfileCard_box .authorProfileCard_box_info p {
   font-size: 1.1rem;
   line-height: 1;
@@ -33,10 +36,11 @@
 }
 .authorProfileCard .authorProfileCard_box .authorProfileCard_box_info .authorProfileCard_box_info_address input {
   outline: none;
-  width: 35%;
+  width: 30%;
   font-size: 1rem;
   border: none;
   background-color: transparent;
+  color: var(--icons-color);
 }
 .authorProfileCard .authorProfileCard_box .authorProfileCard_box_info .authorProfileCard_box_info_address .authorProfileCard_box_info_address_icon {
   transition: all 0.3s ease-in;
@@ -76,6 +80,7 @@
   position: relative;
 }
 .authorProfileCard .authorProfileCard_box .authorProfileCard_box_share .authorProfileCard_box_share_icon {
+  color: var(--icons-bg-color);
   font-size: 2.5rem;
   cursor: pointer;
 }

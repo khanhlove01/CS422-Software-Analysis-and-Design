@@ -19,8 +19,6 @@ const Profile = () => {
         <img
           src={profileImage}
           alt="user profile"
-          width={50}
-          height={50}
           className={Style.profile_account_img}
         />
         <div className={Style.profile_account_info}>

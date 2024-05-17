@@ -24,6 +24,9 @@
         font-size: 2.5rem;
         line-height: 0;
         margin-top: -0.5rem;
+        span{
+          color: var(--icons-bg-color);
+        }
       }
       p {
         font-size: 1.1rem;
@@ -34,10 +37,11 @@
         margin-top: -1rem;
         input {
           outline: none;
-          width: 35%;
+          width: 30%;
           font-size: 1rem;
           border: none;
           background-color: transparent;
+          color: var(--icons-color);
         }
         .authorProfileCard_box_info_address_icon {
           transition: all 0.3s ease-in;
@@ -78,6 +82,7 @@
       gap: 2rem;
       position: relative;
       .authorProfileCard_box_share_icon {
+        color: var(--icons-bg-color);
         font-size: 2.5rem;
         cursor: pointer;
       }
