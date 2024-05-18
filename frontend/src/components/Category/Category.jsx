@@ -11,22 +11,22 @@ const Category = () => {
   const CategoryArray = [
     {
       name: "Forest",
-      background: images.test_img_2,
+      background: "https://pbs.twimg.com/media/F7M422yboAATxqv?format=jpg&name=4096x4096",
       user: images.test_img,
     },
     {
       name: "Sea",
-      background: images.test_img_2,
+      background: "https://pbs.twimg.com/media/EaoHPeMUcAMNsm4?format=jpg&name=4096x4096",
       user: images.test_img_2,
     },
     {
       name: "Player",
-      background: images.test_img,
+      background: "https://pbs.twimg.com/media/GGdn7hRbQAAlcqo?format=jpg&name=4096x4096",
       user: images.test_img,
     },
     {
       name: "Sky",
-      background: images.test_img_2,
+      background: "https://pbs.twimg.com/media/GDUM5NTagAA3u2l?format=jpg&name=4096x4096",
       user: images.test_img,
     },
   ];

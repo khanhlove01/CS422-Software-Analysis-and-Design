@@ -52,7 +52,7 @@ const AudioCard = () => {
           </div>
         </div>
         <div className={Style.audioCard_box_player}>
-          <img src={test_img_2} alt="musice" width={200} />
+          <img src="https://pbs.twimg.com/media/E-6_nIuVkAMu-63?format=jpg&name=4096x4096" alt="musice" width={200} />
           <div
             className={Style.audioCard_box_musicPlayer}
             onClick={() => playMusic()}
@@ -84,7 +84,7 @@ const AudioCard = () => {
         </div>
         <div className={Style.audioCard_box_img}>
           <img
-            src={test_img_2}
+            src="https://pbs.twimg.com/media/E-6_nIuVkAMu-63?format=jpg&name=4096x4096"
             alt="background"
             width={500}
             height={500}
