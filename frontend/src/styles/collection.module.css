@@ -1,0 +1,73 @@
+.collection .collection_box {
+  width: 80%;
+  margin: 5rem auto;
+}
+.collection .collection_box .collection_box_tag {
+  display: flex;
+  justify-content: space-between;
+}
+.collection .collection_box .collection_box_tag .collection_box_tag_selection {
+  display: flex;
+  gap: 1rem;
+}
+.collection .collection_box .collection_box_tag .collection_box_tag_selection .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.collection .collection_box .collection_box_tag .collection_box_tag_selection .dropdown button {
+  border: 1px solid var(--icons-color);
+  outline: 0;
+  background-color: var(--main-bg-color);
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  color: var(--icons-color);
+}
+.collection .collection_box .collection_box_tag .collection_box_tag_selection .dropdown button:hover {
+  border: 1px solid var(--icons-color);
+  background-color: var(--icons-color);
+  color: var(--main-bg-color);
+}
+.collection .collection_box .collection_box_tag .collection_box_tag_selection .dropdown .dropdown_menu {
+  position: absolute;
+  padding: 1rem 0.5rem;
+  box-shadow: var(--box-shadow);
+  font-size: 1rem;
+  width: 15rem;
+  border-radius: 1rem;
+  background-color: var(--main-bg-color);
+}
+.collection .collection_box .collection_box_tag .collection_box_tag_selection .dropdown .dropdown_menu li {
+  color: var(--icons-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.collection .collection_box .collection_box_tag .collection_box_tag_selection .dropdown .dropdown_menu li:hover {
+  background-color: var(--icons-color);
+  color: var(--shadow-dark-color);
+  border-radius: 0.3rem;
+}
+.collection .collection_box .collection_box_tag .collection_box_tag_apply button {
+  border: 1px solid var(--icons-color);
+  outline: 0;
+  background-color: var(--main-bg-color);
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  color: var(--icons-color);
+}
+.collection .collection_box .collection_box_tag .collection_box_tag_apply button:hover {
+  border: 1px solid var(--icons-color);
+  background-color: var(--icons-color);
+  color: var(--main-bg-color);
+}
+.collection .collection_box .collection_box_content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}/*# sourceMappingURL=collection.module.css.map */

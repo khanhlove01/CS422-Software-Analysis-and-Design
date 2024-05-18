@@ -1,0 +1,77 @@
+.collection {
+  .collection_box {
+    width: 80%;
+    margin: 5rem auto;
+    .collection_box_tag {
+      display: flex;
+      justify-content: space-between;
+      .collection_box_tag_selection {
+        display: flex;
+        gap: 1rem;
+        .dropdown {
+          position: relative;
+          display: inline-block;
+          button {
+            border: 1px solid var(--icons-color);
+            outline: 0;
+            background-color: var(--main-bg-color);
+            font-size: 1.2rem;
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            color: var(--icons-color);
+          }
+          button:hover {
+            border: 1px solid var(--icons-color);
+            background-color: var(--icons-color);
+            color: var(--main-bg-color);
+          }
+          .dropdown_menu {
+            position: absolute;
+            padding: 1rem 0.5rem;
+            box-shadow: var(--box-shadow);
+            font-size: 1rem;
+            width: 15rem;
+            border-radius: 1rem;
+            background-color: var(--main-bg-color);
+            li {
+              color: var(--icons-color);
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              cursor: pointer;
+            }
+            li:hover {
+              background-color: var(--icons-color);
+              color: var(--shadow-dark-color);
+              border-radius: 0.3rem;
+            }
+          }
+        }
+      }
+      .collection_box_tag_apply{
+        button {
+            border: 1px solid var(--icons-color);
+            outline: 0;
+            background-color: var(--main-bg-color);
+            font-size: 1.2rem;
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            color: var(--icons-color);
+          }
+          button:hover {
+            border: 1px solid var(--icons-color);
+            background-color: var(--icons-color);
+            color: var(--main-bg-color);
+          }
+      }
+    }
+    .collection_box_content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

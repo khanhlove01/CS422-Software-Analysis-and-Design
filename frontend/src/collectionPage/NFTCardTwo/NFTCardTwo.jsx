@@ -41,14 +41,12 @@ const NFTCardTwo = ({ NFTData }) => {
             <img
               src={el}
               alt="NFT"
-              
               className={Style.NFTCardTwo_box_img_img}
             />
           </div>
 
           <div className={Style.NFTCardTwo_box_info}>
             <div className={Style.NFTCardTwo_box_info_left}>
-              <LikeProfile />
               <p>NhutThi</p>
             </div>
             <small>4{i + 2}</small>

@@ -10,14 +10,14 @@ import {
 import Style from "./CollectionProfile.module.css";
 import images from "../../img/index";
 
-const collectionProfile = () => {
+const collectionProfile = ({profileImage}) => {
   const cardArray = [1, 2, 3, 4];
   return (
     <div className={Style.collectionProfile}>
       <div className={Style.collectionProfile_box}>
         <div className={Style.collectionProfile_box_left}>
           <img
-            src={images.test_img_2}
+            src={profileImage || images.test_img_3}
             alt="nft image"
             className={Style.collectionProfile_box_left_img}
           />

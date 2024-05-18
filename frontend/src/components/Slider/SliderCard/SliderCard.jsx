@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 //INTERNAL IMPORT
 import Style from "./SliderCard.module.css";
 import LikeProfile from "../../LikeProfile/LikeProfile";
+import images from "../../../img/index"
 
 
 const SliderCard = ({ el, i }) => {
@@ -12,7 +13,7 @@ const SliderCard = ({ el, i }) => {
       <div className={Style.sliderCard_box}>
         <motion.div className={Style.sliderCard_box_img}>
           <img
-            src={el.imageCover}
+            src={el.imageCover || images.test_img_2}
             className={Style.sliderCard_box_img_img}
             alt="slider profile"
             objectFit="cover"
@@ -29,13 +30,13 @@ const SliderCard = ({ el, i }) => {
         <div className={Style.sliderCard_box_price}>
           <div className={Style.sliderCard_box_price_box}>
             <small>Current Bid</small>
-            <p>{i + 2}.000 ETH</p>
+            <p>{el.price} USDT</p>
           </div>
 
           <div className={Style.sliderCard_box_price_time}>
             <small>Reaming time</small>
             <p>
-              {i + 1}h : 15m : {i + 4}0s
+              {el.time || "00 : 00 : 00"} 
             </p>
           </div>
         </div>

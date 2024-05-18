@@ -74,7 +74,7 @@ const Service = () => {
           <p className={Style.service_box_item_step}>
             <span>Step 4</span>
           </p>
-          <h3>Filter & Discover</h3>
+          <h3>Enjoy our website</h3>
           <p>
             Connect with wallet, discover, buy NTFs, sell your NFTs and earn
             money
