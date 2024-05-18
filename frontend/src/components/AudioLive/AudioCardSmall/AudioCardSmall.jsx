@@ -22,7 +22,7 @@ const AudioCardSmall = () => {
     <div className={Style.audioPlayer}>
       <div className={Style.audioPlayer_box}>
         <img
-          src={test_img}
+          src="https://pbs.twimg.com/media/EkXceLkVoAE368U?format=jpg&name=4096x4096"
           alt="music"
           width={100}
           height={100}
