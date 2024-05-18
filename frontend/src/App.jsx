@@ -23,6 +23,7 @@ import AboutUsPage from "./pages/aboutUsPage";
 import SubscriptionPage from "./pages/subscriptionPage";
 import ForgetPasswordPage from "./pages/forgetPasswordPage";
 import ResetPasswordPage from "./pages/resetPasswordPage";
+import CategoryPage from "./pages/categoryPage";
 
 // Layout component to wrap the common layout structure
 const Layout = () => {
@@ -71,6 +72,7 @@ const router = createBrowserRouter([
       { path: "/sign-up", element: <SignUpPage /> },
       { path: "/about", element: <AboutUsPage /> },
       { path: "/subscription", element: <SubscriptionPage /> },
+      { path: "/category/:id", element: <CategoryPage/> },
     ],
   },
   { path: "/login", element: <LoginPage /> },
