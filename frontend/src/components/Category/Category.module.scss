@@ -4,7 +4,7 @@
   .category {
     padding: 4rem 0;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     .category_box {
       line-height: 0;
@@ -16,14 +16,19 @@
       .category_box_img {
         border-radius: 1rem;
         width: 100%;
-        height: 150px;
+        height: 400px;
         object-fit: cover;
       }
       .category_box_title {
         display: flex;
         align-items: center;
+        text-align: center;
+        justify-content: center;
         padding: 1rem;
         gap: 1rem;
+        h4{
+          font-size: 3rem;
+        }
         span {
           font-size: 3rem;
           margin-top: 1rem;
