@@ -8,9 +8,9 @@ const AppError = require("../Utils/appError");
 //     fs.readFileSync(`${__dirname}/../data/nft-simple.json`)
 // );
 const aliasTopNfts = (req,res,next) => {
-    req.query.limit = '5';
-    req.query.sort = '-ratingsAverage,price';
-    req.query.fields = "name,price,ratingsAverage,difficulty"
+    // req.query.limit = '15';
+    // req.query.sort = 'ratingsAverage,price';
+    // req.query.fields = "name,price,ratingsAverage,difficulty"
     next();
 }
 
