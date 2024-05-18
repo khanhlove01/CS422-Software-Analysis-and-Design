@@ -20,84 +20,69 @@ const Collection = () => {
 
   const CardArray = [
     {
-      background: images.test_img_2,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/Fw-YY9naUAEx2z2?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/F3kUDqbagAAmGJZ?format=jpg&name=4096x4096",
+      name: "Minh Khanh",
+      collection: "Battle Collection"
     },
     {
-      background: images.test_img_2,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/FcsiU-iaUAEVSlh?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/FcsiU-iaUAEVSlh?format=jpg&name=4096x4096",
+      name: "Minh Khanh",
+      collection: "Library Collection"
     },
     {
-      background: images.test_img,
-      user: images.test_img,
-    },
-    {
-      background: images.test_img_2,
-      user: images.test_img,
-    },
-    {
-      background: images.test_img,
-      user: images.test_img_2,
-    },
-    {
-      background: images.test_img,
-      user: images.test_img,
-    },
-    {
-      background: images.test_img_2,
-      user: images.test_img_2,
-    },
-    {
-      background: images.test_img,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/Fedl7uqVIAAiVQO?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/Fedl7uqVIAAiVQO?format=jpg&name=4096x4096",
+      name: "Minh Khanh",
+      collection: "Modern City Collection"
     },
   ];
   const FollowingArray = [
     {
-      background: images.test_img_2,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/FThU8BmVIAAakXW?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/FThU8BmVIAAakXW?format=jpg&name=4096x4096",
+      name: "Minh Khanh",
+      collection: "Cyberpunk Collection"
+
     },
     {
-      background: images.test_img,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/FP-6DTsaIAI9rS6?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/FP-6DTsaIAI9rS6?format=jpg&name=4096x4096",
+      name: "Minh Khanh",
+      collection: "War Collection"
+
     },
     {
-      background: images.test_img,
-      user: images.test_img,
-    },
-    {
-      background: images.test_img_2,
-      user: images.test_img_2,
-    },
-    {
-      background: images.test_img,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/FMXRN06VUAQzYGn?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/FMXRN06VUAQzYGn?format=jpg&name=4096x4096",
+      name: "Minh Khanh",
+      collection: "Top View Collection"
+
     },
   ];
   const NewsArray = [
     {
-      background: images.test_img_2,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/E3MTb__UUAUtI9z?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/E3MTb__UUAUtI9z?format=jpg&name=4096x4096",
+      name: "Hong Nhut",
+      collection: "Forest Battle Collection"
+
     },
     {
-      background: images.test_img,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/EuleiYzVIAcaWO7?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/EuleiYzVIAcaWO7?format=jpg&name=4096x4096",
+      name: "Hong Nhut",
+      collection: "Destroy City Collection"
+
     },
     {
-      background: images.test_img_2,
-      user: images.test_img,
-    },
-    {
-      background: images.test_img,
-      user: images.test_img_2,
-    },
-    {
-      background: images.test_img,
-      user: images.test_img,
-    },
-    {
-      background: images.test_img_2,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/EpBquG8VEAA6bSu?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/EpBquG8VEAA6bSu?format=jpg&name=4096x4096",
+      name: "Hong Nhut",
+      collection: "Pokemon Gathering Collection"
+
+      
     },
   ];
   const openPopular = () => {

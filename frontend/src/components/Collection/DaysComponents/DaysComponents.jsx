@@ -42,7 +42,7 @@ const DaysComponents = ({el, i}) => {
         </div>
 
         <div className={Style.daysComponent_box_title}>
-          <h2>Amazing Collection</h2>
+          <h2>{el.collection}</h2>
           <div className={Style.daysComponent_box_title_info}>
             <div className={Style.daysComponent_box_title_info_profile}>
               <img
@@ -57,7 +57,7 @@ const DaysComponents = ({el, i}) => {
               <p>
                 Creator
                 <span>
-                  Shoaib Bhai
+                  {el.name}
                   <small>
                     <MdVerified className={Style.daysComponent_box_title_info_profile_icons}/>
                   </small>
