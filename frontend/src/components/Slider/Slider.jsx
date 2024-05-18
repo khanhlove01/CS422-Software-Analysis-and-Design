@@ -1,14 +1,41 @@
 import React, { useState, useEffect, useRef } from "react";
 import { TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti";
 import { motion } from "framer-motion";
-
+import { useContext } from "react";
+import { AuthContext } from "../../context/authContext";
 //Internal Import
 import Style from "./Slider.module.css";
 import SliderCard from "./SliderCard/SliderCard";
 //Image import
 import images from "../../img/index"
+import axios from "axios";
 
 const Slider = () => {
+  const [arrayImage,setArrayImage] = useState(null);
+  const [current, setCurrent] = useState(
+    JSON.parse(localStorage.getItem("user")) || null
+  );
+  // console.log('====================================');
+  // console.log(current.token);
+  // console.log('====================================');
+  const fetchSlider = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/api/v1/nfts", {
+        headers: {
+          Authorization: `Bearer ${current.token}`
+        }
+      });
+      console.log(response.data.data.nfts);
+    } catch (error) {
+      console.log('====================================');
+      console.log(error);
+      console.log('====================================');
+    }
+  }
+  useEffect(() => {
+    fetchSlider();
+  }, []);
+
   const sliderArray = [{
     background: images.test_img_2,
     user: images.test_img_2,
