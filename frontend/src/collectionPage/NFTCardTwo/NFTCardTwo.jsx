@@ -28,18 +28,18 @@ const NFTCardTwo = ({ NFTData }) => {
             <div className={Style.NFTCardTwo_box_like_box}>
               <div className={Style.NFTCardTwo_box_like_box_box}>
                 <BsImage className={Style.NFTCardTwo_box_like_box_box_icon} />
-                <p onClick={() => likeNFT()}>
+                {/* <p onClick={() => likeNFT()}>
                   {like ? <AiOutlineHeart className={Style.icon}/> : <AiFillHeart className={Style.icon}/>}
                   {""}
                   <span>{likeInc + 1}</span>
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
 
           <div className={Style.NFTCardTwo_box_img}>
             <img
-              src={el}
+              src={el.imageCover}
               alt="NFT"
               className={Style.NFTCardTwo_box_img_img}
             />
@@ -47,18 +47,18 @@ const NFTCardTwo = ({ NFTData }) => {
 
           <div className={Style.NFTCardTwo_box_info}>
             <div className={Style.NFTCardTwo_box_info_left}>
-              <p>NhutThi</p>
+              <p>{el.name}</p>
             </div>
-            <small>4{i + 2}</small>
+            <small>{el.ratingsAverage}</small>
           </div>
 
           <div className={Style.NFTCardTwo_box_price}>
             <div className={Style.NFTCardTwo_box_price_box}>
               <small>Current Bid</small>
-              <p>{el.price || i + 4} ETH</p>
+              <p>{el.price} USDT</p>
             </div>
             <p className={Style.NFTCardTwo_box_price_stock}>
-              <MdTimer /> <span>{i + 1} hours left</span>
+              <MdTimer /> <span>{el.duration} hours left</span>
             </p>
           </div>
         </div>
