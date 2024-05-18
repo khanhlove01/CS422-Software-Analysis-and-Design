@@ -21,8 +21,8 @@ nftsRouter
 
 //Router NFTs
 nftsRouter.route('/')
-    .get(authController.protect, nftControllers.getAllNfts)
-    // .get(nftControllers.getAllNfts)
+    //.get(authController.protect, nftControllers.getAllNfts)
+    .get(nftControllers.getAllNfts)
     .post(nftControllers.createNFT);
 
 nftsRouter.route('/:id')

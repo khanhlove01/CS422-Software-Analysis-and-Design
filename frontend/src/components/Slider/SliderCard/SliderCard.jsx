@@ -12,7 +12,7 @@ const SliderCard = ({ el, i }) => {
       <div className={Style.sliderCard_box}>
         <motion.div className={Style.sliderCard_box_img}>
           <img
-            src={el.background}
+            src={el.imageCover}
             className={Style.sliderCard_box_img_img}
             alt="slider profile"
             objectFit="cover"

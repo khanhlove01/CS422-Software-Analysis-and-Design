@@ -21,11 +21,12 @@ const Slider = () => {
   const fetchSlider = async () => {
     try {
       const response = await axios.get("http://localhost:3000/api/v1/nfts", {
-        headers: {
-          Authorization: `Bearer ${current.token}`
-        }
+        // headers: {
+        //   Authorization: `Bearer ${current.token}`
+        // }
       });
       console.log(response.data.data.nfts);
+      setArrayImage(response.data.data.nfts);
     } catch (error) {
       console.log('====================================');
       console.log(error);
@@ -109,7 +110,7 @@ const Slider = () => {
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
           >
-            {sliderArray.map((el, i) => (
+            {arrayImage && arrayImage.filter(el => el.elemental === "Player").map((el, i) => (
               <SliderCard key={i + 1} el={el} i={i} />
             ))}
           </motion.div>
