@@ -30,6 +30,9 @@
   align-items: center;
   gap: 1rem;
 }
+.bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_creator .bigNFTSlider_box_left_creator_profile img {
+  border-radius: 50%;
+}
 .bigNFTSlider .bigNFTSlider_box .bigNFTSlider_box_left .bigNFTSlider_box_left_creator .bigNFTSlider_box_left_creator_profile .bigNFTSlider_box_left_creator_profile_img {
   border-radius: 50%;
 }

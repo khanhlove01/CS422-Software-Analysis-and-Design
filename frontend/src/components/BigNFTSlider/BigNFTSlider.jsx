@@ -22,8 +22,8 @@ const BigNFTSlider = () => {
       collection: "GYm",
       price: "00664 ETH",
       like: 243,
-      image: test_img,
-      nftImage: test_img,
+      image: "https://pbs.twimg.com/media/ExjITWfU4AMzcnt?format=jpg&name=900x900",
+      nftImage: "https://pbs.twimg.com/media/ExjITWfU4AMzcnt?format=jpg&name=900x900",
       time: {
         days: 21,
         hours: 40,
@@ -107,8 +107,8 @@ const BigNFTSlider = () => {
               <img
                 src={sliderData[idNumber].image}
                 alt="profile image"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
               <div
                 className={Style.bigNFTSlider_box_left_creator_profile_image}

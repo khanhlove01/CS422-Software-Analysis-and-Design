@@ -27,7 +27,7 @@ const Brand = () => {
           </div>
         </div>
         <div className={Style.brand_box_right}>
-          <img src={images.test_img} alt='brand logo' width={800} height={600}/>
+          <img src="https://pbs.twimg.com/media/GBY0LXraAAAGA81?format=jpg&name=4096x4096" alt='brand logo' width={800} height={600}/>
         </div>
       </div>
     </div>

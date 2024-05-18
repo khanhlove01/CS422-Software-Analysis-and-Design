@@ -24,6 +24,7 @@ import SubscriptionPage from "./pages/subscriptionPage";
 import ForgetPasswordPage from "./pages/forgetPasswordPage";
 import ResetPasswordPage from "./pages/resetPasswordPage";
 import CategoryPage from "./pages/categoryPage";
+import FeaturedNFTPage from "./pages/featuredNFTPage";
 
 // Layout component to wrap the common layout structure
 const Layout = () => {
@@ -73,6 +74,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <AboutUsPage /> },
       { path: "/subscription", element: <SubscriptionPage /> },
       { path: "/category/:id", element: <CategoryPage/> },
+      { path: "/feature-NFTs", element: <FeaturedNFTPage/> },
     ],
   },
   { path: "/login", element: <LoginPage /> },

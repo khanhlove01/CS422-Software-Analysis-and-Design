@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Style from "./Discover.module.css";
 
 const Discover = () => {
+  const navigate = useNavigate();
+
   // Discover menu
   const discover = [
     {
@@ -29,12 +31,21 @@ const Discover = () => {
       name: "Connect Wallet",
       link: "connect-wallet",
     },
+    {
+      name: "Featured NFTs",
+      link: "feature-NFTs",
+    }
   ];
+
+  const handleNavigation = (link) => {
+    navigate(`/${link}`);
+  };
+
   return (
     <div>
       {discover.map((item, index) => (
         <div key={index + 1} className={Style.discover}>
-          <a href={`${item.link}`}>{item.name}</a>
+          <a onClick={() => handleNavigation(item.link)}>{item.name}</a>
         </div>
       ))}
     </div>
