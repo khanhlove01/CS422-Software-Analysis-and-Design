@@ -38,7 +38,6 @@ const SearchPage = () => {
   return (
     <div className={Style.searchBar}>
       <Banner bannerImage={images.test_img_3}/>
-      <Filter/>
       <SearchBar/>
       <NFTCardTwo NFTData={collectionArray}/>
       <Slider/>

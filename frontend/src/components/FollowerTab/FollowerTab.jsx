@@ -18,84 +18,84 @@ import { TbBackground } from "react-icons/tb";
 const FollowerTab = () => {
   const CardArray = [
     {
-      background: images.test_img_2,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/Fj7wvUzUAAAcqNo?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/GHa18RLagAATUZE?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img_2,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/FzTal2laAAAFgMn?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/GC6pjIcagAAsP0Y?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/FzTat5faAAA_-WU?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/FuZH36paUAA4cQi?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img_2,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/FzTaxQVagAEzPNx?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/F-psYRvbkAA8G-9?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/F7mKL3Ja8AAYWB_?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/F5vq8wkbQAAvRBD?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/F7M422yboAATxqv?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/F6YqtGsbkAACyH9?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img_2,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/F6tGfVUaEAAB5ft?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/F5lBQz9aoAAtRQN?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/F27MZwObkAAUNWX?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/FxnORKwaUAg2KVl?format=jpg&name=4096x4096",
     },
   ];
   const FollowingArray = [
     {
-      background: images.test_img_2,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/FP0rguMVgAIgtc_?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/GHa18RLagAATUZE?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/FP0rhOrUYAUukNo?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/F-psYRvbkAA8G-9?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/FP0rivSVsAAx2E4?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/GHa18RLagAATUZE?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img_2,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/FP0rjRNVUAkTkAu?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/FaDEd7WVQAA12sx?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/FPvpta3VUAAN2FJ?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/FYh9-m-VUAAZeGk?format=jpg&name=4096x4096",
     },
   ];
   const NewsArray = [
     {
-      background: images.test_img_2,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/EmxfNxzVkAEn4Po?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/GHa18RLagAATUZE?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/EmIv7hmVkAAc9Cu?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/ER3bR-5U4AE1-65?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img_2,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/EmIv7-PVgAMzkoA?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/ER3bUAzVAAQtWa9?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/EmIv8lmU4AARjaO?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/ER3bUkjU0AAQg0C?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img,
-      user: images.test_img,
+      background: "https://pbs.twimg.com/media/EmIv9JQVkAAZOOj?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/ER3bWdBU4AE_VEV?format=jpg&name=4096x4096",
     },
     {
-      background: images.test_img_2,
-      user: images.test_img_2,
+      background: "https://pbs.twimg.com/media/EYnddEaUYAIh3Ty?format=jpg&name=4096x4096",
+      user: "https://pbs.twimg.com/media/EO-AM8mVAAA4sWa?format=jpg&name=4096x4096",
     },
   ];
 
