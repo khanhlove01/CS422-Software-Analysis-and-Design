@@ -5,7 +5,12 @@ import { BsSearch, BsArrowRight } from "react-icons/bs";
 import Style from "./SearchBar.module.css";
 
 const SearchBar = () => {
-  
+  const[search, setSearch] = useState(null);
+
+  const handleSearchBar = (e) =>{
+    setSearch(e.target.value);
+  }
+
   return (
     <div className={Style.SearchBar}>
       <div className={Style.SearchBar_box}>
@@ -13,8 +18,8 @@ const SearchBar = () => {
         <input
           type="text"
           placeholder="Type yout keyword..."
-          onChange={(e) => {}}
-          value={""}
+          onChange={(e) => handleSearchBar(e)}
+          // value={""}
         />
         <BsArrowRight className={Style.SearchBar_box_icon} />
       </div>

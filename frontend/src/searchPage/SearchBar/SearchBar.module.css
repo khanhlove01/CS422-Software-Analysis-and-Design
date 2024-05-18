@@ -19,14 +19,16 @@
   outline: 0;
   padding: 2rem;
   background-color: var(--main-bg-color);
+  color: var(--icons-color);
+  font-size: 2rem;
 }
 .SearchBar .SearchBar_box input::-moz-placeholder {
   color: var(--icons-color);
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 .SearchBar .SearchBar_box input::placeholder {
   color: var(--icons-color);
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 .SearchBar .SearchBar_box .SearchBar_box_icon {
   font-size: 3rem;
