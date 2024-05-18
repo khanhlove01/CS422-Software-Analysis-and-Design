@@ -15,15 +15,15 @@
         border-radius: 1rem;
         padding: 1rem 2rem;
         .collectionProfile_box_left{
-            height: 70%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 10px;
             .collectionProfile_box_left_img{
                 width: 80%;
-                height: 80%;
-                border-radius: 1rem;
+                aspect-ratio: 1/1;
+                border-radius: 2rem;
             }
             .collectionProfile_box_left_social{
                 display: flex;
@@ -38,8 +38,12 @@
                     border-radius: 50%;
                     color: var(--main-bg-color);
                     display: grid;
-                    padding: .3rem;
+                    padding: .8rem;
                     transition: all .3s ease-in;
+                    .icon{
+                        width: 25px;
+                        height: 25px;
+                    }
                 }
                 a:hover{
                     background-color: var(--main-bg-color);
@@ -49,8 +53,8 @@
             }
         }
         .collectionProfile_box_middle{
-            display: grid;
-            align-self: flex-start;
+            display: flex;
+            flex-direction: column;            
             h1{
                 font-size: 3rem;
                 line-height: 0;

@@ -24,16 +24,16 @@ const collectionProfile = () => {
 
           <div className={Style.collectionProfile_box_left_social}>
             <a href="#">
-              <TiSocialFacebook />
+              <TiSocialFacebook className={Style.icon}/>
             </a>
             <a href="#">
-              <TiSocialInstagram />
+              <TiSocialInstagram className={Style.icon}/>
             </a>
             <a href="#">
-              <TiSocialLinkedin />
+              <TiSocialLinkedin className={Style.icon}/>
             </a>
             <a href="#">
-              <TiSocialTwitter />
+              <TiSocialTwitter className={Style.icon}/>
             </a>
           </div>
         </div>
@@ -46,7 +46,7 @@ const collectionProfile = () => {
             Museum of Toys.
           </p>
 
-          <div className={Style.collectionProfile_box_middle_box}>
+          {/* <div className={Style.collectionProfile_box_middle_box}>
             {cardArray.map((el, i) => (
               <div
                 className={Style.collectionProfile_box_middle_box_item}
@@ -57,7 +57,7 @@ const collectionProfile = () => {
                 <span>+ {i + 2}.11%</span>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@
   padding: 1rem 2rem;
 }
 .collectionProfile .collectionProfile_box .collectionProfile_box_left {
-  height: 70%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +23,8 @@
 }
 .collectionProfile .collectionProfile_box .collectionProfile_box_left .collectionProfile_box_left_img {
   width: 80%;
-  height: 80%;
-  border-radius: 1rem;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
 }
 .collectionProfile .collectionProfile_box .collectionProfile_box_left .collectionProfile_box_left_social {
   display: flex;
@@ -40,8 +40,12 @@
   border-radius: 50%;
   color: var(--main-bg-color);
   display: grid;
-  padding: 0.3rem;
+  padding: 0.8rem;
   transition: all 0.3s ease-in;
+}
+.collectionProfile .collectionProfile_box .collectionProfile_box_left .collectionProfile_box_left_social a .icon {
+  width: 25px;
+  height: 25px;
 }
 .collectionProfile .collectionProfile_box .collectionProfile_box_left .collectionProfile_box_left_social a:hover {
   background-color: var(--main-bg-color);
@@ -49,8 +53,8 @@
   box-shadow: var(--box-shadow);
 }
 .collectionProfile .collectionProfile_box .collectionProfile_box_middle {
-  display: grid;
-  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
 }
 .collectionProfile .collectionProfile_box .collectionProfile_box_middle h1 {
   font-size: 3rem;

@@ -23,9 +23,6 @@ const Collection = () => {
       <Banner bannerImage={images.test_img_2} />
       <CollectionProfile/>
       <NFTCardTwo  NFTData = {collectionArray}/>
-      <Filter/>
-      <Slider/>
-      <Brand/>
     </div>
   );
 };
