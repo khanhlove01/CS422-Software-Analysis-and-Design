@@ -1,6 +1,7 @@
 import React from 'react'
 import Cookies from 'js-cookie'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 //INTERNAL IMPORT
 import Style from "../styles/login.module.css";
 import images from "../img/index";
@@ -12,6 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 
 const ForgetPasswordPage = () => {
+  const navigate = useNavigate();
   const {linkResetPassword,setLinkResetPassword} = useContext(AuthContext)
   const [inputs, setInputs] = useState({
     email: "",
@@ -39,6 +41,10 @@ const handleForgetPassword = async (e) => {
       console.log(error);
     }
 }
+const handleClickCreate = () =>{
+  navigate("/account");
+}
+
 
   return (
     <div className={Style.login}>
@@ -69,7 +75,7 @@ const handleForgetPassword = async (e) => {
             {/* <button onClick={handleLogin}>Submit</button> */}
           </div>
         </div>
-        <p className={Style.login_box_para}>
+        <p className={Style.login_box_para} onClick={handleClickCreate}>
           New user? <a href="#">Create an account</a>
         </p>
       </div>

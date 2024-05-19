@@ -5,9 +5,11 @@ import images from "../img/index";
 import { Button } from "../components/componentsindex";
 import { AuthContext } from '../context/authContext';
 import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 const ResetPasswordPage = () => {
+  const navigate = useNavigate();
     const {linkResetPassword} = useContext(AuthContext)
     const [inputs, setInputs] = useState({
       password: "",
@@ -33,6 +35,10 @@ const ResetPasswordPage = () => {
         toast.error("There are some errors occured");
         console.log('====================================');
       }
+    }
+
+    const handleClickCreate = () =>{
+      navigate("/account");
     }
 
     return (
@@ -79,8 +85,8 @@ const ResetPasswordPage = () => {
                 {/* <button onClick={handleLogin}>Submit</button> */}
               </div>
             </div>
-            <p className={Style.login_box_para}>
-              New user? <a href="#">Create an account</a>
+            <p className={Style.login_box_para} onClick={handleClickCreate}>
+              New user? <a href="">Create an account</a>
             </p>
           </div>
         </div>
