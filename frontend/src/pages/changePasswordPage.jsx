@@ -21,16 +21,16 @@ const ChangePasswordPage = () => {
 
   const handleChangePassword = async (e) => {
     try {
-      const response = await axios.patch(
-        "http://localhost:3000/api/v1/users/updateMyPassword",
+      const response = await axios.patch("http://localhost:3000/api/v1/users/updateMyPassword",
+        {
+            passwordCurrent: inputs.passwordCurrent,
+            password: inputs.password,
+            passwordConfirmed: inputs.passwordConfirmed
+        },
         {
           headers: {
             Authorization: `Bearer ${current.token}`,
           },
-        },{
-            passwordCurrent: inputs.passwordCurrent,
-            password: inputs.password,
-          passwordConfirmed: inputs.passwordConfirmed
         }
       );
     } catch (error) {
