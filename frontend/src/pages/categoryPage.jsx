@@ -78,8 +78,8 @@ const CategoryPage = () => {
   const selectedCollection = collections[id] || collections.forest;
 
   // Use selectedCollection's images as default if filteredNFTData is empty
-  const bannerImage = filteredNFTData.length > 0 ? filteredNFTData[0].imageCover : selectedCollection.bannerImage;
-  const profileImage = filteredNFTData.length > 0 ? filteredNFTData[0].imageCover : selectedCollection.profileImage;
+  const bannerImage = filteredNFTData.length > 0 ? filteredNFTData[2].imageCover : selectedCollection.bannerImage;
+  const profileImage = filteredNFTData.length > 0 ? filteredNFTData[2].imageCover : selectedCollection.profileImage;
 
   return (
     <div className={Style.categoryPage}>
