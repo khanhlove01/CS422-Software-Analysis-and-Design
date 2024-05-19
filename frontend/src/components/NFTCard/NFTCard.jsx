@@ -8,7 +8,10 @@ import Style from "./NFTCard.module.css";
 //Image Import
 import images from "../../img/index"
 
-const NFTCard = () => {
+const NFTCard = ({filteredDataArray}) => {
+  console.log('====================================');
+  console.log(filteredDataArray);
+  console.log('====================================');
   const featureArray = [{
     background: images.test_img_2,
     user: images.test_img,
@@ -52,11 +55,11 @@ const NFTCard = () => {
   };
   return (
     <div className={Style.NFTCard}>
-      {featureArray.map((el, i) => (
+      {filteredDataArray.map((el, i) => (
         <div className={Style.NFTCard_box} key={i + 1}>
           <div className={Style.NFTCard_box_img}>
             <img
-              src={el.background}
+              src={el.imageCover}
               alt="NFT images"
               className={Style.NFTCard_box_img_img}
             />
@@ -89,7 +92,7 @@ const NFTCard = () => {
               <div className={Style.NFTCard_box_update_details_price}>
                 <div className={Style.NFTCard_box_update_details_price_box}>
                   <h4>
-                    Clone #2404
+                    {el.name}
                   </h4>
 
                   <div

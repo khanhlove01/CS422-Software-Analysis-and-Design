@@ -1,38 +1,58 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NFTCard, Title } from "../components/componentsindex";
-import { useEffect } from "react";
+import axios from 'axios';
 //Internal Import
 import Style from "../styles/featuredNFTPage.module.css";
 import { Banner } from "../collectionPage/collectionindex";
 import img from "../img";
 
 const FeaturedNFTPage = () => {
-  
-  const [feature, setFeature] = useState(null);
-
+  const [features, setFeatures] = useState([]);
+  const [dataArray, setDataArray] = useState([]);
+  const [filteredDataArray, setFilteredDataArray] = useState([]);
   const handleButtonClick = (text) => {
-    setFeature(text);
+    setFeatures((prevFeatures) => {
+      if (prevFeatures.includes(text)) {
+        return prevFeatures.filter((feature) => feature !== text);
+      } else {
+        return [...prevFeatures, text];
+      }
+    });
   };
 
-  const handleApplyClick = () =>{
-    //Change the NFT below
-    setFeature(null);
-  }
+  const fetchData = async () => {
+    try {
+      const res = await axios.get("http://localhost:3000/api/v1/nfts");
+      setDataArray(res.data.data.nfts);
+      console.log('====================================');
+      console.log(res.data.data.nfts);
+      console.log('====================================');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  //Call api
-  const [dataArray, setDataArray] = useState([]);
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get("http://localhost:3000/api/v1/nfts");
-        setDataArray(res.data.data.nfts);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
     fetchData();
   }, []);
+
+  useEffect(() => {
+    setFilteredDataArray(
+      dataArray.filter((nft) =>
+        features.length === 0 || features.includes(nft.elemental)
+      )
+    );
+    console.log("Selected features:", features);
+    console.log("Filtered data array:", filteredDataArray);
+  }, [features, dataArray]);
+
+  // const handleApplyClick = () => {
+  //   // This function can be used to trigger any specific actions when apply is clicked
+  //   console.log("Selected features:", features);
+  // };
+  // const filteredDataArray = dataArray.filter(nft => 
+  //   features.length === 0 || features.includes(nft.elemental)
+  // );
 
   return (
     <div className={Style.FeaturedNFTPage}>
@@ -44,37 +64,25 @@ const FeaturedNFTPage = () => {
       <div className={Style.FeaturedNFTPage_box}>
         <div className={Style.FeaturedNFTPage_box_tag}>
           <div className={Style.FeaturedNFTPage_box_tag_selection}>
-            <button
-              className={feature === "Forest" ? Style.active : null}
-              onClick={() => handleButtonClick("Forest")}
-            >
-              Forest
-            </button>
-            <button
-              className={feature === "Sea" ? Style.active : null}
-              onClick={() => handleButtonClick("Sea")}
-            >
-              Sea
-            </button>
-            <button
-              className={feature === "Sky" ? Style.active : null}
-              onClick={() => handleButtonClick("Sky")}
-            >
-              Sky
-            </button>
-            <button
-              className={feature === "Player" ? Style.active : null}
-              onClick={() => handleButtonClick("Player")}
-            >
-              Player
-            </button>
+            {["Forest", "Sea", "Sky", "Player"].map((feature) => (
+              <button
+                key={feature}
+                className={features.includes(feature) ? Style.active : null}
+                onClick={() => handleButtonClick(feature)}
+              >
+                {feature}
+              </button>
+            ))}
           </div>
-          <div className={Style.FeaturedNFTPage_box_tag_apply}>
-            <button onClick={()=>handleApplyClick()}>Apply</button>
-          </div>
+          {/* <div className={Style.FeaturedNFTPage_box_tag_apply}>
+            <button onClick={handleApplyClick}>Apply</button>
+          </div> */}
         </div>
         <div>
-          <NFTCard />
+          <NFTCard filteredDataArray={filteredDataArray}/>
+          {/* {filteredDataArray.map((nft, index) => (
+            <NFTCard key={index} nft={nft} />
+          ))} */}
         </div>
       </div>
     </div>
