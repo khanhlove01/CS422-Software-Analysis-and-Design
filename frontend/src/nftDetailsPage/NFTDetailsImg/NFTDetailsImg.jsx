@@ -8,6 +8,9 @@ import Style from "./NFTDetailsImg.module.css";
 import images from "../../img/index";
 
 const NFTDetailsImg = ({ nft }) => {
+  console.log('====================================');
+  console.log(nft);
+  console.log('====================================');
   const [description, setDescription] = useState(true);
   const [details, setDetails] = useState(true);
   const [like, setLike] = useState(false);
@@ -58,7 +61,7 @@ const NFTDetailsImg = ({ nft }) => {
 
           <div className={Style.NFTDetailsImg_box_NFT_img}>
             <img
-              src={images.test_img_3}
+              src={nft.imageCover}
               className={Style.NFTDetailsImg_box_NFT_img_img}
               alt="NFT image"
               width={700}
@@ -78,7 +81,7 @@ const NFTDetailsImg = ({ nft }) => {
 
         {description && (
           <div className={Style.NFTDetailsImg_box_description_box}>
-            <p>Desciption</p>
+            <p>{nft.summary}</p>
           </div>
         )}
 

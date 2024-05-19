@@ -22,7 +22,7 @@ const NFTDetails = () => {
   },[])
   return (
     <div>
-      <NFTDetailsPage />
+      <NFTDetailsPage nft={nft}/>
       <Category />
       <Brand />
     </div>
