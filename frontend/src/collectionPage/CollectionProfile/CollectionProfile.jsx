@@ -6,11 +6,12 @@ import {
   TiSocialInstagram,
 } from "react-icons/ti";
 
+
 //INTERNAL IMPORT
 import Style from "./CollectionProfile.module.css";
 import images from "../../img/index";
 
-const collectionProfile = ({profileImage}) => {
+const collectionProfile = ({ profileImage }) => {
   const cardArray = [1, 2, 3, 4];
   return (
     <div className={Style.collectionProfile}>
@@ -23,17 +24,11 @@ const collectionProfile = ({profileImage}) => {
           />
 
           <div className={Style.collectionProfile_box_left_social}>
-            <a href="#">
-              <TiSocialFacebook className={Style.icon}/>
+            <a href="https://www.instagram.com/asteroid_ill/">
+              <TiSocialInstagram className={Style.icon} />
             </a>
-            <a href="#">
-              <TiSocialInstagram className={Style.icon}/>
-            </a>
-            <a href="#">
-              <TiSocialLinkedin className={Style.icon}/>
-            </a>
-            <a href="#">
-              <TiSocialTwitter className={Style.icon}/>
+            <a href="https://twitter.com/asteroid_ill">
+              <TiSocialTwitter className={Style.icon} />
             </a>
           </div>
         </div>
