@@ -17,6 +17,8 @@ const FeaturedNFTPage = () => {
   const [sortBy, setSortBy] = useState(null);
   const [ratingScore, setRatingScore] = useState(null);
   const [ratingQuantity, setRatingQuantity] = useState(null);
+  const [price, setPrice] = useState(null);
+  const [duration, setDuration] = useState(null);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [linkCallAPI, setLinkCallAPI] = useState("http://localhost:3000/api/v1/nfts/top-5-nfts");
   const dropdownRef = useRef();
@@ -38,19 +40,19 @@ const FeaturedNFTPage = () => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
 
-  const handleSelect = (dropdown, value) => {
+  const handleSelect = (dropdown, value,title) => {
     switch (dropdown) {
       case "difficulty":
-        setDifficulty(value);
+        setDifficulty({ value: value,title:title });
         break;
       case "sortBy":
-        setSortBy(value);
+        setSortBy({value:value,title:title});
         break;
       case "ratingScore":
-        setRatingScore(value);
+        setRatingScore({value:value,title:title});
         break;
       case "ratingQuantity":
-        setRatingQuantity(value);
+        setRatingQuantity({value:value,title:title});
         break;
       default:
         break;
@@ -70,9 +72,27 @@ const FeaturedNFTPage = () => {
     });
   };
 
+  const constructApiUrl = () => {
+    let apiUrl = "http://localhost:3000/api/v1/nfts/top-5-nfts?";
+    if (difficulty) apiUrl += `difficulty=${difficulty.value}&`;
+    if (sortBy) apiUrl += `sort=${sortBy.value}&`;
+    if (price) apiUrl += `price[gt]=${price}&`;
+    if (duration) apiUrl += `duration[gte]=${duration}&`;
+    if (ratingScore) apiUrl += `ratingsAverage[gt]=${ratingScore.value}&`;
+    if (ratingQuantity) apiUrl += `ratingsQuantity[gt]=${ratingQuantity.value}&`;
+    // Remove trailing '&' if it exists
+    apiUrl = apiUrl.endsWith("&") ? apiUrl.slice(0, -1) : apiUrl;
+    console.log('====================================');
+    console.log(apiUrl);
+    console.log('====================================');
+    return apiUrl;
+  };
+  
+
   const fetchData = async () => {
     try {
-      const res = await axios.get(linkCallAPI);
+      const apiUrl = constructApiUrl();
+      const res = await axios.get(apiUrl);
       setDataArray(res.data.data.nfts);
       console.log("====================================");
       console.log(res.data.data.nfts);
@@ -84,7 +104,7 @@ const FeaturedNFTPage = () => {
 
   useEffect(() => {
     fetchData();
-  }, [linkCallAPI]);
+  }, [difficulty, sortBy, price, duration, ratingScore, ratingQuantity]);  
 
   useEffect(() => {
     setFilteredDataArray(
@@ -129,7 +149,7 @@ const FeaturedNFTPage = () => {
             {/* Difficulty Dropdown */}
             <div className={Style.dropdown}>
               <button onClick={() => handleDropdownClick("difficulty")}>
-                Difficulty: {difficulty ? difficulty : "Select"}
+                Difficulty: {difficulty ? difficulty.title : "Select"}
                 {openDropdown === "difficulty" ? (
                   <TiArrowSortedUp />
                 ) : (
@@ -138,23 +158,23 @@ const FeaturedNFTPage = () => {
               </button>
               {openDropdown === "difficulty" && (
                 <ul className={Style.dropdown_menu}>
-                  <li onClick={() => handleSelect("difficulty", "Easy")}>
+                  <li onClick={() => handleSelect("difficulty", "easy", "Easy")}>
                     Easy
                   </li>
-                  <li onClick={() => handleSelect("difficulty", "Medium")}>
+                  <li onClick={() => handleSelect("difficulty", "medium", "Medium")}>
                     Medium
                   </li>
-                  <li onClick={() => handleSelect("difficulty", "Hard")}>
+                  <li onClick={() => handleSelect("difficulty", "difficult", "Difficult")}>
                     Hard
                   </li>
-                  <li onClick={() => handleSelect("difficulty", null)}>None</li>
+                  <li onClick={() => handleSelect("difficulty", null, "None")}>None</li>
                 </ul>
               )}
             </div>
             {/* Sort By Dropdown */}
             <div className={Style.dropdown}>
               <button onClick={() => handleDropdownClick("sortBy")}>
-                Sort By: {sortBy ? sortBy : "Select"}
+                Sort By: {sortBy ? sortBy.title : "Select"}
                 {openDropdown === "sortBy" ? (
                   <TiArrowSortedUp />
                 ) : (
@@ -165,32 +185,32 @@ const FeaturedNFTPage = () => {
                 <ul className={Style.dropdown_menu}>
                   <li
                     onClick={() =>
-                      handleSelect("sortBy", "By Price (Low to High)")
+                      handleSelect("sortBy", "price", "By Price Low to High")
                     }
                   >
                     By Price (Low to High)
                   </li>
                   <li
                     onClick={() =>
-                      handleSelect("sortBy", "By Price (High to Low)")
+                      handleSelect("sortBy", "-price", "By Price High to Low")
                     }
                   >
                     By Price (High to Low)
                   </li>
-                  <li onClick={() => handleSelect("sortBy", "By Name (A - Z)")}>
+                  <li onClick={() => handleSelect("sortBy", "name", "By Name (A - Z)")}>
                     By Name (A - Z)
                   </li>
-                  <li onClick={() => handleSelect("sortBy", "By Name (Z - A)")}>
+                  <li onClick={() => handleSelect("sortBy", "-name", "By Name (Z - A)")}>
                     By Name (Z - A)
                   </li>
-                  <li onClick={() => handleSelect("sortBy", null)}>None</li>
+                  <li onClick={() => handleSelect("sortBy", null, "None")}>None</li>
                 </ul>
               )}
             </div>
             {/* Rating Score Dropdown */}
             <div className={Style.dropdown}>
               <button onClick={() => handleDropdownClick("ratingScore")}>
-                Rating Score: {ratingScore ? ratingScore : "Select"}
+                Rating Score: {ratingScore ? ratingScore.title : "Select"}
                 {openDropdown === "ratingScore" ? (
                   <TiArrowSortedUp />
                 ) : (
@@ -200,21 +220,21 @@ const FeaturedNFTPage = () => {
               {openDropdown === "ratingScore" && (
                 <ul className={Style.dropdown_menu}>
                   <li
-                    onClick={() => handleSelect("ratingScore", "Higher than 3")}
+                    onClick={() => handleSelect("ratingScore", "3","Higher than 3")}
                   >
                     Higher than 3
                   </li>
                   <li
-                    onClick={() => handleSelect("ratingScore", "Higher than 4")}
+                    onClick={() => handleSelect("ratingScore", "4","Higher than 4")}
                   >
                     Higher than 4
                   </li>
                   <li
-                    onClick={() => handleSelect("ratingScore", "Higher than 5")}
+                    onClick={() => handleSelect("ratingScore", "4.5","Higher than 4.5")}
                   >
-                    Higher than 5
+                    Higher than 4.5
                   </li>
-                  <li onClick={() => handleSelect("ratingScore", null)}>
+                  <li onClick={() => handleSelect("ratingScore", null, "None")}>
                     None
                   </li>
                 </ul>
@@ -223,7 +243,7 @@ const FeaturedNFTPage = () => {
             {/* Rating Quantity Dropdown */}
             <div className={Style.dropdown}>
               <button onClick={() => handleDropdownClick("ratingQuantity")}>
-                Rating Quantity: {ratingQuantity ? ratingQuantity : "Select"}
+                Rating Quantity: {ratingQuantity ? ratingQuantity.title : "Select"}
                 {openDropdown === "ratingQuantity" ? (
                   <TiArrowSortedUp />
                 ) : (
@@ -234,26 +254,26 @@ const FeaturedNFTPage = () => {
                 <ul className={Style.dropdown_menu}>
                   <li
                     onClick={() =>
-                      handleSelect("ratingQuantity", "Higher than 10")
+                      handleSelect("ratingQuantity", "10","Higher than 10")
                     }
                   >
                     Higher than 10
                   </li>
                   <li
                     onClick={() =>
-                      handleSelect("ratingQuantity", "Higher than 50")
+                      handleSelect("ratingQuantity", "50","Higher than 50")
                     }
                   >
                     Higher than 50
                   </li>
                   <li
                     onClick={() =>
-                      handleSelect("ratingQuantity", "Higher than 100")
+                      handleSelect("ratingQuantity", "100","Higher than 100")
                     }
                   >
                     Higher than 100
                   </li>
-                  <li onClick={() => handleSelect("ratingQuantity", null)}>
+                  <li onClick={() => handleSelect("ratingQuantity", null,"None")}>
                     None
                   </li>
                 </ul>
