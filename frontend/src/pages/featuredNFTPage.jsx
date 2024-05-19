@@ -113,6 +113,7 @@ const FeaturedNFTPage = () => {
       />
       <div className={Style.FeaturedNFTPage_box}>
         <div className={Style.FeaturedNFTPage_box_tag}>
+          <div className={Style.FeaturedNFTPage_box_tag_container}>
           <div className={Style.FeaturedNFTPage_box_tag_selection}>
             {["Forest", "Sea", "Sky", "Player"].map((feature) => (
               <button
@@ -259,6 +260,8 @@ const FeaturedNFTPage = () => {
               )}
             </div>
           </div>
+          </div>
+          
           {/* <div className={Style.FeaturedNFTPage_box_tag_apply}>
             <button onClick={handleApplyClick}>Apply</button>
           </div> */}

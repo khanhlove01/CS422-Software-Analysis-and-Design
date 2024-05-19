@@ -9,18 +9,24 @@
   margin: 5rem auto;
 }
 .FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   padding: 5rem 15rem;
   padding-top: 0;
 }
-.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_selection {
+.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
-.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_selection button {
+.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_container .FeaturedNFTPage_box_tag_selection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_container .FeaturedNFTPage_box_tag_selection button {
   border: 1px solid var(--icons-color);
   outline: 0;
   background-color: var(--main-bg-color);
@@ -31,29 +37,35 @@
   transition: all 0.3s ease-in;
   color: var(--icons-color);
 }
-.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_selection button:hover {
+.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_container .FeaturedNFTPage_box_tag_selection button:hover {
   border: 1px solid var(--icons-color);
   background-color: var(--icons-color);
   color: var(--main-bg-color);
 }
-.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_selection .active {
+.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_container .FeaturedNFTPage_box_tag_selection .active {
   border: 1px solid var(--icons-color);
   background-color: var(--icons-color);
   color: var(--main-bg-color);
 }
-.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_apply button {
-  border: 1px solid var(--icons-color);
-  outline: 0;
+.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_container .FeaturedNFTPage_box_tag_selection .dropdown_menu {
+  position: absolute;
+  padding: 1rem 0.5rem;
+  box-shadow: var(--box-shadow);
+  font-size: 1rem;
+  width: 15rem;
+  border-radius: 1rem;
   background-color: var(--main-bg-color);
-  font-size: 1.2rem;
-  border-radius: 2rem;
-  padding: 1rem 2rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in;
-  color: var(--icons-color);
+  z-index: 9999999;
 }
-.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_apply button:hover {
-  border: 1px solid var(--icons-color);
+.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_container .FeaturedNFTPage_box_tag_selection .dropdown_menu li {
+  color: var(--icons-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.FeaturedNFTPage .FeaturedNFTPage_box .FeaturedNFTPage_box_tag .FeaturedNFTPage_box_tag_container .FeaturedNFTPage_box_tag_selection .dropdown_menu li:hover {
   background-color: var(--icons-color);
-  color: var(--main-bg-color);
+  color: var(--shadow-dark-color);
+  border-radius: 0.3rem;
 }/*# sourceMappingURL=featuredNFTPage.module.css.map */

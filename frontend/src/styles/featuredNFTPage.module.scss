@@ -7,39 +7,21 @@
     width: 100%;
     margin: 5rem auto;
     .FeaturedNFTPage_box_tag {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
       padding: 5rem 15rem;
       padding-top: 0;
-      .FeaturedNFTPage_box_tag_selection {
+      .FeaturedNFTPage_box_tag_container{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 1rem;
-        button {
-          border: 1px solid var(--icons-color);
-          outline: 0;
-          background-color: var(--main-bg-color);
-          font-size: 1.2rem;
-          border-radius: 2rem;
-          padding: 1rem 2rem;
-          cursor: pointer;
-          transition: all 0.3s ease-in;
-          color: var(--icons-color);
-        }
-        button:hover {
-            border: 1px solid var(--icons-color);
-            background-color: var(--icons-color);
-            color: var(--main-bg-color);
-          }
-        .active{
-            border: 1px solid var(--icons-color);
-            background-color: var(--icons-color);
-            color: var(--main-bg-color);
-        }
-      }
-      .FeaturedNFTPage_box_tag_apply{
-        button {
+        .FeaturedNFTPage_box_tag_selection {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          button {
             border: 1px solid var(--icons-color);
             outline: 0;
             background-color: var(--main-bg-color);
@@ -51,11 +33,41 @@
             color: var(--icons-color);
           }
           button:hover {
-            border: 1px solid var(--icons-color);
-            background-color: var(--icons-color);
-            color: var(--main-bg-color);
+              border: 1px solid var(--icons-color);
+              background-color: var(--icons-color);
+              color: var(--main-bg-color);
+            }
+          .active{
+              border: 1px solid var(--icons-color);
+              background-color: var(--icons-color);
+              color: var(--main-bg-color);
           }
+          .dropdown_menu {
+            position: absolute;
+            padding: 1rem 0.5rem;
+            box-shadow: var(--box-shadow);
+            font-size: 1rem;
+            width: 15rem;
+            border-radius: 1rem;
+            background-color: var(--main-bg-color);
+            z-index: 9999999;
+            li {
+              color: var(--icons-color);
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              cursor: pointer;
+            }
+            li:hover {
+              background-color: var(--icons-color);
+              color: var(--shadow-dark-color);
+              border-radius: 0.3rem;
+            }
+          }
+        }
       }
+      
+      
     }
   }
 }
