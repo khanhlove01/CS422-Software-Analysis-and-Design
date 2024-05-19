@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Button } from "../components/componentsindex";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 //Internal Import
 import Style from "../styles/login.module.css";
 
 const ChangePasswordPage = () => {
+    const navigate = useNavigate();
   const [current, setCurrent] = useState(
     JSON.parse(localStorage.getItem("user")) || null
   );
@@ -21,11 +24,12 @@ const ChangePasswordPage = () => {
 
   const handleChangePassword = async (e) => {
     try {
-      const response = await axios.patch("http://localhost:3000/api/v1/users/updateMyPassword",
+      const response = await axios.patch(
+        "http://localhost:3000/api/v1/users/updateMyPassword",
         {
-            passwordCurrent: inputs.passwordCurrent,
-            password: inputs.password,
-            passwordConfirmed: inputs.passwordConfirmed
+          passwordCurrent: inputs.passwordCurrent,
+          password: inputs.password,
+          passwordConfirmed: inputs.passwordConfirmed,
         },
         {
           headers: {
@@ -33,15 +37,19 @@ const ChangePasswordPage = () => {
           },
         }
       );
+      toast.success("Your password is changed successfully");
+      navigate('/login');
     } catch (error) {
       console.log("====================================");
       console.log(error);
+      toast.error("There are some errors occured");
       console.log("====================================");
     }
   };
 
   return (
     <div className={Style.login}>
+        <ToastContainer autoClose={1000}/>
       <div className={Style.login_box}>
         <h1>Change Password</h1>
         <div className={Style.user}>
