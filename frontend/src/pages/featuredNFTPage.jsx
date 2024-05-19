@@ -13,8 +13,8 @@ const FeaturedNFTPage = () => {
   const handleButtonClick = (text) => {
     setFeatures((prevFeatures) => {
       if (prevFeatures.includes(text)) {
-        // Move the clicked feature to the beginning of the array
-        return [text, ...prevFeatures.filter((feature) => feature !== text)];
+        // Remove the feature if it's already selected
+        return prevFeatures.filter((feature) => feature !== text);
       } else {
         // Add the new feature to the beginning of the array
         return [text, ...prevFeatures];
