@@ -6,6 +6,8 @@ import {
   TiSocialTwitter,
   TiSocialInstagram,
 } from "react-icons/ti";
+import { useNavigate } from 'react-router-dom';
+
 
 //Internal Import
 import Style from "./Form.module.css"
@@ -13,6 +15,11 @@ import {Button} from "../../components/componentsindex"
 
 
 const Form = () => {
+  const navigate = useNavigate();
+
+  const handleChangePassword = () => {
+    navigate('/change-password');
+  }
   return (
     <div className={Style.Form}>
       <div className={Style.Form_box}>
@@ -108,6 +115,11 @@ const Form = () => {
             <Button
               btnName="Upload profile"
               handleClick={() => {}}
+              classStyle={Style.button}
+            />
+            <Button
+              btnName="Change password"
+              handleClick={handleChangePassword}
               classStyle={Style.button}
             />
           </div>
