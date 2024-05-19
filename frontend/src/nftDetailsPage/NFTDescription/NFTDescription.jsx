@@ -159,7 +159,7 @@ const NFTDescription = ({resNFT}) => {
           <div className={Style.NFTDescription_box_profile_box}>
             <div className={Style.NFTDescription_box_profile_box_left}>
               <img
-                src={images.test_img_2}
+                src={resNFT.imageCover}
                 alt="profile"
                 width={40}
                 height={40}
@@ -178,7 +178,7 @@ const NFTDescription = ({resNFT}) => {
 
             <div className={Style.NFTDescription_box_profile_box_right}>
               <img
-                src={images.test_img}
+                src={resNFT.imageCover}
                 alt="profile"
                 width={40}
                 height={40}
