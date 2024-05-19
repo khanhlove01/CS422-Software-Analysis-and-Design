@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { NFTCard, Title } from "../components/componentsindex";
-
+import { useEffect } from "react";
 //Internal Import
 import Style from "../styles/featuredNFTPage.module.css";
 import { Banner } from "../collectionPage/collectionindex";
 import img from "../img";
 
 const FeaturedNFTPage = () => {
+  
   const [feature, setFeature] = useState(null);
 
   const handleButtonClick = (text) => {
@@ -17,6 +18,21 @@ const FeaturedNFTPage = () => {
     //Change the NFT below
     setFeature(null);
   }
+
+  //Call api
+  const [dataArray, setDataArray] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("http://localhost:3000/api/v1/nfts");
+        setDataArray(res.data.data.nfts);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className={Style.FeaturedNFTPage}>
