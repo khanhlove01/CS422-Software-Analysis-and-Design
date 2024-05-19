@@ -18,11 +18,11 @@ const BigNFTSlider = () => {
     {
       title: "Hello NFT",
       id: 1,
-      name: "Daulat Hussain",
-      collection: "GYm",
+      name: "Minh Khanh",
+      collection: "Space",
       price: "00664 ETH",
       like: 243,
-      image: "https://pbs.twimg.com/media/ExjITWfU4AMzcnt?format=jpg&name=900x900",
+      image: "https://pbs.twimg.com/media/GLHyzbUaoAAqMuT?format=jpg&name=4096x4096",
       nftImage: "https://pbs.twimg.com/media/ExjITWfU4AMzcnt?format=jpg&name=900x900",
       time: {
         days: 21,
@@ -34,11 +34,11 @@ const BigNFTSlider = () => {
     {
       title: "Buddy NFT",
       id: 2,
-      name: "Shoaib Hussain",
-      collection: "Home",
+      name: "Minh Khanh",
+      collection: "Forest",
       price: "0000004 ETH",
       like: 243,
-      image: test_img,
+      image: "https://pbs.twimg.com/media/GLHyzbUaoAAqMuT?format=jpg&name=4096x4096",
       nftImage: test_img_2,
       time: {
         days: 77,
@@ -50,11 +50,11 @@ const BigNFTSlider = () => {
     {
       title: "Gym NFT",
       id: 3,
-      name: "Raayan Hussain",
-      collection: "GYm",
+      name: "Minh Khanh",
+      collection: "Sea",
       price: "0000064 ETH",
       like: 243,
-      image: test_img,
+      image: "https://pbs.twimg.com/media/GLHyzbUaoAAqMuT?format=jpg&name=4096x4096",
       nftImage: test_img,
       time: {
         days: 37,
@@ -66,11 +66,11 @@ const BigNFTSlider = () => {
     {
       title: "Home NFT",
       id: 4,
-      name: "Raayan Hussain",
-      collection: "GYm",
+      name: "Minh Khanh",
+      collection: "Forest",
       price: "4664 ETH",
       like: 243,
-      image: test_img,
+      image: "https://pbs.twimg.com/media/GLHyzbUaoAAqMuT?format=jpg&name=4096x4096",
       nftImage: test_img_2,
       time: {
         days: 87,
