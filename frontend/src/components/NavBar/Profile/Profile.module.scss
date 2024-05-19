@@ -13,25 +13,25 @@
 
   .profile_account {
     display: flex;
-    gap: 1rem;    
+    gap: 1rem;
     padding: 1.5rem;
     .profile_account_img {
-        flex: 1;
-      line-height: 0.3;
+      flex: 1;
       width: 80px;
-      aspect-ratio: 1/1;
+      height: 80px;
+      aspect-ratio: 2/2;
       border-radius: 50%;
     }
     .profile_account_info {
-        flex: 2;
-      word-wrap: break-word;
+      flex: 2;
       overflow-wrap: break-word;
+      word-break: break-all;
       p {
         font-weight: 600;
+        overflow-wrap: break-word; /* Ensure consistency */
       }
       small {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+        overflow-wrap: break-word; /* Ensure consistency */
       }
     }
   }

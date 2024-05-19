@@ -17,22 +17,22 @@
 }
 .profile .profile_account .profile_account_img {
   flex: 1;
-  line-height: 0.3;
   width: 80px;
-  aspect-ratio: 1/1;
+  height: 80px;
+  aspect-ratio: 2/2;
   border-radius: 50%;
 }
 .profile .profile_account .profile_account_info {
   flex: 2;
-  word-wrap: break-word;
   overflow-wrap: break-word;
+  word-break: break-all;
 }
 .profile .profile_account .profile_account_info p {
   font-weight: 600;
+  overflow-wrap: break-word; /* Ensure consistency */
 }
 .profile .profile_account .profile_account_info small {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  overflow-wrap: break-word; /* Ensure consistency */
 }
 .profile .profile_menu .profile_menu_one .profile_menu_one_item {
   display: flex;
