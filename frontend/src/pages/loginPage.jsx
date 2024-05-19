@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useContext, useEffect } from "react";
-import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
-//INTERNAL IMPORT
 import Style from "../styles/login.module.css";
-import images from "../img/index";
 import { Button } from "../components/componentsindex";
-
 import { AuthContext } from "../context/authContext";
 import { ToastContainer, toast } from "react-toastify";
-const loginPage = () => {
+
+const LoginPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
+  const [inputs, setInputs] = useState({
+    email: "",
+    password: "",
+  });
+
   useEffect(() => {
     if (location.state?.message) {
       toast.success(location.state.message, {
@@ -24,18 +27,13 @@ const loginPage = () => {
         draggable: true,
         progress: undefined,
       });
+      // Clear the state to prevent the toast from showing again
+      navigate(location.pathname, { replace: true, state: {} });
     }
-  }, [location.state]);
-  const [activeBtn, setActiveBtn] = useState(1);
-  const navigate = useNavigate();
-  const { currentUser, login, logout } = useContext(AuthContext);
-  const [inputs, setInputs] = useState({
-    email: "",
-    password: "",
-  });
+  }, [location.state, navigate, location.pathname]);
 
   const handleChange = (e) => {
-    setInputs((preV) => ({ ...preV, [e.target.name]: e.target.value }));
+    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleLogin = async (e) => {
@@ -47,13 +45,10 @@ const loginPage = () => {
       });
 
       if (res) {
-        navigate("/");
+        navigate("/", { state: { message: "You have been logged in successfully!" } });
       }
     } catch (err) {
-      console.log("====================================");
-      console.log(err);
       toast.error("Please input again!!!");
-      console.log("====================================");
       setInputs("");
     }
   };
@@ -106,7 +101,6 @@ const loginPage = () => {
               classStyle={Style.button}
               handleClick={handleLogin}
             />
-            {/* <button onClick={handleLogin}>Submit</button> */}
           </div>
         </div>
         <p className={Style.login_box_para}>
@@ -117,4 +111,4 @@ const loginPage = () => {
   );
 };
 
-export default loginPage;
+export default LoginPage;

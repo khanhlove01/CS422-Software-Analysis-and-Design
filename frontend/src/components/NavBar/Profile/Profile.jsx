@@ -45,10 +45,10 @@ const Profile = () => {
         </div>
 
         <div className={Style.profile_menu_one}>
-          <div className={Style.profile_menu_one_item}>
+          <div className={Style.profile_menu_one_item} onClick={handleLogout}>
             <TbDownload />
             <p>
-              <a href="" onClick={handleLogout}>Logout</a>
+              <a href="" >Logout</a>
             </p>
           </div>
         </div>

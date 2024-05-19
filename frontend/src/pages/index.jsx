@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { ToastContainer,toast } from "react-toastify"; 
+import { useNavigate } from "react-router-dom";
 
 //Internal Import
 import Style from "../styles/index.module.css";
@@ -19,9 +22,29 @@ import {
   Video,
 } from "../components/componentsindex";
 
+
+
 const Home = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (location.state?.message) {
+      toast.success(location.state.message, {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+    navigate(location.pathname, { replace: true, state: {} });
+  }, [location.state, navigate, location.pathname]);
+
   return (
     <div className={Style.homePage}>
+      <ToastContainer style={{ zIndex: 999999 }}/>
       <HeroSection />
       <Service />
       <BigNFTSlider />
