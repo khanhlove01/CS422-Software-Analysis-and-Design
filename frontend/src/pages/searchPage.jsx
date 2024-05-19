@@ -48,13 +48,21 @@ const SearchPage = () => {
         searchContent={searchContent}
         setSearchContent={setSearchContent}
       />
-      {filteredNFTData.length <= 0 || searchContent === "" ? (
-        <div className={Style.searchBar_box_content}>
-          <h1>There is no valid NFT. Search another NFT.</h1>
-        </div>
-      ) : (
-        <NFTCardTwo NFTData={filteredNFTData} />
-      )}
+     {
+  searchContent === "" ? (
+    <div className={Style.searchBar_box_content}>
+      <h1>Please enter the name of NFTs you want to find.</h1>
+    </div>
+  ) : filteredNFTData.length <= 0 ? (
+    <div className={Style.searchBar_box_content}>
+      <h1>There is no valid NFT. Search another NFT.</h1>
+    </div>
+  ) : (
+    <NFTCardTwo NFTData={filteredNFTData} />
+  )
+}
+
+      
 
       <Slider />
       <Brand />
