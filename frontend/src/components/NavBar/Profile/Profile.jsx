@@ -22,8 +22,8 @@ const Profile = () => {
           className={Style.profile_account_img}
         />
         <div className={Style.profile_account_info}>
-          <p>{currentUser.data.user.name}</p>
-          <small>{currentUser.data.user.email}</small>
+          <p>{currentUser ? currentUser.data.user.name : "No account"}</p>
+          <small>{currentUser ? currentUser.data.user.email : null}</small>
         </div>
       </div>
       <div className={Style.profile_menu}>

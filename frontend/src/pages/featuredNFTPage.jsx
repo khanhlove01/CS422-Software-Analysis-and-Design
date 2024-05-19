@@ -18,7 +18,7 @@ const FeaturedNFTPage = () => {
   const [ratingScore, setRatingScore] = useState(null);
   const [ratingQuantity, setRatingQuantity] = useState(null);
   const [openDropdown, setOpenDropdown] = useState(null);
-
+  const [linkCallAPI, setLinkCallAPI] = useState("http://localhost:3000/api/v1/nfts/top-5-nfts");
   const dropdownRef = useRef();
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const FeaturedNFTPage = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/v1/nfts");
+      const res = await axios.get(linkCallAPI);
       setDataArray(res.data.data.nfts);
       console.log("====================================");
       console.log(res.data.data.nfts);
@@ -84,7 +84,7 @@ const FeaturedNFTPage = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [linkCallAPI]);
 
   useEffect(() => {
     setFilteredDataArray(
