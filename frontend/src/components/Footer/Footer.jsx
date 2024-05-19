@@ -34,16 +34,16 @@ const Footer = () => {
           </p>
 
           <div className={Style.footer_social}>
-            <a href="https://www.facebook.com/">
+            <a href="https://www.facebook.com/13laem/">
               <TiSocialFacebook />
             </a>
             <a href="https://www.linkedin.com/">
               <TiSocialLinkedin />
             </a>
-            <a href="https://www.instagram.com/">
+            <a href="https://www.instagram.com/tm.khanhhhhh/">
               <TiSocialInstagram />
             </a>
-            <a href="https://x.com/">
+            <a href="https://x.com/KhnhTrnMin51907">
               <TiSocialTwitter />
             </a>
             <a href="https://www.youtube.com/">

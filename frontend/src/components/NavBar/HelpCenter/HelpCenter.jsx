@@ -22,6 +22,7 @@ const HelpCenter = () => {
 
   const handleNavigation = (link) => {
     navigate(`/${link}`);
+
   };
 
   return (

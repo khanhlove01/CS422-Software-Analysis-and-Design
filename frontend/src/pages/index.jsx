@@ -25,23 +25,6 @@ import {
 
 
 const Home = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (location.state?.message) {
-      toast.success(location.state.message, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
-    navigate(location.pathname, { replace: true, state: {} });
-  }, [location.state, navigate, location.pathname]);
-
   return (
     <div className={Style.homePage}>
       <ToastContainer style={{ zIndex: 999999 }}/>

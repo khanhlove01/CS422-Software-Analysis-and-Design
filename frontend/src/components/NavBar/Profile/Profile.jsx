@@ -16,7 +16,7 @@ const Profile = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/login', { state: { message: "You have been logged out successfully!" } });
+    navigate('/login');
     console.log("Log out");
   };
 

@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import Style from "../styles/login.module.css";
 import { Button } from "../components/componentsindex";
@@ -8,29 +7,12 @@ import { AuthContext } from "../context/authContext";
 import { ToastContainer, toast } from "react-toastify";
 
 const LoginPage = () => {
-  const location = useLocation();
   const navigate = useNavigate();
   const { login } = useContext(AuthContext);
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
   });
-
-  useEffect(() => {
-    if (location.state?.message) {
-      toast.success(location.state.message, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      // Clear the state to prevent the toast from showing again
-      navigate(location.pathname, { replace: true, state: {} });
-    }
-  }, [location.state, navigate, location.pathname]);
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -45,7 +27,7 @@ const LoginPage = () => {
       });
 
       if (res) {
-        navigate("/", { state: { message: "You have been logged in successfully!" } });
+        navigate("/");
       }
     } catch (err) {
       toast.error("Please input again!!!");
