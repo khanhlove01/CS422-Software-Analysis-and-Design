@@ -23,7 +23,8 @@ import images from "../../img";
 import { Button } from "../../components/componentsindex";
 import { NFTTabs } from "../NFTDetailsIndex";
 
-const NFTDescription = () => {
+const NFTDescription = ({resNFT}) => {
+  console.log(resNFT);
   const [social, setSocial] = useState(false);
   const [NFTMenu, setNFTMenu] = useState(false);
   const [history, setHistory] = useState(true);
@@ -40,15 +41,8 @@ const NFTDescription = () => {
   const historyArray = [
     images.test_img,
     images.test_img_2,
-    images.test_img_3,
-    images.test_img,
-    images.test_img_2,
   ];
   const provananceArray = [
-    images.test_img_2,
-    images.test_img_3,
-    images.test_img,
-    images.test_img_2,
     images.test_img_3,
     images.test_img,
   ];
@@ -107,7 +101,7 @@ const NFTDescription = () => {
       <div className={Style.NFTDescription_box}>
         {/* //Part ONE */}
         <div className={Style.NFTDescription_box_share}>
-          <p>Virtual Worlds</p>
+          <p>{resNFT.elemental}</p>
           <div className={Style.NFTDescription_box_share_box}>
             <MdCloudUpload
               className={Style.NFTDescription_box_share_box_icon}
@@ -160,7 +154,7 @@ const NFTDescription = () => {
         {/* //Part TWO */}
         <div className={Style.NFTDescription_box_profile}>
           <h1>
-            {nft.name} #{nft.tokenId}
+            {resNFT.name} 
           </h1>
           <div className={Style.NFTDescription_box_profile_box}>
             <div className={Style.NFTDescription_box_profile_box_left}>
@@ -194,7 +188,7 @@ const NFTDescription = () => {
               <div className={Style.NFTDescription_box_profile_box_right_info}>
                 <small>Collection</small> <br />
                 <span>
-                  Mokeny app <MdVerified className={Style.icon}/>
+                  {resNFT.elemental} <MdVerified className={Style.icon}/>
                 </span>
               </div>
             </div>
@@ -248,11 +242,11 @@ const NFTDescription = () => {
               >
                 <small>Current Bid</small>
                 <p>
-                  {nft.price} ETH <span>( ≈ $3,221.22)</span>
+                  {resNFT.price} USDT 
                 </p>
               </div>
 
-              <span>[96 in stock]</span>
+              <span>[{resNFT.maxGroupSize} in stock]</span>
             </div>
 
             <div className={Style.NFTDescription_box_profile_biding_box_button}>
