@@ -65,7 +65,7 @@ const router = createBrowserRouter([
       { path: "/collection", element: <Collection /> },
       { path: "/author", element: <Author /> },
       { path: "/search-page", element: <SearchPage /> },
-      { path: "/NFT-details", element: <NFTDetails /> },
+      { path: "/NFT-details/:id", element: <NFTDetails /> },
       { path: "/account", element: <Account /> },
       { path: "/upload-NFT", element: <UploadNFTPage /> },
       { path: "/connect-wallet", element: <ConnectWalletPage /> },

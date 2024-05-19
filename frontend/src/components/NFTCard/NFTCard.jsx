@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { BsImages } from "react-icons/bs";
-
+import { useNavigate } from "react-router-dom";
 //INTERNAL IMPORT
 import Style from "./NFTCard.module.css";
 
@@ -13,7 +13,11 @@ const NFTCard = ({filteredDataArray}) => {
   console.log(filteredDataArray);
   console.log('====================================');
   const [like, setLike] = useState(true);
+  const navigate = useNavigate();
 
+  const handleCardClick = (id) => {
+    navigate(`/NFT-details/${id}`);
+  };
   const likeNft = () => {
     if (!like) {
       setLike(true);
@@ -24,7 +28,7 @@ const NFTCard = ({filteredDataArray}) => {
   return (
     <div className={Style.NFTCard}>
       {filteredDataArray.map((el, i) => (
-        <div className={Style.NFTCard_box} key={i + 1}>
+        <div className={Style.NFTCard_box} key={i + 1} onClick={() => handleCardClick(el.id)}>
           <div className={Style.NFTCard_box_img}>
             <img
               src={el.imageCover}
