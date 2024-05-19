@@ -1,7 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 //INTERNAL IMPORT
 import Style from "../styles/login.module.css";
 import images from "../img/index";
@@ -10,6 +12,20 @@ import { Button } from "../components/componentsindex";
 import { AuthContext } from "../context/authContext";
 import { ToastContainer, toast } from "react-toastify";
 const loginPage = () => {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.state?.message) {
+      toast.success(location.state.message, {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  }, [location.state]);
   const [activeBtn, setActiveBtn] = useState(1);
   const navigate = useNavigate();
   const { currentUser, login, logout } = useContext(AuthContext);
@@ -36,14 +52,15 @@ const loginPage = () => {
     } catch (err) {
       console.log("====================================");
       console.log(err);
-      toast.error("Please input again!!!")
+      toast.error("Please input again!!!");
       console.log("====================================");
-      setInputs("")
+      setInputs("");
     }
   };
 
   return (
     <div className={Style.login}>
+      <ToastContainer />
       <div className={Style.login_box}>
         <h1>Login</h1>
         <div className={Style.user}>
@@ -56,10 +73,10 @@ const loginPage = () => {
                 >
                   <p>Email address</p>
                 </label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   placeholder="example@emample.com"
-                  name = "email"
+                  name="email"
                   onChange={handleChange}
                   value={inputs.email}
                 />
@@ -75,16 +92,20 @@ const loginPage = () => {
                     <a href="#">Forget password</a>
                   </p>
                 </label>
-                <input 
-                  type="password" 
-                  name = "password"
+                <input
+                  type="password"
+                  name="password"
                   onChange={handleChange}
                   value={inputs.password}
                 />
               </div>
             </div>
 
-            <Button btnName="Continue" classStyle={Style.button} handleClick={handleLogin}/>
+            <Button
+              btnName="Continue"
+              classStyle={Style.button}
+              handleClick={handleLogin}
+            />
             {/* <button onClick={handleLogin}>Submit</button> */}
           </div>
         </div>

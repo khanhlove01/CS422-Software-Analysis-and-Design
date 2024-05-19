@@ -1,20 +1,28 @@
-import React from "react";
-import { useContext,useState } from "react";
-import { FaUserAlt, FaRegImage, FaUserEdit } from "react-icons/fa";
-import { MdHelpCenter } from "react-icons/md";
-import { TbDownloadOff, TbDownload } from "react-icons/tb";
+import React, { useContext, useState } from "react";
+import { FaUserAlt } from "react-icons/fa";
+import { TbDownload } from "react-icons/tb";
 import { AuthContext } from "../../../context/authContext";
-//Internal import
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 import Style from "./Profile.module.css";
 
 const Profile = () => {
   const [profileImage, setProfileImage] = useState(
     "https://pbs.twimg.com/media/GCr11sgXEAADIpg?format=jpg&name=large"
   );
-  const { currentUser, login, logout } = useContext(AuthContext);
-  //console.log(currentUser);
+  const { currentUser, logout } = useContext(AuthContext);
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login', { state: { message: "You have been logged out successfully!" } });
+    console.log("Log out");
+  };
+
   return (
     <div className={Style.profile}>
+      <ToastContainer />
       <div className={Style.profile_account}>
         <img
           src={profileImage}
@@ -40,7 +48,7 @@ const Profile = () => {
           <div className={Style.profile_menu_one_item}>
             <TbDownload />
             <p>
-              <a href="./login" onClick={logout}>Logout</a>
+              <a href="" onClick={handleLogout}>Logout</a>
             </p>
           </div>
         </div>
