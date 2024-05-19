@@ -66,7 +66,7 @@ const LoginPage = () => {
                 >
                   <p>Password</p>
                   <p>
-                    <a href="#">Forget password</a>
+                    <a href="./forget-password">Forget password</a>
                   </p>
                 </label>
                 <input
@@ -86,7 +86,7 @@ const LoginPage = () => {
           </div>
         </div>
         <p className={Style.login_box_para}>
-          New user? <a href="#">Create an account</a>
+          New user? <a href="">Create an account</a>
         </p>
       </div>
     </div>

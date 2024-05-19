@@ -4,6 +4,7 @@ import Style from "../styles/login.module.css";
 import images from "../img/index";
 import { Button } from "../components/componentsindex";
 import { AuthContext } from '../context/authContext';
+import { ToastContainer, toast } from "react-toastify";
 import axios from 'axios';
 import Cookies from 'js-cookie';
 const ResetPasswordPage = () => {
@@ -24,16 +25,19 @@ const ResetPasswordPage = () => {
         })
         console.log('====================================');
         console.log("Successfully reset password");
+        toast.success("Your password is changed successfully")
         console.log('====================================');
       } catch (error) {
         console.log('====================================');
         console.log(error);
+        toast.error("There are some errors occured");
         console.log('====================================');
       }
     }
 
     return (
         <div className={Style.login}>
+          <ToastContainer/>
           <div className={Style.login_box}>
             <h1>Reset Password</h1>
             <div className={Style.user}>

@@ -32,7 +32,7 @@ const Form = () => {
               <div className={Style.Form_box_input_box_icon}>
                 <HiOutlineMail />
               </div>
-              <input type="text" placeholder="Enter your password..." />
+              <input type="text" placeholder="Enter your email..." />
             </div>
           </div>
 

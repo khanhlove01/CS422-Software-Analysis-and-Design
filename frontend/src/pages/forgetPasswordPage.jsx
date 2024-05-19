@@ -8,6 +8,9 @@ import { Button } from "../components/componentsindex";
 import axios from 'axios';
 import { useContext } from 'react';
 import { AuthContext } from '../context/authContext';
+import { ToastContainer, toast } from "react-toastify";
+
+
 const ForgetPasswordPage = () => {
   const {linkResetPassword,setLinkResetPassword} = useContext(AuthContext)
   const [inputs, setInputs] = useState({
@@ -26,17 +29,20 @@ const handleForgetPassword = async (e) => {
       })
       //setLinkResetPassword(response.data.data)
       console.log("Sent successful!");
+      toast.success("Email is sent successfully");
       console.log(response.data.data.resetToken);
       const resetToken = response.data.data.resetToken;
       Cookies.set('resetToken', resetToken);
       //window.location.reload();
     } catch (error) {
+      toast.error("Cannot send the email");
       console.log(error);
     }
 }
 
   return (
     <div className={Style.login}>
+      <ToastContainer />
       <div className={Style.login_box}>
         <h1>Forget Password</h1>
         <div className={Style.user}>
