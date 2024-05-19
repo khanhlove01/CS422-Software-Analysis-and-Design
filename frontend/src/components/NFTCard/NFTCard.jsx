@@ -77,7 +77,7 @@ const NFTCard = ({filteredDataArray}) => {
                     className={Style.NFTCard_box_update_left_like_icon}
                   />
                 )}
-                {""} 22
+                {""} {el.likes ? el.likes : 0}
               </div>
             </div>
 
@@ -102,14 +102,14 @@ const NFTCard = ({filteredDataArray}) => {
                       className={Style.NFTCard_box_update_details_price_box_bid}
                     >
                       <small>Current Bid</small>
-                      <p>1.000ETH</p>
+                      <p>{el.price} USDT</p>
                     </div>
                     <div
                       className={
                         Style.NFTCard_box_update_details_price_box_stock
                       }
                     >
-                      <small>61 in stock</small>
+                      <small>{el.maxGroupSize} in stock</small>
                     </div>
                   </div>
                 </div>

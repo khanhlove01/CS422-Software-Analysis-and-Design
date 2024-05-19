@@ -13,9 +13,11 @@ const FeaturedNFTPage = () => {
   const handleButtonClick = (text) => {
     setFeatures((prevFeatures) => {
       if (prevFeatures.includes(text)) {
-        return prevFeatures.filter((feature) => feature !== text);
+        // Move the clicked feature to the beginning of the array
+        return [text, ...prevFeatures.filter((feature) => feature !== text)];
       } else {
-        return [...prevFeatures, text];
+        // Add the new feature to the beginning of the array
+        return [text, ...prevFeatures];
       }
     });
   };
