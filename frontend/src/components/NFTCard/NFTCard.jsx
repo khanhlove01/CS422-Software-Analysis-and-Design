@@ -12,38 +12,6 @@ const NFTCard = ({filteredDataArray}) => {
   console.log('====================================');
   console.log(filteredDataArray);
   console.log('====================================');
-  const featureArray = [{
-    background: images.test_img_2,
-    user: images.test_img,
-  },
-  {
-    background: images.test_img_2,
-    user: images.test_img_2,
-  },
-  {
-    background: images.test_img,
-    user: images.test_img,
-  },
-  {
-    background: images.test_img_2,
-    user: images.test_img,
-  },
-  {
-    background: images.test_img,
-    user: images.test_img_2,
-  },
-  {
-    background: images.test_img,
-    user: images.test_img,
-  },
-  {
-    background: images.test_img_2,
-    user: images.test_img_2,
-  },
-  {
-    background: images.test_img,
-    user: images.test_img,
-  },];
   const [like, setLike] = useState(true);
 
   const likeNft = () => {
