@@ -78,24 +78,6 @@ const AuthorTaps = ({
         <div className={Style.AuthorTaps_box_left}>
           <div className={Style.AuthorTaps_box_left_btn}>
             <button
-              className={`${activeBtn == 1 ? Style.active : ""}`}
-              onClick={(e) => openTab(e)}
-            >
-              Listed NFTs
-            </button>
-            <button
-              className={`${activeBtn == 2 ? Style.active : ""}`}
-              onClick={(e) => openTab(e)}
-            >
-              Own NFT
-            </button>
-            <button
-              className={`${activeBtn == 3 ? Style.active : ""}`}
-              onClick={(e) => openTab(e)}
-            >
-              Liked
-            </button>
-            <button
               className={`${activeBtn == 4 ? Style.active : ""}`}
               onClick={(e) => openTab(e)}
             >

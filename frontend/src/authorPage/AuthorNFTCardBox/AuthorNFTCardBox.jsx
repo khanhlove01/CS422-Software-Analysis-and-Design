@@ -14,7 +14,7 @@ const AuthorNFTCardBox = ({
   follower,
   following,
 }) => {
-  const [arrayImage,setArrayImage] = useState(null);
+  const [arrayImage,setArrayImage] = useState([]);
   const fetchSlider = async () => {
     try {
       const response = await axios.get("http://localhost:3000/api/v1/nfts", {
@@ -94,9 +94,6 @@ const AuthorNFTCardBox = ({
 
   return (
     <div className={Style.AuthorNFTCardBox}>
-      {collectiables && <NFTCardTwo NFTData={collectiablesArray}/>}
-      {created && <NFTCardTwo NFTData={createdArray}/>}
-      {like && <NFTCardTwo NFTData={likeArray}/>}
       {follower && (
         <div className={Style.AuthorNFTCardBox_box}>
           {followerArray.map((el, i) => (
