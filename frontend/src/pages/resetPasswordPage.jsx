@@ -38,7 +38,7 @@ const ResetPasswordPage = () => {
     }
 
     const handleClickCreate = () =>{
-      navigate("/account");
+      navigate("/sign-up");
     }
 
     return (
