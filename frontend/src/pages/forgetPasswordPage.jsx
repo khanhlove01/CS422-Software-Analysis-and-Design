@@ -42,7 +42,7 @@ const handleForgetPassword = async (e) => {
     }
 }
 const handleClickCreate = () =>{
-  navigate("/account");
+  navigate("/sign-up");
 }
 
 

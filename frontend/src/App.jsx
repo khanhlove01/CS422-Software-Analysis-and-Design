@@ -74,14 +74,14 @@ const router = createBrowserRouter([
       { path: "/sign-up", element: <SignUpPage /> },
       { path: "/about", element: <AboutUsPage /> },
       { path: "/subscription", element: <SubscriptionPage /> },
-      { path: "/category/:id", element: <CategoryPage/> },
-      { path: "/feature-NFTs", element: <FeaturedNFTPage/> },
-      { path: "/change-password", element: <ChangePasswordPage/> },
+      { path: "/category/:id", element: <CategoryPage /> },
+      { path: "/feature-NFTs", element: <FeaturedNFTPage /> },
+      { path: "/change-password", element: <ChangePasswordPage /> },
+      { path: "/login", element: <LoginPage /> },
+      { path: "/forget-password", element: <ForgetPasswordPage /> },
+      { path: "/resetPassword/:id", element: <ResetPasswordPage /> },
     ],
   },
-  { path: "/login", element: <LoginPage /> },
-  { path: "/forget-password", element: <ForgetPasswordPage /> },
-  { path: "/resetPassword/:id", element: <ResetPasswordPage /> },
 ]);
 
 const App = () => {

@@ -86,7 +86,7 @@ const LoginPage = () => {
           </div>
         </div>
         <p className={Style.login_box_para}>
-          New user? <a href="">Create an account</a>
+          New user? <a href="./sign-up">Create an account</a>
         </p>
       </div>
     </div>
