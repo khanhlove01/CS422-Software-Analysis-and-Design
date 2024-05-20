@@ -49,20 +49,20 @@ const ContactUsPage = () => {
                 SOCIALS
               </h3>
               <div className={Style.contactus_box_box_left_item_social}>
-                <a href="#">
+                <a href="https://www.facebook.com/13laem/">
                   <TiSocialFacebook />
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/">
                   <TiSocialLinkedin />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/tm.khanhhhhh/">
                   <TiSocialInstagram />
                 </a>
-                <a href="#">
-                  <TiSocialYoutube />
-                </a>
-                <a href="#">
+                <a href="https://x.com/KhnhTrnMin51907">
                   <TiSocialTwitter />
+                </a>
+                <a href="https://www.youtube.com/">
+                  <TiSocialYoutube />
                 </a>
               </div>
             </div>
