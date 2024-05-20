@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 //Internal Import
 import Style from "./AuthorNFTCardBox.module.css";
 import images from "../../img/index";
 import { NFTCardTwo } from "../../collectionPage/collectionindex";
 import FollowerTabCard from "../../components/FollowerTab/FollowerTabCard/FollowerTabCard";
+import axios from "axios";
 
 const AuthorNFTCardBox = ({
   collectiables,
@@ -13,31 +14,31 @@ const AuthorNFTCardBox = ({
   follower,
   following,
 }) => {
-  const collectiablesArray = [
-    images.test_img,
-    images.test_img_2,
-    images.test_img_3,
-    images.test_img,
-    images.test_img_2,
-    images.test_img_3,
-    images.test_img,
-    images.test_img_2,
-  ];
+  const [arrayImage,setArrayImage] = useState(null);
+  const fetchSlider = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/api/v1/nfts", {
+        // headers: {
+        //   Authorization: `Bearer ${current.token}`
+        // }
+      });
+      console.log(response.data.data.nfts);
+      console.log("Author");
+      setArrayImage(response.data.data.nfts);
+    } catch (error) {
+      console.log('====================================');
+      console.log(error);
+      console.log('====================================');
+    }
+  }
+  useEffect(() => {
+    fetchSlider();
+  }, []);
+  const collectiablesArray = arrayImage.filter((el) => el.elemental.toLowerCase() === "forest");
 
-  const createdArray = [
-    images.test_img,
-    images.test_img_2,
-    images.test_img_3,
-  ];
+  const createdArray = arrayImage.filter((el) => el.elemental.toLowerCase() === "sea");
 
-  const likeArray = [
-    images.test_img,
-    images.test_img_2,
-    images.test_img_3,
-    images.test_img,
-    images.test_img_2,
-    images.test_img_3,
-  ];
+  const likeArray = arrayImage.filter((el) => el.elemental.toLowerCase() === "sky");
 
   const followerArray = [
     {
