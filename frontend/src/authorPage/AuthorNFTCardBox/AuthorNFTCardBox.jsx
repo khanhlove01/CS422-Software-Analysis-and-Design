@@ -14,31 +14,6 @@ const AuthorNFTCardBox = ({
   follower,
   following,
 }) => {
-  const [arrayImage, setArrayImage] = useState(null);
-  const fetchSlider = async () => {
-    try {
-      const response = await axios.get("http://localhost:3000/api/v1/nfts", {
-        // headers: {
-        //   Authorization: `Bearer ${current.token}`
-        // }
-      });
-      console.log(response.data.data.nfts);
-      setArrayImage(response.data.data.nfts);
-    } catch (error) {
-      console.log("====================================");
-      console.log(error);
-      console.log("====================================");
-    }
-  };
-  useEffect(() => {
-    fetchSlider();
-  }, []);
-  const collectiablesArray = arrayImage.filter((el) => el.elemental.toLowerCase() === "forest");
-
-  const createdArray = arrayImage.filter((el) => el.elemental.toLowerCase() === "sea");
-
-  const likeArray = arrayImage.filter((el) => el.elemental.toLowerCase() === "sky");
-
   const followerArray = [
     {
       background: images.test_img_2,
@@ -92,9 +67,6 @@ const AuthorNFTCardBox = ({
 
   return (
     <div className={Style.AuthorNFTCardBox}>
-      {collectiables && <NFTCardTwo NFTData={collectiablesArray} />}
-      {created && <NFTCardTwo NFTData={createdArray} />}
-      {like && <NFTCardTwo NFTData={likeArray} />}
       {follower && (
         <div className={Style.AuthorNFTCardBox_box}>
           {followerArray.map((el, i) => (
