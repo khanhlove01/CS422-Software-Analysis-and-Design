@@ -5,11 +5,12 @@ import Style from "../styles/login.module.css";
 import { Button } from "../components/componentsindex";
 import images from "../img/index";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const SignUpPage = () => {
   const [checkToast, setCheckToast] = useState(false);
+  const navigate = useNavigate();
   const [inputs, setInputs] = useState({
     username: "",
     email: "",
@@ -52,6 +53,7 @@ const SignUpPage = () => {
         password: inputs.password,
         passwordConfirmed: inputs.confirmedPassword
       });
+      navigate('/login');
       e.preventDefault();
       console.log("Sign-up successful!");
       setCheckToast(true);
