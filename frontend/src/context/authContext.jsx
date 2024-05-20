@@ -18,7 +18,7 @@ export const AuthContextProvider = ({children}) => {
     // parse a JSON string and convert it into a JavaScript object.
     const login = async (inputs) => {
         console.log(inputs);
-        const res = await axios.post("http://localhost:3000/api/v1/users/login", inputs);
+        const res = await axios.post("https://cs422-software-analysis-and-design-api.onrender.com"+"/api/v1/users/login", inputs);
 
         console.log(res.data);
         if (res.data) {
