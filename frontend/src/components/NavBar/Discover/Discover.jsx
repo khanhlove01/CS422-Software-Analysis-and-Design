@@ -8,10 +8,6 @@ const Discover = () => {
   // Discover menu
   const discover = [
     {
-      name: "Collection",
-      link: "collection",
-    },
-    {
       name: "Search",
       link: "search-page",
     },
