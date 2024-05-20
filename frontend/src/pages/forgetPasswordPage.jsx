@@ -48,7 +48,7 @@ const handleClickCreate = () =>{
 
   return (
     <div className={Style.login}>
-      <ToastContainer />
+      <ToastContainer style={{zIndex:9999999}}/>
       <div className={Style.login_box}>
         <h1>Forget Password</h1>
         <div className={Style.user}>

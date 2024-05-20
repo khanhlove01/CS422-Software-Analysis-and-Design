@@ -22,7 +22,7 @@ const Profile = () => {
 
   return (
     <div className={Style.profile}>
-      <ToastContainer />
+      <ToastContainer style={{zIndex: 99999999}} />
       <div className={Style.profile_account}>
         <img
           src={profileImage}

@@ -43,7 +43,7 @@ const ResetPasswordPage = () => {
 
     return (
         <div className={Style.login}>
-          <ToastContainer/>
+          <ToastContainer style={{zIndex:9999999}}/>
           <div className={Style.login_box}>
             <h1>Reset Password</h1>
             <div className={Style.user}>

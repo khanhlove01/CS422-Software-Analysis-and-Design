@@ -49,7 +49,7 @@ const ChangePasswordPage = () => {
 
   return (
     <div className={Style.login}>
-        <ToastContainer autoClose={1000}/>
+        <ToastContainer autoClose={1000} style={{zIndex:9999999}}/>
       <div className={Style.login_box}>
         <h1>Change Password</h1>
         <div className={Style.user}>

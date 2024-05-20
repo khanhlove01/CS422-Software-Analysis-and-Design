@@ -37,7 +37,7 @@ const LoginPage = () => {
 
   return (
     <div className={Style.login}>
-      <ToastContainer />
+      <ToastContainer style={{zIndex:9999999}}/>
       <div className={Style.login_box}>
         <h1>Login</h1>
         <div className={Style.user}>
