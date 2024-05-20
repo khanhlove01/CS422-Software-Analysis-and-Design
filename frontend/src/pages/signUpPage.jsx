@@ -5,7 +5,7 @@ import Style from "../styles/login.module.css";
 import { Button } from "../components/componentsindex";
 import images from "../img/index";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 const SignUpPage = () => {
@@ -143,6 +143,7 @@ const SignUpPage = () => {
           New user? <a href="#">Create an account</a>
         </p>
       </div>
+      <ToastContainer />
     </div>
   );
 };
