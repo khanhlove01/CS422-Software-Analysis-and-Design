@@ -37,7 +37,7 @@ const LoginPage = () => {
 
   return (
     <div className={Style.login}>
-      <ToastContainer />
+      
       <div className={Style.login_box}>
         <h1>Login</h1>
         <div className={Style.user}>
@@ -89,6 +89,7 @@ const LoginPage = () => {
           New user? <a href="/sign-up">Create an account</a>
         </p>
       </div>
+      <ToastContainer />
     </div>
   );
 };
